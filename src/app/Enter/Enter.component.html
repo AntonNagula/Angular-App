@@ -1,0 +1,13 @@
+<div class="center">
+  <div class="form-group">
+    <p><label>Email</label></p>
+    <input class="form-control auth" name="username" [(ngModel)]="user.name" />
+  </div>
+  <div class="form-group">
+    <p><label>Password</label></p>
+    <input class="form-control auth" name="age" [(ngModel)]="user.age" />
+  </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" (click)="submit(user)">Отправить</button>
+  </div>
+</div>

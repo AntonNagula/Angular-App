@@ -1,0 +1,16 @@
+.centerComp { 
+  padding-left: 50px;
+  padding-top: 50px;
+  box-shadow: 10px 4px 10px 3px #888;
+  border-radius: 10px;
+  border: 1px solid black;
+  height:auto;
+}
+
+li {
+  padding: 10px;
+}
+
+input.auth{
+    width:200px;
+}
