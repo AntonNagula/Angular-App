@@ -15,6 +15,9 @@ export class CreateUserComponent
   done: boolean = false;
   constructor(private httpService: HttpService) { }
   submit(user: User) {
-    this.httpService.CreateUser(user);
+    this.httpService.CreateUser(user).subscribe(
+      (data: string) => { console.log(data) },
+      error => console.log(error)
+    );
     }
 }
