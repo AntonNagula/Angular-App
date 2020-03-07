@@ -8,6 +8,7 @@ import { EnterComponent } from './Enter/Enter.component';
 import { MainAdminComponent } from './Admin/Main/Main.component';
 import { MainClientComponent } from './Client/Main/Main.component';
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
+import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
     EnterComponent,
     MainAdminComponent,
     MainClientComponent,
-    UsersTableComponent
+    UsersTableComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

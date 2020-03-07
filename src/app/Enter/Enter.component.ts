@@ -21,7 +21,8 @@ export class EnterComponent {
         (data: EnterData) => { this.receivedUser = data; this.done = true; },
         error => console.log(error)
     );
-    if (this.receivedUser.name == "anton") {
+    console.log(this.receivedUser);
+    if (this.receivedUser.name == "Антон") {
       this.router.navigate(['/MainAdmin']);
     }
     else {

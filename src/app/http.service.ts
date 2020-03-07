@@ -13,6 +13,11 @@ export class HttpService {
     return this.http.post('https://localhost:44327/api/users', body);
   }
 
+  CreateUser(user: User) {
+    const body = { name: user.name, surname: user.surname, password: user.password, email: user.email, role: user.role };
+    this.http.post('https://localhost:44327/api/users/CreateUser', body);
+  }
+
   getUsers() {       
     return this.http.get('https://localhost:44327/api/users');
   }
