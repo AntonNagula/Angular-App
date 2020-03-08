@@ -9,8 +9,11 @@ import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
 
 const itemRoutes: Routes = [
   { path: 'CreateUser', component: CreateUserComponent },
-  { path: 'UserTable', component: UsersTableComponent }
+  { path: 'UserTable', component: UsersTableComponent },
+  { path: 'DeleteUser/:id', component: UsersTableComponent },
+  { path: 'UpdateUser/:id', component: CreateUserComponent },
 ];
+
 
 const appRoutes: Routes = [
   { path: 'MainAdmin', component: MainAdminComponent },

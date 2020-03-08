@@ -4,14 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\Admin",
-    "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Admin\\Main\\Users",
-    "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\Enter",
-    "\\src\\app\\Models"
+    "\\src\\app\\Admin\\Main"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\Admin\\Main\\CreateUser",
   "PreviewInSolutionExplorer": false
 }
