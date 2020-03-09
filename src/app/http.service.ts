@@ -15,13 +15,16 @@ export class HttpService {
 
   CreateUser(user: User) {
     const body = { name: user.name, surname: user.surname, password: user.password, email: user.email, role: user.role };
-    return this.http.post('https://localhost:44327/api/users/CreateUser', body);
+    return this.http.post('https://localhost:44327/api/users', body);
   }
 
   UpdateUser(user: User) {
     const body = { id: user.id, name: user.name, surname: user.surname, password: user.password, email: user.email, role: user.role };
-    console.log(body);
-    return this.http.put('https://localhost:44327/api/users/UpdateUser', body);
+    return this.http.put('https://localhost:44327/api/users', body);
+  }
+
+  DeleteUser(id: string) {
+    return this.http.delete('https://localhost:44327/api/users/' + id);
   }
 
   getUsers() {       
