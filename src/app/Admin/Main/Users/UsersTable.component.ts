@@ -23,7 +23,6 @@ export class UsersTableComponent implements OnInit
   }  
   ngOnInit() {
     if (this.id != undefined) {
-      this.ngOnDestroy();
       this.httpService.DeleteUser(this.id).subscribe(() => { this.id = undefined; this.ngOnInit() }, error => console.log(error));
     }
     this.httpService.getUsers().subscribe(data => { this.users = data["obj"]; console.log(this.users); }, error => console.log(error));
