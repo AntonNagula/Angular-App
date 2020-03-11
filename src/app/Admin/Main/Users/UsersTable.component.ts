@@ -19,7 +19,7 @@ export class UsersTableComponent implements OnInit
 
   constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
   {    
-    this.routeSubscription = route.params.subscribe(params => this.id = params['id']);    
+    this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }  
   ngOnInit() {
     if (this.id != undefined) {
@@ -27,10 +27,7 @@ export class UsersTableComponent implements OnInit
     }
     this.httpService.getUsers().subscribe(data => { this.users = data["obj"]; console.log(this.users); }, error => console.log(error));
   }
-  ngOnDestroy() {
-    
-  }
-
+  
   goToItem() {
 
     this.router.navigate(

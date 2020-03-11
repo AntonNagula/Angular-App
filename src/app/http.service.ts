@@ -14,7 +14,8 @@ export class HttpService {
   }
 
   CreateUser(user: User) {
-    const body = { name: user.name, surname: user.surname, password: user.password, email: user.email, role: user.role };
+    const body = { name: user.name, surname: user.surname, password: user.password, email: user.email, roleId: user.roleId };
+    console.log(body);
     return this.http.post('https://localhost:44327/api/users', body);
   }
 
@@ -29,5 +30,9 @@ export class HttpService {
 
   getUsers() {       
     return this.http.get('https://localhost:44327/api/users');
+  }
+
+  getRoles() {
+    return this.http.get('https://localhost:44327/api/roles');
   }
 }

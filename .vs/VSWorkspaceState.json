@@ -5,7 +5,7 @@
     "\\src\\app",
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\Admin\\Main\\CreateUser",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
     "\\src\\app\\Enter",
