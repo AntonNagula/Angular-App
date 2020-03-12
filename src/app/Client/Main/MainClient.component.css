@@ -106,14 +106,6 @@ button:hover {
   left: 448px;
   width: 106px;
 }
-
-  #nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: #8dc445 url(images/menu_bg.gif) repeat-y;
-  }
-
   #nav li {
     list-style: none;
     margin: 0;
@@ -240,17 +232,6 @@ button:hover {
     margin-left: 0px;
   }
 
-  #packages .golden {
-    color: #ba9f35;
-    background: url(images/gold.gif) no-repeat;
-    padding: 5px 0 3px 30px;
-  }
-
-  #packages .silveren {
-    color: #b4b4b4;
-    background: url(images/silver.gif) no-repeat;
-    padding: 5px 0 3px 30px;
-  }
 
 #special {
   border-top: 1px solid #ccc;
