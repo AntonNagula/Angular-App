@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpService } from '../../../HttpServices/http.service';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Country } from '../../../Models/Country';
-import { HttpService } from '../../../HttpServices/http.service';
+import { Hotel } from '../../../Models/Hotel';
 
 @Component({
-  selector: 'CreateCountry-app',
-  templateUrl: './CreateCountry.component.html',
-  styleUrls: ['./CreateCountry.component.css'],
+  selector: 'CreateHotel-app',
+  templateUrl: './CreateHotel.component.html',
+  styleUrls: ['./CreateHotel.component.css'],
   providers: [HttpService]
 })
 export class CreateCountryComponent
 {  
-  newCounty: Country  = new Country();
+  hotel: Hotel  = new Hotel();
   id: string;
   isTrue: boolean;
   private routeSubscription: Subscription;
@@ -22,13 +23,8 @@ export class CreateCountryComponent
   {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
-  submit(newCounty: Country) {
-    this.httpService.CreateCountry(newCounty).subscribe(
+  submit(hotel: Hotel) {
+    this.httpService.CreateHotel(hotel).subscribe(
       () => { }, error => console.log(error));
-  }
-
-  onChange(isTrue: boolean) {
-    this.newCounty.hasSea = isTrue;
-    console.log(this.newCounty);
   }
 }

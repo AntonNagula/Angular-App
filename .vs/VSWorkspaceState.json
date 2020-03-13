@@ -5,12 +5,13 @@
     "\\src\\app",
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\Admin\\Main\\CreateUser",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Enter",
+    "\\src\\app\\Client\\Main\\CreateCountry",
+    "\\src\\app\\Client\\Main\\CreateHotel",
     "\\src\\app\\Models"
   ],
-  "SelectedNode": "\\src\\app\\http.service.ts",
+  "SelectedNode": "\\src\\app\\Client\\Main\\CreateHotel\\CreateHotel.component.ts",
   "PreviewInSolutionExplorer": false
 }

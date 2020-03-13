@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../../../http.service';
 import { User } from '../../../Models/User';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { HttpService } from '../../../HttpServices/http.service';
 
 @Component({
   selector: 'UserTable-app',

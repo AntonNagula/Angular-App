@@ -18,7 +18,8 @@ const itemRoutes: Routes = [
 ];
 
 const UserRoutes: Routes = [
-  { path: 'CreateCountry', component: CreateCountryComponent }
+  { path: 'CreateCountry', component: CreateCountryComponent },
+  { path: 'CreateCountry/:id', component: CreateCountryComponent }
 ];
 
 const appRoutes: Routes = [

@@ -1,9 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { HttpService } from '../../../http.service';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../../../Models/User';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Role } from '../../../Models/Role';
+import { HttpService } from '../../../HttpServices/http.service';
 
 @Component({
   selector: 'CreateUser-app',

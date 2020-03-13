@@ -4,6 +4,7 @@ import { EnterData } from './Models/EnterData';
 import { User } from './Models/User';
 import { Role } from './Models/Role';
 import { Country } from './Models/Country';
+import { Hotel } from './Models/Hotel';
 
 @Injectable()
 export class HttpService {
@@ -46,5 +47,14 @@ export class HttpService {
   CreateCountry(country: Country) {
     const body = { name: country.name, hasSea: country.hasSea, img: country.img };
     return this.http.post('https://localhost:44327/api/contries', body);
+  }
+
+  CreateHotel(hotel: Hotel) {
+    const body = {
+      country: hotel.country, countryId: hotel.countryId, facilities: hotel.facilities,
+      hasBeach: hotel.hasBeach, hotelId: hotel.hotelId, img: hotel.img,
+      name: hotel.name, pricePerDay: hotel.pricePerDay, stars: hotel.stars
+    };
+    return this.http.post('https://localhost:44327/api/hotels', body);
   }
 }

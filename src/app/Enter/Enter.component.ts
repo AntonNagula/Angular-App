@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { EnterData } from './../Models/EnterData';
-import { HttpService } from './../http.service';
 import { Router } from '@angular/router';
+import { HttpService } from '../HttpServices/http.service';
 
 @Component({
   selector: 'Enter-root',
