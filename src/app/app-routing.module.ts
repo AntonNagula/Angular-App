@@ -7,6 +7,8 @@ import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.componen
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
 import { CreateRoleComponent } from './Admin/Main/CreateRole/CreateRole.component';
 import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
+import { WeatherComponent } from './ForAllUsers/Weather/Weather.component';
+import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
 
 
 const itemRoutes: Routes = [
@@ -19,7 +21,9 @@ const itemRoutes: Routes = [
 
 const UserRoutes: Routes = [
   { path: 'CreateCountry', component: CreateCountryComponent },
-  { path: 'CreateCountry/:id', component: CreateCountryComponent }
+  { path: 'UpdateCountry/:id', component: CreateCountryComponent },
+  { path: 'CountriesTable', component: CountriesTableComponent },
+  { path: 'DeleteCountry/:id', component: CountriesTableComponent }
 ];
 
 const appRoutes: Routes = [
@@ -27,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
   { path: 'MainClient', component: MainClientComponent },
   { path: 'MainClient', component: MainClientComponent, children: UserRoutes },
+  { path: 'Weather', component: WeatherComponent },
   { path: '', component: EnterComponent }
 ];
 

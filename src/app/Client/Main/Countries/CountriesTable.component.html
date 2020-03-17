@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <tr *ngFor="let country of countries">
+      <td>{{country.countryId}}</td>
+      <td>{{country.hasSea}}</td>
+      <td>{{country.name}}</td>
+      <td>{{country.img}}</td>
+      <td><a routerLink="/MainClient/UpdateCountry/{{country.countryId}}">Редактировать</a></td>
+      <td><a routerLink="/MainClient/DeleteCountry/{{country.countryId}}">Удалить</a></td>
+    </tr>
+  </tbody>
+</table>

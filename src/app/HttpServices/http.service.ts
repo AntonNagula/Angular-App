@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { EnterData } from './Models/EnterData';
-import { User } from './Models/User';
-import { Role } from './Models/Role';
-import { Country } from './Models/Country';
-import { Hotel } from './Models/Hotel';
+import { EnterData } from '../Models/EnterData';
+import { User } from '../Models/User';
+import { Role } from '../Models/Role';
+import { Country } from '../Models/Country';
+import { Hotel } from '../Models/Hotel';
 
 @Injectable()
 export class HttpService {
@@ -44,9 +44,27 @@ export class HttpService {
     return this.http.post('https://localhost:44327/api/roles', body);
   }
 
+
+  getCountries() {
+    return this.http.get('https://localhost:44327/api/contries');
+  }
+
+  GetCountry(id: string){
+    return this.http.get('https://localhost:44327/api/contries/' + id);
+  }
+
   CreateCountry(country: Country) {
     const body = { name: country.name, hasSea: country.hasSea, img: country.img };
     return this.http.post('https://localhost:44327/api/contries', body);
+  }
+
+  UpdateCountry(country: Country) {
+    const body = { countryId: country.countryId, name: country.name, hasSea: country.hasSea, img: country.img };
+    return this.http.put('https://localhost:44327/api/contries', body);
+  }
+
+  DeleteCountry(id: string) {
+    return this.http.delete('https://localhost:44327/api/contries/' + id);
   }
 
   CreateHotel(hotel: Hotel) {

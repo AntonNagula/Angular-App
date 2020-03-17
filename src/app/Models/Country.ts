@@ -1,5 +1,5 @@
 export class Country {
-  countryId: number;
+  countryId: string;
   name: string;
   hasSea: boolean;
   img: string;

@@ -5,13 +5,13 @@
     "\\src\\app",
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\CreateCountry",
-    "\\src\\app\\Client\\Main\\CreateHotel",
-    "\\src\\app\\Models"
+    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\ForAllUsers",
+    "\\src\\app\\ForAllUsers\\Weather",
+    "\\src\\app\\HttpServices",
+    "\\src\\app\\Models",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\Client\\Main\\CreateHotel\\CreateHotel.component.ts",
+  "SelectedNode": "\\src\\app\\HttpServices\\Weather.Service.ts",
   "PreviewInSolutionExplorer": false
 }

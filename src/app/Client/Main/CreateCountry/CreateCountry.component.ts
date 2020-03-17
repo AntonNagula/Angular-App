@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Country } from '../../../Models/Country';
@@ -10,9 +10,10 @@ import { HttpService } from '../../../HttpServices/http.service';
   styleUrls: ['./CreateCountry.component.css'],
   providers: [HttpService]
 })
-export class CreateCountryComponent
+export class CreateCountryComponent implements OnInit
 {  
-  newCounty: Country  = new Country();
+  newCounty: Country = new Country();
+  country: Country = new Country();
   id: string;
   isTrue: boolean;
   private routeSubscription: Subscription;
@@ -23,8 +24,28 @@ export class CreateCountryComponent
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
   submit(newCounty: Country) {
-    this.httpService.CreateCountry(newCounty).subscribe(
-      () => { }, error => console.log(error));
+    if (this.id != undefined) {
+      newCounty.countryId = this.id;
+      console.log(newCounty);
+      this.httpService.UpdateCountry(newCounty).subscribe(
+        (data: string) => { console.log(data) }, error => console.log(error));
+    }
+    else {
+      this.httpService.CreateCountry(newCounty).subscribe(
+        () => { }, error => console.log(error));
+    }
+  }
+
+  ngOnInit() {
+    if (this.id != undefined) {
+      this.httpService.GetCountry(this.id.toString()).subscribe(data =>
+      {
+        this.newCounty.hasSea = data["hasSea"];
+        this.newCounty.img = data["img"];
+        this.newCounty.name = data["name"];
+        this.newCounty.countryId = this.id;
+      }, error => console.log(error));
+    }
   }
 
   onChange(isTrue: boolean) {
