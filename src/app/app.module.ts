@@ -13,6 +13,8 @@ import { CreateRoleComponent } from './Admin/Main/CreateRole/CreateRole.componen
 import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
 import { WeatherComponent } from './ForAllUsers/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
+import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
+import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.
     CreateRoleComponent,
     CreateCountryComponent,
     CountriesTableComponent,
+    CreateHotelComponent,
+    HotelsTableComponent,
     WeatherComponent
   ],
   imports: [

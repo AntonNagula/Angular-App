@@ -11,7 +11,7 @@ import { Hotel } from '../../../Models/Hotel';
   styleUrls: ['./CreateHotel.component.css'],
   providers: [HttpService]
 })
-export class CreateCountryComponent
+export class CreateHotelComponent
 {  
   hotel: Hotel  = new Hotel();
   id: string;

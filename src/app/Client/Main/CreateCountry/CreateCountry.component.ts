@@ -13,7 +13,6 @@ import { HttpService } from '../../../HttpServices/http.service';
 export class CreateCountryComponent implements OnInit
 {  
   newCounty: Country = new Country();
-  country: Country = new Country();
   id: string;
   isTrue: boolean;
   private routeSubscription: Subscription;

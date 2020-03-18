@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <tr *ngFor="let hotel of hotels">
+      <td>{{hotel.hotelId}}</td>
+      <td>{{hotel.hasSea}}</td>
+      <td>{{hotel.stars}}</td>
+      <td>{{hotel.pricePerDay}}</td>
+      <td><a routerLink="/MainClient/UpdateHotels/{{hotel.hotelId}}">Редактировать</a></td>
+      <td><a routerLink="/MainClient/DeleteHotel/{{hotel.hotelId}}">Удалить</a></td>
+    </tr>
+  </tbody>
+</table>

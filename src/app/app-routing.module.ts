@@ -9,6 +9,8 @@ import { CreateRoleComponent } from './Admin/Main/CreateRole/CreateRole.componen
 import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
 import { WeatherComponent } from './ForAllUsers/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
+import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
+import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
 
 
 const itemRoutes: Routes = [
@@ -23,7 +25,11 @@ const UserRoutes: Routes = [
   { path: 'CreateCountry', component: CreateCountryComponent },
   { path: 'UpdateCountry/:id', component: CreateCountryComponent },
   { path: 'CountriesTable', component: CountriesTableComponent },
-  { path: 'DeleteCountry/:id', component: CountriesTableComponent }
+  { path: 'DeleteCountry/:id', component: CountriesTableComponent },
+  { path: 'CreateHotel', component: CreateHotelComponent },
+  { path: 'UpdateHotels/:id', component: CreateHotelComponent },
+  { path: 'Hotels', component: HotelsTableComponent },
+  { path: 'DeleteHotel/:id', component: HotelsTableComponent }
 ];
 
 const appRoutes: Routes = [
