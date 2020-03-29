@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Admin",
-    "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\Countries",
-    "\\src\\app\\Client\\Main\\CreateCountry"
+    "\\src\\app\\Client\\Main\\CreateCountry",
+    "\\src\\app\\Client\\Main\\Hotels",
+    "\\src\\app\\ForAllUsers",
+    "\\src\\app\\ForAllUsers\\Translate",
+    "\\src\\app\\ForAllUsers\\Weather",
+    "\\src\\app\\HttpServices",
+    "\\src\\app\\Models"
   ],
-  "SelectedNode": "\\src\\app\\Client\\Main\\CreateCountry\\CreateCountry.component.ts",
+  "SelectedNode": "\\src\\app\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }

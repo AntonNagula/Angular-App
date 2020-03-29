@@ -15,6 +15,7 @@ import { WeatherComponent } from './ForAllUsers/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
 import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
 import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
+import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.comp
     CountriesTableComponent,
     CreateHotelComponent,
     HotelsTableComponent,
+    ToursTableComponent,
     WeatherComponent
   ],
   imports: [

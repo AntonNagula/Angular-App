@@ -11,6 +11,7 @@ import { WeatherComponent } from './ForAllUsers/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
 import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
 import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
+import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
 
 
 const itemRoutes: Routes = [
@@ -29,7 +30,11 @@ const UserRoutes: Routes = [
   { path: 'CreateHotel', component: CreateHotelComponent },
   { path: 'UpdateHotels/:id', component: CreateHotelComponent },
   { path: 'Hotels', component: HotelsTableComponent },
-  { path: 'DeleteHotel/:id', component: HotelsTableComponent }
+  { path: 'DeleteHotel/:id', component: HotelsTableComponent },
+  { path: 'CreateTour', component: CreateHotelComponent },
+  { path: 'UpdateTours/:id', component: CreateHotelComponent },
+  { path: 'Tours', component: ToursTableComponent },
+  { path: 'DeleteTour/:id', component: ToursTableComponent },
 ];
 
 const appRoutes: Routes = [

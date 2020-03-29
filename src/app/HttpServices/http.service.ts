@@ -97,4 +97,33 @@ export class HttpService {
     };
     return this.http.post('https://localhost:44327/api/hotels', body);
   }
+
+  getTours() {
+    return this.http.get('https://localhost:44327/api/tours');
+  }
+
+  //GetHotel(id: string) {
+  //  return this.http.get('https://localhost:44327/api/hotels/' + id);
+  //}
+
+  //UpdateHotel(hotel: Hotel) {
+  //  const body = {
+  //    country: hotel.country, countryId: hotel.countryId, facilities: hotel.facilities,
+  //    hasBeach: hotel.hasBeach, hotelId: hotel.hotelId, img: hotel.img,
+  //    name: hotel.name, pricePerDay: hotel.pricePerDay, stars: hotel.stars
+  //  };
+  //  return this.http.put('https://localhost:44327/api/hotels', body);
+  //}
+
+  //DeleteHotel(id: string) {
+  //  return this.http.delete('https://localhost:44327/api/hotels/' + id);
+  //}
+  //CreateHotel(hotel: Hotel) {
+  //  const body = {
+  //    country: hotel.country, countryId: hotel.countryId, facilities: hotel.facilities,
+  //    hasBeach: hotel.hasBeach, img: hotel.img,
+  //    name: hotel.name, pricePerDay: hotel.pricePerDay, stars: hotel.stars
+  //  };
+  //  return this.http.post('https://localhost:44327/api/hotels', body);
+  //}
 }

@@ -1,0 +1,14 @@
+<table>
+  <tbody>
+    <tr *ngFor="let tour of tours">
+      <td>{{tour.tourId}}</td>
+      <td>{{tour.name}}</td>
+      <td>{{tour.quantity}}</td>
+      <td>{{tour.country}}</td>
+      <td>{{tour.city}}</td>
+      <td>{{tour.hotel}}</td>
+      <td><a routerLink="/MainClient/UpdateTour/{{tour.tourId}}">Редактировать</a></td>
+      <td><a routerLink="/MainClient/DeleteTour/{{tour.tourId}}">Удалить</a></td>
+    </tr>
+  </tbody>
+</table>
