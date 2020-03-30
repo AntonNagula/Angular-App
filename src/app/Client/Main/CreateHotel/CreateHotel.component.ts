@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Country } from '../../../Models/Country';
 import { Hotel } from '../../../Models/Hotel';
+import { City } from '../../../Models/City';
 
 @Component({
   selector: 'CreateHotel-app',
@@ -11,8 +12,10 @@ import { Hotel } from '../../../Models/Hotel';
   styleUrls: ['./CreateHotel.component.css'],
   providers: [HttpService]
 })
-export class CreateHotelComponent
-{  
+export class CreateHotelComponent implements OnInit
+{
+  countries: Country[] = [];
+  cities: City[] = [];
   hotel: Hotel  = new Hotel();
   id: string;
   isTrue: boolean;
@@ -26,5 +29,10 @@ export class CreateHotelComponent
   submit(hotel: Hotel) {
     this.httpService.CreateHotel(hotel).subscribe(
       () => { }, error => console.log(error));
+  }
+  ngOnInit() {
+
+    this.httpService.getCities().subscribe(data => { this.cities = data["obj"]; console.log(this.cities); }, error => console.log(error));
+    this.httpService.getCountries().subscribe(data => { this.countries = data["obj"]; console.log(this.countries); }, error => console.log(error));
   }
 }

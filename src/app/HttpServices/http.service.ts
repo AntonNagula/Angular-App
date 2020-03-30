@@ -68,6 +68,29 @@ export class HttpService {
   }
 
 
+  getCities() {
+    return this.http.get('https://localhost:44327/api/cities');
+  }
+
+  //GetCountry(id: string) {
+  //  return this.http.get('https://localhost:44327/api/contries/' + id);
+  //}
+
+  //CreateCountry(country: Country) {
+  //  const body = { name: country.name, hasSea: country.hasSea, img: country.img };
+  //  return this.http.post('https://localhost:44327/api/contries', body);
+  //}
+
+  //UpdateCountry(country: Country) {
+  //  const body = { countryId: country.countryId, name: country.name, hasSea: country.hasSea, img: country.img };
+  //  return this.http.put('https://localhost:44327/api/contries', body);
+  //}
+
+  //DeleteCountry(id: string) {
+  //  return this.http.delete('https://localhost:44327/api/contries/' + id);
+  //}
+
+
 
   getHotels() {
     return this.http.get('https://localhost:44327/api/hotels');
@@ -91,7 +114,7 @@ export class HttpService {
   }
   CreateHotel(hotel: Hotel) {
     const body = {
-      country: hotel.country, countryId: hotel.countryId, facilities: hotel.facilities,
+      country: hotel.country, city: hotel.city,countryId: hotel.countryId, cityId: hotel.cityId, facilities: hotel.facilities,
       hasBeach: hotel.hasBeach, img: hotel.img,
       name: hotel.name, pricePerDay: hotel.pricePerDay, stars: hotel.stars
     };
