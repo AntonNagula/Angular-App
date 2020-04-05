@@ -22,6 +22,8 @@ export class EnterComponent {
         error => console.log(error)
     );
     console.log(this.receivedUser);
+    localStorage.setItem('UserId', this.receivedUser["userId"]);
+    console.log(localStorage.getItem('UserId'));
     if (this.receivedUser.role == "админ") {
       this.router.navigate(['/MainAdmin']);
     }

@@ -14,7 +14,7 @@ export class HttpService {
 
   postData(user: EnterData) {
     const body = { login: user.login, password: user.password, role: user.role };
-    return this.http.post('https://localhost:44327/api/users', body);
+    return this.http.post('https://localhost:44327/api/users/auth', body);
   }
 
   CreateUser(user: User) {
@@ -124,6 +124,9 @@ export class HttpService {
 
   getTours() {
     return this.http.get('https://localhost:44327/api/tours');
+  }
+  getTour(id: string) {
+    return this.http.get('https://localhost:44327/api/tours/' + id);
   }
 
   //GetHotel(id: string) {

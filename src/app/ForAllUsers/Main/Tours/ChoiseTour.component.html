@@ -3,11 +3,10 @@
     <tr *ngFor="let tour of tours">
       <td>{{tour.tourId}}</td>
       <td>{{tour.name}}</td>
-      <td>{{tour.quantity}}</td>
       <td>{{tour.country}}</td>
       <td>{{tour.city}}</td>
       <td>{{tour.hotel}}</td>
-      <td><a routerLink="/ForAllUsers/CreateVoucher/{{tour.tourId}}">Редактировать</a></td>
+      <td><a routerLink="/MainForAllUsers/ThisTour/{{tour.tourId}}">Подробнее</a></td>
       <td><a routerLink="/MainClient/DeleteTour/{{tour.tourId}}">Удалить</a></td>
     </tr>
   </tbody>

@@ -21,16 +21,6 @@ export class ChoiseTourComponent implements OnInit
     //this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }  
   ngOnInit() {
-    //if (this.id != undefined) {
-    //  this.httpService.DeleteCountry(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
-    //}
     this.httpService.getTours().subscribe(data => { this.tours = data["obj"]; console.log(this.tours); }, error => console.log(error));
-  }
-  
-  goToItem() {
-
-    this.router.navigate(
-      ['/MainClient/Tours']
-    );
   }
 }

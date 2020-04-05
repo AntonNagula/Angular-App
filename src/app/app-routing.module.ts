@@ -15,13 +15,16 @@ import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
 import { WeatherCityComponent } from './ForAllUsers/Main/WeatherCity/WeatherCity.component';
 import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
 import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
+import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.component';
+import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateVoucher.component';
 
 
 const otherRoutes: Routes = [
   { path: 'CityForWeather', component: WeatherCityComponent },
   { path: 'Weather/:City', component: WeatherComponent },
   { path: 'Tours', component: ChoiseTourComponent },
-  { path: 'CreateVoucher', component: CreateVoucherComponent }
+  { path: 'ThisTour/:id', component: ThisTourComponent },
+  { path: 'CreateVoucher/:id', component: CreateVoucherComponent }
 ];
 
 const itemRoutes: Routes = [
