@@ -5,6 +5,7 @@ import { User } from '../Models/User';
 import { Role } from '../Models/Role';
 import { Country } from '../Models/Country';
 import { Hotel } from '../Models/Hotel';
+import { Voucher } from '../Models/Voucher';
 
 @Injectable()
 export class HttpService {
@@ -12,7 +13,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   postData(user: EnterData) {
-    const body = { name: user.name, age: user.age };
+    const body = { login: user.login, password: user.password, role: user.role };
     return this.http.post('https://localhost:44327/api/users', body);
   }
 
@@ -141,12 +142,9 @@ export class HttpService {
   //DeleteHotel(id: string) {
   //  return this.http.delete('https://localhost:44327/api/hotels/' + id);
   //}
-  //CreateHotel(hotel: Hotel) {
-  //  const body = {
-  //    country: hotel.country, countryId: hotel.countryId, facilities: hotel.facilities,
-  //    hasBeach: hotel.hasBeach, img: hotel.img,
-  //    name: hotel.name, pricePerDay: hotel.pricePerDay, stars: hotel.stars
-  //  };
-  //  return this.http.post('https://localhost:44327/api/hotels', body);
-  //}
+  CreateVoucher(voucher: Voucher) {
+    const body = {
+      userName: voucher.userName, userSurname: voucher.userSurname, tourId: voucher.tourId};
+    return this.http.post('https://localhost:44327/api/vouchers', body);
+  }
 }

@@ -22,11 +22,14 @@ export class EnterComponent {
         error => console.log(error)
     );
     console.log(this.receivedUser);
-    if (this.receivedUser.name == "Антон") {
+    if (this.receivedUser.role == "админ") {
       this.router.navigate(['/MainAdmin']);
     }
-    else {
+    else if (this.receivedUser.role == "работник") {
       this.router.navigate(['/MainClient']);
+    }
+    else {
+      this.router.navigate(['/MainForAllUsers']);
     }
   }
 }

@@ -1,4 +1,5 @@
 export class EnterData {
-  name: string;
-  age: number;
+  role: string;
+  login: string;
+  password: string;
 }

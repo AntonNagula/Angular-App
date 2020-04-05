@@ -11,11 +11,14 @@ import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
 import { CreateRoleComponent } from './Admin/Main/CreateRole/CreateRole.component';
 import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
-import { WeatherComponent } from './ForAllUsers/Weather/Weather.component';
+import { WeatherComponent } from './ForAllUsers/Main/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
 import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
 import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
 import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
+import { WeatherCityComponent } from './ForAllUsers/Main/WeatherCity/WeatherCity.component';
+import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
+import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
     CreateHotelComponent,
     HotelsTableComponent,
     ToursTableComponent,
-    WeatherComponent
+    WeatherComponent,
+    MainForAllUsersComponent,
+    ChoiseTourComponent,
+    WeatherCityComponent
   ],
   imports: [
     BrowserModule,

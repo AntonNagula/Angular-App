@@ -14,7 +14,7 @@ export class WeatherService {
     return this.http.get('http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=e4a5f2affda9436803a696f4c837200c');
   }
 
-  getWeather5_8() {
-    return this.http.get('http://api.openweathermap.org/data/2.5/forecast?q=london&appid=e4a5f2affda9436803a696f4c837200c');
+  getWeather5_8(city:string) {
+    return this.http.get('http://api.openweathermap.org/data/2.5/forecast?q='+city+'&appid=e4a5f2affda9436803a696f4c837200c');
   }
 }

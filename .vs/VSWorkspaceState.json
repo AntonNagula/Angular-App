@@ -4,14 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\Admin",
-    "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\CreateUser",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\Tours",
-    "\\src\\app\\HttpServices",
-    "\\src\\app\\Models"
+    "\\src\\app\\ForAllUsers",
+    "\\src\\app\\ForAllUsers\\Main",
+    "\\src\\app\\ForAllUsers\\Main\\Weather",
+    "\\src\\app\\ForAllUsers\\Main\\WeatherCity"
   ],
-  "SelectedNode": "\\src\\app\\HttpServices\\http.service.ts",
+  "SelectedNode": "\\src\\app\\app-routing.module.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -1,11 +1,11 @@
 <div class="center">
   <div class="form-group">
     <p><label>Email</label></p>
-    <input class="form-control auth" name="username" [(ngModel)]="user.name" />
+    <input class="form-control auth" name="username" [(ngModel)]="user.login" />
   </div>
   <div class="form-group">
     <p><label>Password</label></p>
-    <input class="form-control auth" name="age" [(ngModel)]="user.age" />
+    <input class="form-control auth" name="age" [(ngModel)]="user.password" />
   </div>
   <div class="form-group">
     <button type="button" class="btn btn-primary" (click)="submit(user)">Отправить</button>
