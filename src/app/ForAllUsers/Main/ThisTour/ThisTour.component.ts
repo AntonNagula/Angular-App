@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { Role } from '../../../Models/Role';
 import { HttpService } from '../../../HttpServices/http.service';
 import { Tour } from '../../../Models/Tour';
+import { Voucher } from '../../../Models/Voucher';
 
 @Component({
   selector: 'ThisTour-app',
@@ -14,7 +15,9 @@ import { Tour } from '../../../Models/Tour';
 })
 export class ThisTourComponent implements OnInit
 {
+  _voucher: Voucher = new Voucher();
   _tour: Tour = new Tour();
+  _status: string;
   id: string;    
   private routeSubscription: Subscription;
   constructor(private httpService: HttpService, private route: ActivatedRoute, private Router: Router)
@@ -23,7 +26,11 @@ export class ThisTourComponent implements OnInit
   }
 
   Voucher() {
-    this.goToRegistryVoucher(this._tour.tourId);
+    this._voucher["userId"] = localStorage.getItem('UserId');
+    this._voucher["tourId"] = this.id;
+    this.httpService.CreateVoucher(this._voucher).subscribe(
+      (data) => { console.log(data) }, error => console.log(error));
+    //this.goToRegistryVoucher(this._tour.tourId);
   }
 
   Weather() {
@@ -38,8 +45,7 @@ export class ThisTourComponent implements OnInit
       this._tour["engNameOfCity"] = data["engNameOfCity"];
       this._tour["country"] = data["country"];
       this._tour["hotel"] = data["hotel"];
-      this._tour["tourId"] = data["tourId"];
-      console.log(data);
+      this._tour["tourId"] = data["tourId"];      
     }, error => console.log(error));
   }
   goToRegistryVoucher(id: string) {

@@ -147,7 +147,8 @@ export class HttpService {
   //}
   CreateVoucher(voucher: Voucher) {
     const body = {
-      userName: voucher.userName, userSurname: voucher.userSurname, tourId: voucher.tourId};
+      userId: voucher.userId, tourId: voucher.tourId, userName: voucher.userName, userSurname: voucher.userSurname, voucherId: voucher.voucherId
+    };
     return this.http.post('https://localhost:44327/api/vouchers', body);
   }
 }

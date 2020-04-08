@@ -12,7 +12,6 @@ import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.
 import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
 import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
 import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
-import { WeatherCityComponent } from './ForAllUsers/Main/WeatherCity/WeatherCity.component';
 import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
 import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.component';
@@ -20,7 +19,6 @@ import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateV
 
 
 const otherRoutes: Routes = [
-  { path: 'CityForWeather', component: WeatherCityComponent },
   { path: 'Weather/:City', component: WeatherComponent },
   { path: 'Tours', component: ChoiseTourComponent },
   { path: 'ThisTour/:id', component: ThisTourComponent },

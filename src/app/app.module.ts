@@ -16,7 +16,6 @@ import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.
 import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
 import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
 import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
-import { WeatherCityComponent } from './ForAllUsers/Main/WeatherCity/WeatherCity.component';
 import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
 import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 
@@ -36,8 +35,7 @@ import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.compone
     ToursTableComponent,
     WeatherComponent,
     MainForAllUsersComponent,
-    ChoiseTourComponent,
-    WeatherCityComponent
+    ChoiseTourComponent
   ],
   imports: [
     BrowserModule,

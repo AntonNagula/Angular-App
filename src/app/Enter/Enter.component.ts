@@ -25,13 +25,13 @@ export class EnterComponent {
     localStorage.setItem('UserId', this.receivedUser["userId"]);
     console.log(localStorage.getItem('UserId'));
     if (this.receivedUser.role == "админ") {
-      this.router.navigate(['/MainAdmin']);
+      this.router.navigate(['/MainAdmin/UserTable']);
     }
     else if (this.receivedUser.role == "работник") {
-      this.router.navigate(['/MainClient']);
+      this.router.navigate(['/MainClient/Tours']);
     }
     else {
-      this.router.navigate(['/MainForAllUsers']);
+      this.router.navigate(['/MainForAllUsers/Tours']);
     }
   }
 }
