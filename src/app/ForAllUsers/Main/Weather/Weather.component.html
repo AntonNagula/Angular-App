@@ -1,20 +1,31 @@
 <div class="form-group">
   <p><label>Город {{_city}}</label></p>
-  <!--<select [(ngModel)]="City">
-    <option *ngFor="let city of cities" [value]="city.engName">{{city.rusName}}</option>
-  </select>-->
 </div>
-<table>
+<table class="table_blur">
+  <thead>
+    <tr>
+      <th>Дата и время</th>
+      <th>температура, F</th>
+      <th>температура(как чувствуется) F</th>
+      <th>температура(минимум), F</th>
+      <th>температура(максимум), F</th>
+      <th>Давление</th>
+      <th>Влажность, %</th>
+      <th>Погода</th>
+      <th>Скорость ветра</th>
+    </tr>
+  </thead>
   <tbody>
     <tr *ngFor="let index of mas">
-      <td>{{weather.list[index]["main"]["temp"]}}</td>
-      <td>{{weather.list[index]["main"]["feels_like"]}}</td>
-      <td>{{weather.list[index]["main"]["temp_min"]}}</td>
-      <td>{{weather.list[index]["main"]["temp_max"]}}</td>
-      <td>{{weather.list[index]["main"]["pressure"]}}</td>
-      <td>{{weather.list[index]["main"]["humidity"]}}</td>
-      <td>{{weather.list[index]["weather"][0]["description"]}}</td>
-      <td>{{weather.list[index]["wind"]["speed"]}}</td>
+      <td>{{weather[index]["dt_txt"]}}</td>
+      <td>{{weather[index]["main"]["temp"]}}</td>
+      <td>{{weather[index]["main"]["feels_like"]}}</td>
+      <td>{{weather[index]["main"]["temp_min"]}}</td>
+      <td>{{weather[index]["main"]["temp_max"]}}</td>
+      <td>{{weather[index]["main"]["pressure"]}}</td>
+      <td>{{weather[index]["main"]["humidity"]}}</td>
+      <td>{{weather[index]["weather"][0]["description"]}}</td>
+      <td>{{weather[index]["wind"]["speed"]}}</td>
     </tr>
   </tbody>
 </table>

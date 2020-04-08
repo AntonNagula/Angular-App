@@ -4,6 +4,7 @@ export class Tour {
   quantity: string;
   country: string;
   city: string;
+  engNameOfCity: string;
   hotel: string;
   countryId: string;
   cityId: string;

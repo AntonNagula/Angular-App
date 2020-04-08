@@ -21,8 +21,13 @@ export class ThisTourComponent implements OnInit
   {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
-  submit() {
+
+  Voucher() {
     this.goToRegistryVoucher(this._tour.tourId);
+  }
+
+  Weather() {
+    this.goToWeatherOfThisCity(this._tour.engNameOfCity);
   }
   ngOnInit() {
 
@@ -30,6 +35,7 @@ export class ThisTourComponent implements OnInit
     {
       this._tour["name"] = data["name"];
       this._tour["city"] = data["city"];
+      this._tour["engNameOfCity"] = data["engNameOfCity"];
       this._tour["country"] = data["country"];
       this._tour["hotel"] = data["hotel"];
       this._tour["tourId"] = data["tourId"];
@@ -37,9 +43,13 @@ export class ThisTourComponent implements OnInit
     }, error => console.log(error));
   }
   goToRegistryVoucher(id: string) {
-
     this.Router.navigate(
       ['/MainForAllUsers/CreateVoucher/' + id]
+    );
+  }
+  goToWeatherOfThisCity(city: string) {
+    this.Router.navigate(
+      ['/MainForAllUsers/Weather/' + city]
     );
   }
 }
