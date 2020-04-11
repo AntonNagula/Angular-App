@@ -16,9 +16,7 @@ export class CreateUserComponent implements OnInit
   roles: Role[] = [];
   newUser: User = new User();
   id: string;    
-  private routeSubscription: Subscription;
-
- 
+  private routeSubscription: Subscription; 
   constructor(private httpService: HttpService, private route: ActivatedRoute)
   {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
@@ -38,7 +36,21 @@ export class CreateUserComponent implements OnInit
   }
 
   ngOnInit() {
-    
+    if (this.id != undefined)
+    {
+      this.httpService.getUser(this.id).subscribe(
+        data =>
+        {
+          this.newUser["name"] = data["name"];
+          this.newUser["surname"] = data["surname"];
+          this.newUser["email"] = data["email"];
+          this.newUser["roleId"] = data["roleId"];
+          this.newUser["role"] = data["role"];
+          this.newUser["password"] = data["password"];
+        },
+        error => console.log(error)
+      );
+    }
     this.httpService.getRoles().subscribe(data => { this.roles = data["obj"]; console.log(this.roles); }, error => console.log(error));
   }
 }
