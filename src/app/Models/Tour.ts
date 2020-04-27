@@ -12,4 +12,9 @@ export class Tour {
   hotelId: string;
   startDate: string;
   endDate: string;
+  img: string;
+  numberOfNights: string;
+  priceTransfer: string;
+  priceHotel: string;
+  hasTransfer: boolean;
 }

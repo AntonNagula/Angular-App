@@ -3,14 +3,15 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\Client\\Main",
+    "\\src\\app\\Client\\Main\\Hotels",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\CreateVoucher",
-    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
     "\\src\\app\\ForAllUsers\\Main\\Tours",
+    "\\src\\app\\ForAllUsers\\Main\\Tours\\images",
     "\\src\\app\\Models",
-    "\\src\\app\\Registration"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\Registration\\Registration.component.ts",
+  "SelectedNode": "\\src\\assets",
   "PreviewInSolutionExplorer": false
 }

@@ -21,7 +21,7 @@ import { CreateTourComponent } from './Client/Main/CreateTour/CreateTour.compone
 
 const UserRoutes: Routes = [
   { path: 'Weather/:City', component: WeatherComponent },
-  { path: 'Tours', component: ChoiseTourComponent },
+  { path: 'T', component: ChoiseTourComponent },
   { path: 'ThisTour/:id', component: ThisTourComponent },
   { path: 'CreateVoucher/:id', component: CreateVoucherComponent }
 ];
