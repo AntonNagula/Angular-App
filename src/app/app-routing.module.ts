@@ -17,11 +17,14 @@ import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.componen
 import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateVoucher.component';
 import { RegistrationComponent } from './Registration/Registration.component';
 import { CreateTourComponent } from './Client/Main/CreateTour/CreateTour.component';
+import { AllTourComponent } from './ForAllUsers/Main/AllTours/AllTour.component';
 
 
 const UserRoutes: Routes = [
   { path: 'Weather/:City', component: WeatherComponent },
-  { path: 'T', component: ChoiseTourComponent },
+  { path: 'Tours', component: ChoiseTourComponent },
+  { path: 'AllTours/:id', component: AllTourComponent },
+  { path: 'AllTours', component: AllTourComponent },
   { path: 'ThisTour/:id', component: ThisTourComponent },
   { path: 'CreateVoucher/:id', component: CreateVoucherComponent }
 ];

@@ -19,6 +19,8 @@ import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.com
 import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 import { RegistrationComponent } from './Registration/Registration.component';
 import { CreateTourComponent } from './Client/Main/CreateTour/CreateTour.component';
+import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/ChoiseCountry.component';
+import { AllTourComponent } from './ForAllUsers/Main/AllTours/AllTour.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { CreateTourComponent } from './Client/Main/CreateTour/CreateTour.compone
     WeatherComponent,
     MainForAllUsersComponent,
     ChoiseTourComponent,
+    ChoiseCountryComponent,
+    AllTourComponent,
     CreateTourComponent
   ],
   imports: [

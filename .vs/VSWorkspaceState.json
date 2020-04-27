@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\Hotels",
+    "\\src\\app\\Client\\Main\\CreateCountry",
+    "\\src\\app\\Client\\Main\\CreateTour",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\Tours",
-    "\\src\\app\\ForAllUsers\\Main\\Tours\\images",
-    "\\src\\app\\Models",
-    "\\src\\assets"
+    "\\src\\app\\ForAllUsers\\Main\\ThisTour"
   ],
-  "SelectedNode": "\\src\\assets",
+  "SelectedNode": "\\src\\app\\ForAllUsers\\Main\\AllTours\\AllTour.component.ts",
   "PreviewInSolutionExplorer": false
 }

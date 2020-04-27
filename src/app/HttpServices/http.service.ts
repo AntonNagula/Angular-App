@@ -116,8 +116,13 @@ export class HttpService {
     return this.http.post('https://localhost:44327/api/hotels', body);
   }
 
+
+
   getTours() {
     return this.http.get('https://localhost:44327/api/tours');
+  }
+  getTourByCountry(id: string) {
+    return this.http.get('https://localhost:44327/api/tours/country/' + id);
   }
   getTour(id: string) {
     return this.http.get('https://localhost:44327/api/tours/' + id);

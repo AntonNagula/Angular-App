@@ -29,7 +29,6 @@ export class CountriesTableComponent implements OnInit
   }
   
   goToItem() {
-
     this.router.navigate(
       ['/MainClient/CountriesTable']
     );

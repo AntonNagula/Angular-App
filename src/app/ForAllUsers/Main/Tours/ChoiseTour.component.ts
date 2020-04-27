@@ -15,7 +15,7 @@ export class ChoiseTourComponent implements OnInit
 {
   tours: Tour[] = [];
   contries: Country[] = [];
-  img: string;
+  Contry: string;
   id: string;
   private routeSubscription: Subscription;
 
@@ -27,7 +27,19 @@ export class ChoiseTourComponent implements OnInit
     this.httpService.getTours().subscribe(data => { this.tours = data["obj"]; console.log(this.tours); }, error => console.log(error));
     this.httpService.getCountries().subscribe(data => { this.contries = data["obj"]; console.log(this.contries); }, error => console.log(error));
   }
-  Img(id: number): string {
+  ContryName(id: number): string {
     return this.contries[id]["name"];
+  }
+  TourContryname(id: number): string {
+    return this.tours[id]["country"];
+  }
+  TourId(id: number): string {
+    return this.tours[id]["tourId"];
+  }
+  TourCityname(id: number): string {
+    return this.tours[id]["city"];
+  }
+  TourContryImgName(id: number): string {
+    return "assets/страны/" + this.tours[id]["country"] + ".jpg";
   }
 }
