@@ -59,6 +59,7 @@ const appRoutes: Routes = [
   { path: 'MainClient', component: MainClientComponent },
   { path: 'MainClient', component: MainClientComponent, children: ClientRoutes },
   { path: 'Registration', component: RegistrationComponent },
+  { path: 'Enter', component: EnterComponent },
   { path: '', component: EnterComponent }
 ];
 

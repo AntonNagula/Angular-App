@@ -16,5 +16,6 @@ export class Tour {
   numberOfNights: string;
   priceTransfer: string;
   priceHotel: string;
+  markup: string;
   hasTransfer: boolean;
 }

@@ -15,6 +15,7 @@ export class HttpService {
 
   postData(user: EnterData) {
     const body = { login: user.login, password: user.password, role: user.role };
+    console.log(body);
     return this.http.post('https://localhost:44327/api/users/auth', body);
   }
   CreateUser(user: User) {
@@ -69,6 +70,10 @@ export class HttpService {
   getCities() {
     return this.http.get('https://localhost:44327/api/cities');
   }
+  getCitiesByCountry(id: string)
+  {
+    return this.http.get('https://localhost:44327/api/cities/country/' + id);
+  }
 
   //GetCountry(id: string) {
   //  return this.http.get('https://localhost:44327/api/contries/' + id);
@@ -92,6 +97,12 @@ export class HttpService {
 
   getHotels() {
     return this.http.get('https://localhost:44327/api/hotels');
+  }
+  getHotelsByCountry(id: string) {
+    return this.http.get('https://localhost:44327/api/hotels/country/' + id);
+  }
+  getHotelsByCity(id: string) {
+    return this.http.get('https://localhost:44327/api/hotels/city/' + id);
   }
   GetHotel(id: string) {
     return this.http.get('https://localhost:44327/api/hotels/' + id);
@@ -128,10 +139,13 @@ export class HttpService {
     return this.http.get('https://localhost:44327/api/tours/' + id);
   }
   CreateTour(tour: Tour) {
+    console.log(tour);
     const body = {
+      numberOfNights: tour.numberOfNights, priceTransfer: tour.priceTransfer, markup: tour.markup,
       cityId: tour.cityId, countryId: tour.countryId, hotelId: tour.hotelId, price: tour.price,
       endDate: tour.endDate, startDate: tour.startDate, name: tour.name, quantity: tour.quantity
     };
+    console.log(body);
     return this.http.post('https://localhost:44327/api/tours', body);
   }
   DeleteTour(id: string) {

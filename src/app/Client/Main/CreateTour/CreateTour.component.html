@@ -9,21 +9,33 @@
   </div>
   <div class="form-group">
     <p><label>Страна</label></p>
-    <select [(ngModel)]="tour.countryId">
+    <select [(ngModel)]="tour.countryId" (change)="onCountryChange()">
       <option *ngFor="let country of countries" [value]="country.countryId">{{country.name}}</option>
     </select>
   </div>
   <div class="form-group">
     <p><label>Город</label></p>
-    <select [(ngModel)]="tour.cityId">
+    <select [(ngModel)]="tour.cityId" (change)="onCityChange()">
       <option *ngFor="let city of cities" [value]="city.cityId">{{city.rusName}}</option>
     </select>
   </div>
   <div class="form-group">
     <p><label>Отель</label></p>
-    <select [(ngModel)]="tour.hotelId">
+    <select [(ngModel)]="tour.hotelId" (change)="onHotelChange()">
       <option *ngFor="let hotel of hotels" [value]="hotel.hotelId">{{hotel.name}}</option>
     </select>
+  </div>
+  <div class="form-group">
+    <p><label>Ночей</label></p>
+    <input class="form-control auth" name="numberOfNights" [(ngModel)]="tour.numberOfNights" (change)="onHotelChange()" />
+  </div>
+  <div class="form-group">
+    <p><label>Перелет</label></p>
+    <input class="form-control auth" name="priceTransfer" [(ngModel)]="tour.priceTransfer" (change)="onHotelChange()" />
+  </div>
+  <div class="form-group">
+    <p><label>Наценка</label></p>
+    <input class="form-control auth" name="Overprice" [(ngModel)]="tour.markup" (change)="onHotelChange()" />
   </div>
   <div class="form-group">
     <p><label>Цена</label></p>
