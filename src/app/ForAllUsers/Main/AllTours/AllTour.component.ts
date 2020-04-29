@@ -43,4 +43,12 @@ export class AllTourComponent implements OnInit
   TourId(id: number): string {
     return this.tours[id]["tourId"];
   }
+  TourNights(id: number): string {
+    console.log(this.tours[id]["numberOfNights"]);
+    return this.tours[id]["numberOfNights"];
+  }
+  TourPrice(id: number): string {
+    console.log(this.tours[id]["price"]);
+    return this.tours[id]["price"];
+  }
 }

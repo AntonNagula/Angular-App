@@ -1,57 +1,101 @@
-<div class="center">
-  <div class="form-group">
-    <p><label>Название</label></p>
-    <input class="form-control auth" name="Name" [(ngModel)]="tour.name" />
-  </div>
-  <div class="form-group">
-    <p><label>Мест</label></p>
-    <input class="form-control auth" name="Quantity" [(ngModel)]="tour.quantity" />
-  </div>
-  <div class="form-group">
-    <p><label>Страна</label></p>
-    <select [(ngModel)]="tour.countryId" (change)="onCountryChange()">
-      <option *ngFor="let country of countries" [value]="country.countryId">{{country.name}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <p><label>Город</label></p>
-    <select [(ngModel)]="tour.cityId" (change)="onCityChange()">
-      <option *ngFor="let city of cities" [value]="city.cityId">{{city.rusName}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <p><label>Отель</label></p>
-    <select [(ngModel)]="tour.hotelId" (change)="onHotelChange()">
-      <option *ngFor="let hotel of hotels" [value]="hotel.hotelId">{{hotel.name}}</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <p><label>Ночей</label></p>
-    <input class="form-control auth" name="numberOfNights" [(ngModel)]="tour.numberOfNights" (change)="onHotelChange()" />
-  </div>
-  <div class="form-group">
-    <p><label>Перелет</label></p>
-    <input class="form-control auth" name="priceTransfer" [(ngModel)]="tour.priceTransfer" (change)="onHotelChange()" />
-  </div>
-  <div class="form-group">
-    <p><label>Наценка</label></p>
-    <input class="form-control auth" name="Overprice" [(ngModel)]="tour.markup" (change)="onHotelChange()" />
-  </div>
-  <div class="form-group">
-    <p><label>Цена</label></p>
-    <input class="form-control auth" name="Price" [(ngModel)]="tour.price" />
-  </div>
-  <div class="form-group">
-    <p><label>Начальная дата</label></p>
-    <p><label>Формат ввода(дд/мм/гггг)</label></p>
-    <input type="datetime" name="Start" [(ngModel)]="tour.startDate" />
-  </div>
-  <div class="form-group">
-    <p><label>Конечная дата</label></p>
-    <p><label>Формат ввода(дд/мм/гггг)</label></p>
-    <input type="datetime" name="End" [(ngModel)]="tour.endDate">
-  </div>
-  <div class="form-group">
-    <button type="button" class="btn btn-primary" (click)="submit(tour)">Создать</button>
+<div class="container">
+  <div class="row row-bottom-padded-md">
+    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+      <ul>
+        <li>
+          <div class="form-group">
+            <p><label>Название</label></p>
+            <input class="form-control auth" name="Name" [(ngModel)]="tour.name" />
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Мест</label></p>
+            <input class="form-control auth" name="Quantity" [(ngModel)]="tour.quantity" />
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Страна</label></p>
+            <select [(ngModel)]="tour.countryId" (change)="onCountryChange()">
+              <option *ngFor="let country of countries" [value]="country.countryId">{{country.name}}</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Город</label></p>
+            <select [(ngModel)]="tour.cityId" (change)="onCityChange()">
+              <option *ngFor="let city of cities" [value]="city.cityId">{{city.rusName}}</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link" style="margin-left:40px;">
+      <ul>
+        <li>
+          <div class="form-group">
+            <p><label>Начальная дата(Формат ввода(дд/мм/гггг))</label></p>
+            <input type="datetime" name="Start" [(ngModel)]="tour.startDate" />
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Конечная дата(Формат ввода(дд/мм/гггг))</label></p>
+            <input type="datetime" name="End" [(ngModel)]="tour.endDate">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link" style="margin-left:40px;">
+      <ul>
+        <li>
+          <div class="form-group">
+            <p><label>Отель</label></p>
+            <select [(ngModel)]="tour.hotelId" (change)="onHotelChange()">
+              <option *ngFor="let hotel of hotels" [value]="hotel.hotelId">{{hotel.name}}</option>
+            </select>
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Цена за ночь в отеле</label></p>
+            <input class="form-control auth" name="Overprice" [(ngModel)]="pricehotel" />
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Ночей</label></p>
+            <input class="form-control auth" name="numberOfNights" [(ngModel)]="tour.numberOfNights" (change)="onHotelChange()" />
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Перелет</label></p>
+            <input class="form-control auth" name="priceTransfer" [(ngModel)]="tour.priceTransfer" (change)="onHotelChange()" />
+          </div>
+        </li>
+        <li>
+          <div class="form-group">
+            <p><label>Наценка</label></p>
+            <input class="form-control auth" name="Overprice" [(ngModel)]="tour.markup" (change)="onHotelChange()" />
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link" style="margin-left:40px;">
+      <ul>
+        <li>
+          <div class="form-group">
+            <p><label>Цена</label></p>
+            <input class="form-control auth" name="Price" [(ngModel)]="tour.price" />
+          </div>
+        </li>
+      </ul>
+      <div class="form-group" style="margin-left:50px;">
+        <button type="button" class="btn btn-primary" (click)="submit(tour)">Создать</button>
+      </div>
+    </div>
   </div>
 </div>

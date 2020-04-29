@@ -26,7 +26,8 @@ const UserRoutes: Routes = [
   { path: 'AllTours/:id', component: AllTourComponent },
   { path: 'AllTours', component: AllTourComponent },
   { path: 'ThisTour/:id', component: ThisTourComponent },
-  { path: 'CreateVoucher/:id', component: CreateVoucherComponent }
+  { path: 'CreateVoucher/:id', component: CreateVoucherComponent },
+  { path: '', component: ChoiseTourComponent },
 ];
 
 const AdminRoutes: Routes = [
@@ -60,7 +61,7 @@ const appRoutes: Routes = [
   { path: 'MainClient', component: MainClientComponent, children: ClientRoutes },
   { path: 'Registration', component: RegistrationComponent },
   { path: 'Enter', component: EnterComponent },
-  { path: '', component: EnterComponent }
+  { path: '', component: MainForAllUsersComponent, children: UserRoutes }
 ];
 
 @NgModule({

@@ -23,6 +23,7 @@ export class CreateTourComponent implements OnInit
   numberofnight: number;
   priceTransfer: number;
   markup: number;
+  pricehotel: string="0";
   id: string;
   private routeSubscription: Subscription;
 
@@ -49,6 +50,7 @@ export class CreateTourComponent implements OnInit
   }
   onHotelChange() {
     this.price = +this.hotels.find(x => x["hotelId"] == this.tour["hotelId"])["pricePerDay"];
+    this.pricehotel = this.hotels.find(x => x["hotelId"] == this.tour["hotelId"])["pricePerDay"];
     if (this.tour["numberOfNights"] != undefined)
     {
       this.numberofnight = +this.tour["numberOfNights"];
