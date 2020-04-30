@@ -27,7 +27,18 @@ export class CountriesTableComponent implements OnInit
     }
     this.httpService.getCountries().subscribe(data => { this.countries = data["obj"]; console.log(this.countries); }, error => console.log(error));
   }
-  
+  HasSea(i: number): string {
+    if (this.countries[i]["hasSea"])
+      return "есть выход к морю";
+    else
+      return "нет выхода к морю";
+  }
+  Name(i: number): string {
+    return this.countries[i]["name"];
+  }
+  GetId(i: number): string {
+    return this.countries[i]["countryId"];
+  }
   goToItem() {
     this.router.navigate(
       ['/MainClient/CountriesTable']

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Country } from '../../../Models/Country';
 import { HttpService } from '../../../HttpServices/http.service';
@@ -18,7 +18,7 @@ export class CreateCountryComponent implements OnInit
   private routeSubscription: Subscription;
 
  
-  constructor(private httpService: HttpService, private route: ActivatedRoute)
+  constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
   {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
@@ -33,6 +33,10 @@ export class CreateCountryComponent implements OnInit
       this.httpService.CreateCountry(newCounty).subscribe(
         () => { }, error => console.log(error));
     }
+
+    this.router.navigate(
+      ['/MainClient/CountriesTable']
+    );
   }
 
   ngOnInit() {

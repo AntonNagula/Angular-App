@@ -151,7 +151,14 @@ export class HttpService {
   DeleteTour(id: string) {
     return this.http.delete('https://localhost:44327/api/tours/' + id);
   }
-
+  UpdateTour(tour: Tour) {
+    const body = {
+      numberOfNights: tour.numberOfNights, priceTransfer: tour.priceTransfer, markup: tour.markup,
+      cityId: tour.cityId, countryId: tour.countryId, hotelId: tour.hotelId, price: tour.price,
+      endDate: tour.endDate, startDate: tour.startDate, name: tour.name, quantity: tour.quantity, tourId: tour.tourId
+    };
+    return this.http.put('https://localhost:44327/api/tours/' + tour["tourId"], body);
+  }
   //GetHotel(id: string) {
   //  return this.http.get('https://localhost:44327/api/hotels/' + id);
   //}

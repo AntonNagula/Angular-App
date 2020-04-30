@@ -11,3 +11,8 @@
 input.auth{
     width:200px;
 }
+
+body {
+  background: -webkit-linear-gradient(left, rgba(200, 200, 0, 0.548) 0%, rgba(0, 200, 0, 0.589) 100%);
+  height: 1000px;
+}

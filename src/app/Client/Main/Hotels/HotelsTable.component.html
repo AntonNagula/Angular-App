@@ -1,17 +1,20 @@
 <table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Есть пляж</th>
+      <th>Название отеля</th>
+      <th>Звезд</th>
+      <th>Цена за ночь</th>
+    </tr>
+  </thead>
   <tbody>
-    <tr *ngFor="let hotel of hotels">
-      <td>{{hotel.hotelId}}</td>
-      <td>
-        <p *ngIf="!hotel.hasSea">
-          Возле набережной
-        </p>
-        <p *ngIf="hotel.hasSea">
-          Далеко от моря
-        </p>
-      </td>
-      <td>{{hotel.stars}}</td>
-      <td>{{hotel.pricePerDay}} $</td>
+    <tr *ngFor="let hotel of hotels; let i=index">
+      <td>{{GetId(i)}}</td>
+      <td>{{HasSea(i)}}</td>
+      <td>{{Name(i)}}</td>
+      <td>{{Stars(i)}}</td>
+      <td>{{PricePerDay(i)}} $</td>
       <td><a routerLink="/MainClient/UpdateHotels/{{hotel.hotelId}}">Редактировать</a></td>
       <td><a routerLink="/MainClient/DeleteHotel/{{hotel.hotelId}}">Удалить</a></td>
     </tr>

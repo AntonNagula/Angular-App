@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../../HttpServices/http.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Country } from '../../../Models/Country';
 import { Hotel } from '../../../Models/Hotel';
@@ -28,18 +28,48 @@ export class CreateTourComponent implements OnInit
   private routeSubscription: Subscription;
 
  
-  constructor(private httpService: HttpService, private route: ActivatedRoute)
+  constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
   {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
   submit(tour: Tour) {
-    this.httpService.CreateTour(tour).subscribe(
-      () => { }, error => console.log(error));
+    if (this.id != undefined) {
+      this.httpService.UpdateTour(tour).subscribe(
+        () => { }, error => console.log(error)
+      );      
+    }
+    else {
+      this.httpService.CreateTour(tour).subscribe(
+        () => { }, error => console.log(error));
+    }
+
+    this.router.navigate(
+      ['/MainClient/Tours']
+    );
   }
   ngOnInit() {
     this.httpService.getHotels().subscribe(data => { this.hotels = data["obj"]; console.log(this.hotels); }, error => console.log(error));
     this.httpService.getCities().subscribe(data => { this.cities = data["obj"]; console.log(this.cities); }, error => console.log(error));
     this.httpService.getCountries().subscribe(data => { this.countries = data["obj"]; console.log(this.countries); }, error => console.log(error));
+
+    if (this.id != undefined) {
+      this.httpService.getTour(this.id.toString()).subscribe(data => {
+        this.tour.cityId = data["cityId"];
+        this.tour.countryId = data["countryId"];
+        this.tour.hotelId = data["hotelId"];
+        this.tour.endDate = data["endDate"];
+        this.tour.markup = data["markup"];
+        this.tour.name = data["name"];
+        this.tour.numberOfNights = data["numberOfNights"];
+        this.tour.price = data["price"];
+        this.tour.priceHotel = data["priceHotel"];
+        this.tour.priceTransfer = data["priceTransfer"];
+        this.tour.quantity = data["quantity"];
+        this.tour.startDate = data["startDate"];
+        this.tour.tourId = this.id;
+        console.log(data);
+      }, error => console.log(error));
+    }
   }
   onCountryChange() {
     this.httpService.getHotelsByCountry(this.tour["countryId"]).subscribe(data => { this.hotels = data["obj"]; console.log(this.hotels); }, error => console.log(error));
