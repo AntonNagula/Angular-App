@@ -74,26 +74,7 @@ export class HttpService {
   {
     return this.http.get('https://localhost:44327/api/cities/country/' + id);
   }
-
-  //GetCountry(id: string) {
-  //  return this.http.get('https://localhost:44327/api/contries/' + id);
-  //}
-
-  //CreateCountry(country: Country) {
-  //  const body = { name: country.name, hasSea: country.hasSea, img: country.img };
-  //  return this.http.post('https://localhost:44327/api/contries', body);
-  //}
-
-  //UpdateCountry(country: Country) {
-  //  const body = { countryId: country.countryId, name: country.name, hasSea: country.hasSea, img: country.img };
-  //  return this.http.put('https://localhost:44327/api/contries', body);
-  //}
-
-  //DeleteCountry(id: string) {
-  //  return this.http.delete('https://localhost:44327/api/contries/' + id);
-  //}
-
-
+   
 
   getHotels() {
     return this.http.get('https://localhost:44327/api/hotels');
@@ -143,7 +124,7 @@ export class HttpService {
     const body = {
       numberOfNights: tour.numberOfNights, priceTransfer: tour.priceTransfer, markup: tour.markup,
       cityId: tour.cityId, countryId: tour.countryId, hotelId: tour.hotelId, price: tour.price,
-      endDate: tour.endDate, startDate: tour.startDate, name: tour.name, quantity: tour.quantity
+      endDate: tour.endDate, startDate: tour.startDate, name: tour.name, startQuantity: tour.startQuantity, endQuantity: tour.endQuantity,
     };
     console.log(body);
     return this.http.post('https://localhost:44327/api/tours', body);
@@ -155,7 +136,7 @@ export class HttpService {
     const body = {
       numberOfNights: tour.numberOfNights, priceTransfer: tour.priceTransfer, markup: tour.markup,
       cityId: tour.cityId, countryId: tour.countryId, hotelId: tour.hotelId, price: tour.price,
-      endDate: tour.endDate, startDate: tour.startDate, name: tour.name, quantity: tour.quantity, tourId: tour.tourId
+      endDate: tour.endDate, startDate: tour.startDate, name: tour.name, startQuantity: tour.startQuantity, endQuantity: tour.endQuantity, tourId: tour.tourId
     };
     return this.http.put('https://localhost:44327/api/tours/' + tour["tourId"], body);
   }
@@ -177,7 +158,8 @@ export class HttpService {
   //}
   CreateVoucher(voucher: Voucher) {
     const body = {
-      userId: voucher.userId, tourId: voucher.tourId, userName: voucher.userName, userSurname: voucher.userSurname, voucherId: voucher.voucherId
+      userId: voucher.userId, tourId: voucher.tourId, userName: voucher.userName, userSurname: voucher.userSurname, voucherId: voucher.voucherId,
+      passportSeries: voucher.passportSeries, passportNumber: voucher.passportNumber
     };
     return this.http.post('https://localhost:44327/api/vouchers', body);
   }

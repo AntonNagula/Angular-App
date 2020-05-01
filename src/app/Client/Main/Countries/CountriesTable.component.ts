@@ -25,7 +25,7 @@ export class CountriesTableComponent implements OnInit
     if (this.id != undefined) {
       this.httpService.DeleteCountry(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
     }
-    this.httpService.getCountries().subscribe(data => { this.countries = data["obj"]; console.log(this.countries); }, error => console.log(error));
+    this.httpService.getCountries().subscribe((data: Country[]) => { this.countries = data; console.log(data); }, error => console.log(error));
   }
   HasSea(i: number): string {
     if (this.countries[i]["hasSea"])

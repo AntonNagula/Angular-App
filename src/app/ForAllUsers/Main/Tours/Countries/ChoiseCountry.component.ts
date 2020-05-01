@@ -21,7 +21,7 @@ export class ChoiseCountryComponent implements OnInit
     
   }  
   ngOnInit() {
-    this.httpService.getCountries().subscribe(data => { this.contries = data["obj"]; console.log(this.contries); }, error => console.log(error));
+    this.httpService.getCountries().subscribe((data: Country[]) => { this.contries = data; console.log(this.contries); }, error => console.log(error));
   }
   ContryId(id: number): string {
     return this.contries[id]["countryId"];

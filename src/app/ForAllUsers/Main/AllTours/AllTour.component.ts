@@ -30,9 +30,9 @@ export class AllTourComponent implements OnInit
     }
     else
     {
-      this.httpService.getTours().subscribe(data => { this.tours = data["obj"]; console.log(this.tours); }, error => console.log(error));
+      this.httpService.getTours().subscribe((data : Tour[]) => { this.tours = data; console.log(this.tours); }, error => console.log(error));
     }
-    this.httpService.getCountries().subscribe(data => { this.contries = data["obj"]; console.log(this.tours); }, error => console.log(error));
+    this.httpService.getCountries().subscribe((data: Country[]) => { this.contries = data; console.log(this.tours); }, error => console.log(error));
   }
   TourContryname(id: number): string {
     return "assets/страны/"+this.tours[id]["country"]+".jpg";

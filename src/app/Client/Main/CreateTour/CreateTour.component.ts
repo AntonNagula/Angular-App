@@ -39,6 +39,7 @@ export class CreateTourComponent implements OnInit
       );      
     }
     else {
+      tour["endQuantity"] = tour["startQuantity"];
       this.httpService.CreateTour(tour).subscribe(
         () => { }, error => console.log(error));
     }
@@ -48,9 +49,9 @@ export class CreateTourComponent implements OnInit
     );
   }
   ngOnInit() {
-    this.httpService.getHotels().subscribe(data => { this.hotels = data["obj"]; console.log(this.hotels); }, error => console.log(error));
-    this.httpService.getCities().subscribe(data => { this.cities = data["obj"]; console.log(this.cities); }, error => console.log(error));
-    this.httpService.getCountries().subscribe(data => { this.countries = data["obj"]; console.log(this.countries); }, error => console.log(error));
+    this.httpService.getHotels().subscribe((data: Hotel[]) => { this.hotels = data; console.log(this.hotels); }, error => console.log(error));
+    this.httpService.getCities().subscribe((data: City[]) => { this.cities = data; console.log(this.cities); }, error => console.log(error));
+    this.httpService.getCountries().subscribe((data: Country[]) => { this.countries = data; console.log(this.countries); }, error => console.log(error));
 
     if (this.id != undefined) {
       this.httpService.getTour(this.id.toString()).subscribe(data => {
@@ -64,7 +65,8 @@ export class CreateTourComponent implements OnInit
         this.tour.price = data["price"];
         this.tour.priceHotel = data["priceHotel"];
         this.tour.priceTransfer = data["priceTransfer"];
-        this.tour.quantity = data["quantity"];
+        this.tour.startQuantity = data["startQuantity"];
+        this.tour.endQuantity = data["endQuantity"];
         this.tour.startDate = data["startDate"];
         this.tour.tourId = this.id;
         console.log(data);

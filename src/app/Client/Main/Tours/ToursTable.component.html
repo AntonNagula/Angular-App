@@ -4,6 +4,7 @@
       <tr>
         <th>Id</th>
         <th>Название Тура</th>
+        <th>Начальное колличество мест</th>
         <th>Оставшихся мест</th>
         <th>Страна</th>
         <th>Город</th>
@@ -16,7 +17,8 @@
       <tr *ngFor="let tour of tours">
         <td>{{tour.tourId}}</td>
         <td>{{tour.name}}</td>
-        <td>{{tour.quantity}}</td>
+        <td>{{tour.startQuantity}}</td>
+        <td>{{tour.endQuantity}}</td>
         <td>{{tour.country}}</td>
         <td>{{tour.city}}</td>
         <td>{{tour.hotel}}</td>

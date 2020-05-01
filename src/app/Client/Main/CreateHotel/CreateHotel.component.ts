@@ -43,8 +43,8 @@ export class CreateHotelComponent implements OnInit
     );
   }
   ngOnInit() {
-    this.httpService.getCities().subscribe(data => { this.cities = data["obj"]; console.log(this.cities); }, error => console.log(error));
-    this.httpService.getCountries().subscribe(data => { this.countries = data["obj"]; console.log(this.countries); }, error => console.log(error));
+    this.httpService.getCities().subscribe((data: City[]) => { this.cities = data; console.log(this.cities); }, error => console.log(error));
+    this.httpService.getCountries().subscribe((data: Country[]) => { this.countries = data; console.log(this.countries); }, error => console.log(error));
 
     if (this.id != undefined) {
       this.httpService.GetHotel(this.id.toString()).subscribe(data => {

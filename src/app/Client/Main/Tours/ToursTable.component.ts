@@ -24,7 +24,7 @@ export class ToursTableComponent implements OnInit
     if (this.id != undefined) {
       this.httpService.DeleteTour(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
     }
-    this.httpService.getTours().subscribe(data => { this.tours = data["obj"]; console.log(this.tours); }, error => console.log(error));
+    this.httpService.getTours().subscribe((data: Tour[]) => { this.tours = data; console.log(this.tours); }, error => console.log(error));
   }
   
   goToItem() {

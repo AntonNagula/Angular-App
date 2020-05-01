@@ -18,6 +18,8 @@ export class ThisTourComponent implements OnInit
   _voucher: Voucher = new Voucher();
   _tour: Tour = new Tour();
   _status: string;
+  passportNumber: string;
+  passportSeries: string;
   id: string;    
   private routeSubscription: Subscription;
   constructor(private httpService: HttpService, private route: ActivatedRoute, private Router: Router)
@@ -32,6 +34,7 @@ export class ThisTourComponent implements OnInit
       this.goToRegistration();
     }
     this._voucher["tourId"] = this.id;
+    console.log(this._voucher);
     this.httpService.CreateVoucher(this._voucher).subscribe(
       (data) => { console.log(data) }, error => console.log(error));
   }

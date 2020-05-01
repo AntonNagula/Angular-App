@@ -5,13 +5,13 @@
     "\\src\\app",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\CreateHotel",
     "\\src\\app\\Client\\Main\\CreateTour",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\Tours",
-    "\\src\\app\\ForAllUsers\\Main\\Tours\\Countries"
+    "\\src\\app\\ForAllUsers\\Main\\CreateVoucher",
+    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
+    "\\src\\app\\ForAllUsers\\Main\\Tours"
   ],
-  "SelectedNode": "\\src\\app\\Client\\Main\\CreateTour\\CreateTour.component.ts",
+  "SelectedNode": "\\src\\app\\ForAllUsers\\Main\\ThisTour\\ThisTour.component.html",
   "PreviewInSolutionExplorer": false
 }

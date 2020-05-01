@@ -25,7 +25,7 @@ export class UsersTableComponent implements OnInit
     if (this.id != undefined) {
       this.httpService.DeleteUser(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
     }
-    this.httpService.getUsers().subscribe(data => { this.users = data["obj"]; console.log(this.users); }, error => console.log(error));
+    this.httpService.getUsers().subscribe((data : User[]) => { this.users = data; console.log(this.users); }, error => console.log(error));
   }
   
   goToItem() {

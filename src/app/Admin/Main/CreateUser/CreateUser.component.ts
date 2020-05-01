@@ -51,6 +51,6 @@ export class CreateUserComponent implements OnInit
         error => console.log(error)
       );
     }
-    this.httpService.getRoles().subscribe(data => { this.roles = data["obj"]; console.log(this.roles); }, error => console.log(error));
+    this.httpService.getRoles().subscribe((data: Role[]) => { this.roles = data; console.log(this.roles); }, error => console.log(error));
   }
 }

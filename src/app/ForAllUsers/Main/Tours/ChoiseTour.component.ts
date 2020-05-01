@@ -24,8 +24,8 @@ export class ChoiseTourComponent implements OnInit
     //this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }  
   ngOnInit() {
-    this.httpService.getTours().subscribe(data => { this.tours = data["obj"]; console.log(this.tours); }, error => console.log(error));
-    this.httpService.getCountries().subscribe(data => { this.contries = data["obj"]; console.log(this.contries); }, error => console.log(error));
+    this.httpService.getTours().subscribe((data : Tour[]) => { this.tours = data; console.log(this.tours); }, error => console.log(error));
+    this.httpService.getCountries().subscribe((data: Country[]) => { this.contries = data; console.log(this.contries); }, error => console.log(error));
   }
   ContryName(id: number): string {
     return this.contries[id]["name"];

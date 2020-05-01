@@ -1,7 +1,8 @@
 export class Tour {
   tourId: string;
   name: string;
-  quantity: string;
+  startQuantity: string;
+  endQuantity: string;
   country: string;
   city: string;
   price: string;
