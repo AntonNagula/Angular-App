@@ -1,17 +1,3 @@
-<!--<table>
-  <tbody>
-    <tr *ngFor="let tour of tours">
-      <td>{{tour.tourId}}</td>
-      <td>{{tour.name}}</td>
-      <td>{{tour.country}}</td>
-      <td>{{tour.city}}</td>
-      <td>{{tour.hotel}}</td>
-      <td><a routerLink="/MainForAllUsers/ThisTour/{{tour.tourId}}">Подробнее</a></td>
-    </tr>
-  </tbody>
-</table>-->
-
-
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -80,7 +66,7 @@
                           <div class="col-xxs-12 col-xs-6 mt">
                             <div class="input-field">
                               <label for="from">Страна:</label>
-                              <select [(ngModel)]="Contry">
+                              <select class="form-control" [(ngModel)]="choisenCriterials.countryId">
                                 <option *ngFor="let country of contries" [value]="country.countryId">{{country.name}}</option>
                               </select>
                             </div>
@@ -88,18 +74,18 @@
                           <div class="col-xxs-12 col-xs-6 mt alternate">
                             <div class="input-field">
                               <label for="date-start">Заезд:</label>
-                              <input type="text" class="form-control" id="date-start" placeholder="мм/дд/гггг" />
+                              <input type="text" class="form-control" id="date-start" placeholder="мм/дд/гггг" [(ngModel)]="choisenCriterials.startDate"/>
                             </div>
                           </div>
                           <div class="col-xxs-12 col-xs-6 mt alternate">
                             <div class="input-field">
                               <label for="date-end">Выезд:</label>
-                              <input type="text" class="form-control" id="date-end" placeholder="мм/дд/гггг" />
+                              <input type="text" class="form-control" id="date-end" placeholder="мм/дд/гггг" [(ngModel)]="choisenCriterials.endDate"/>
                             </div>
                           </div>
 
                           <div class="col-xs-12">
-                            <input type="submit" class="btn btn-primary btn-block" value="Поиск">
+                            <input type="submit" class="btn btn-primary btn-block" value="Поиск" (click)="Submit(choisenCriterials)">
                           </div>
                         </div>
                       </div>

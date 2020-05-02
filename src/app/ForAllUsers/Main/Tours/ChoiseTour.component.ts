@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from '../../../HttpServices/http.service';
 import { Tour } from '../../../Models/Tour';
 import { Country } from '../../../Models/Country';
+import { ChoisenCriterials } from '../../../Models/ChoisenCriterials';
 
 @Component({
   selector: 'ChoiseTour-app',
@@ -15,13 +16,14 @@ export class ChoiseTourComponent implements OnInit
 {
   tours: Tour[] = [];
   contries: Country[] = [];
+  choisenCriterials: ChoisenCriterials = new ChoisenCriterials();
   Contry: string;
   id: string;
   private routeSubscription: Subscription;
 
   constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
   {    
-    //this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
+    
   }  
   ngOnInit() {
     this.httpService.getTours().subscribe((data : Tour[]) => { this.tours = data; console.log(this.tours); }, error => console.log(error));
@@ -41,5 +43,18 @@ export class ChoiseTourComponent implements OnInit
   }
   TourContryImgName(id: number): string {
     return "assets/страны/" + this.tours[id]["country"] + ".jpg";
+  }
+  Submit(choisenCriterials : ChoisenCriterials)
+  {
+    this.router.navigate(
+      ['/MainForAllUsers/AllTours'],
+      {
+        queryParams: {
+          'countryId': choisenCriterials.countryId,
+          'startDate': choisenCriterials.startDate,
+          'endDate': choisenCriterials.endDate
+        }
+      }
+    );
   }
 }

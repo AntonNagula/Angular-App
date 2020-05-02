@@ -7,6 +7,7 @@ import { Country } from '../Models/Country';
 import { Hotel } from '../Models/Hotel';
 import { Voucher } from '../Models/Voucher';
 import { Tour } from '../Models/Tour';
+import { ChoisenCriterials } from '../Models/ChoisenCriterials';
 
 @Injectable()
 export class HttpService {
@@ -116,17 +117,22 @@ export class HttpService {
   getTourByCountry(id: string) {
     return this.http.get('https://localhost:44327/api/tours/country/' + id);
   }
+  getTourByCriterials(choisenCriterials: ChoisenCriterials) {
+    const body = {
+      countryId: choisenCriterials.countryId, endDate: choisenCriterials.endDate, startDate: choisenCriterials.startDate
+    };
+    console.log(body);
+    return this.http.post('https://localhost:44327/api/tours/choisen', body);
+  }
   getTour(id: string) {
     return this.http.get('https://localhost:44327/api/tours/' + id);
   }
   CreateTour(tour: Tour) {
-    console.log(tour);
     const body = {
       numberOfNights: tour.numberOfNights, priceTransfer: tour.priceTransfer, markup: tour.markup,
       cityId: tour.cityId, countryId: tour.countryId, hotelId: tour.hotelId, price: tour.price,
       endDate: tour.endDate, startDate: tour.startDate, name: tour.name, startQuantity: tour.startQuantity, endQuantity: tour.endQuantity,
     };
-    console.log(body);
     return this.http.post('https://localhost:44327/api/tours', body);
   }
   DeleteTour(id: string) {
@@ -140,22 +146,8 @@ export class HttpService {
     };
     return this.http.put('https://localhost:44327/api/tours/' + tour["tourId"], body);
   }
-  //GetHotel(id: string) {
-  //  return this.http.get('https://localhost:44327/api/hotels/' + id);
-  //}
 
-  //UpdateHotel(hotel: Hotel) {
-  //  const body = {
-  //    country: hotel.country, countryId: hotel.countryId, facilities: hotel.facilities,
-  //    hasBeach: hotel.hasBeach, hotelId: hotel.hotelId, img: hotel.img,
-  //    name: hotel.name, pricePerDay: hotel.pricePerDay, stars: hotel.stars
-  //  };
-  //  return this.http.put('https://localhost:44327/api/hotels', body);
-  //}
 
-  //DeleteHotel(id: string) {
-  //  return this.http.delete('https://localhost:44327/api/hotels/' + id);
-  //}
   CreateVoucher(voucher: Voucher) {
     const body = {
       userId: voucher.userId, tourId: voucher.tourId, userName: voucher.userName, userSurname: voucher.userSurname, voucherId: voucher.voucherId,
