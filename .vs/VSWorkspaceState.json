@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\Client",
+    "\\src\\app\\Client\\Main",
+    "\\src\\app\\Client\\Main\\Countries",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\AllTours",
-    "\\src\\app\\ForAllUsers\\Main\\Tours",
-    "\\src\\app\\ForAllUsers\\Main\\Tours\\Countries",
-    "\\src\\app\\ForAllUsers\\Main\\Weather",
-    "\\src\\app\\Models"
+    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
+    "\\src\\app\\ForAllUsers\\Main\\Vouchers"
   ],
-  "SelectedNode": "\\src\\app\\Models\\Tour.ts",
+  "SelectedNode": "\\src\\app\\ForAllUsers\\Main\\Vouchers\\Vouchers.component.html",
   "PreviewInSolutionExplorer": false
 }

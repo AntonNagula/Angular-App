@@ -11,10 +11,12 @@ import { User } from '../Models/User';
 })
 export class RegistrationComponent {
   newUser: User = new User();
+  password: string;
   constructor(private httpService: HttpService, private router: Router) {  }
-  submit(newUser: User) {
+  Submit(newUser: User) {
     newUser["roleId"] = "3";
-    this.httpService.CreateUser(newUser).subscribe(
+    console.log(newUser, this.password);
+    this.httpService.Registration(newUser).subscribe(
       (data) => {
         localStorage.setItem('UserId', data["id"]);        
       },

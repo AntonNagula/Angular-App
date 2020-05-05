@@ -23,6 +23,10 @@ export class HttpService {
     const body = { name: user.name, surname: user.surname, password: user.password, email: user.email, roleId: user.roleId };
     return this.http.post('https://localhost:44327/api/users', body);
   }
+  Registration(user: User) {
+    const body = { name: user.name, surname: user.surname, password: user.password, email: user.email, roleId: user.roleId };
+    return this.http.post('https://localhost:44327/api/users/registration', body);
+  }
   UpdateUser(user: User) {
     const body = { id: user.id, name: user.name, surname: user.surname, password: user.password, email: user.email, role: user.role };
     return this.http.put('https://localhost:44327/api/users', body);
@@ -154,5 +158,11 @@ export class HttpService {
       passportSeries: voucher.passportSeries, passportNumber: voucher.passportNumber
     };
     return this.http.post('https://localhost:44327/api/vouchers', body);
+  }
+  GetActualVouchersByUserId(id: string) {
+    return this.http.get('https://localhost:44327/api/vouchers/actual/' + id);
+  }
+  DeleteVoucher(id: string) {
+    return this.http.delete('https://localhost:44327/api/vouchers/' + id);
   }
 }

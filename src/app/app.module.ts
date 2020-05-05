@@ -21,6 +21,7 @@ import { RegistrationComponent } from './Registration/Registration.component';
 import { CreateTourComponent } from './Client/Main/CreateTour/CreateTour.component';
 import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/ChoiseCountry.component';
 import { AllTourComponent } from './ForAllUsers/Main/AllTours/AllTour.component';
+import { VouchersComponent } from './ForAllUsers/Main/Vouchers/Vouchers.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AllTourComponent } from './ForAllUsers/Main/AllTours/AllTour.component'
     ChoiseTourComponent,
     ChoiseCountryComponent,
     AllTourComponent,
+    VouchersComponent,
     CreateTourComponent
   ],
   imports: [

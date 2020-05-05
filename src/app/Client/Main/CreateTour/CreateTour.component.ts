@@ -74,11 +74,11 @@ export class CreateTourComponent implements OnInit
     }
   }
   onCountryChange() {
-    this.httpService.getHotelsByCountry(this.tour["countryId"]).subscribe(data => { this.hotels = data["obj"]; console.log(this.hotels); }, error => console.log(error));
-    this.httpService.getCitiesByCountry(this.tour["countryId"]).subscribe(data => { this.cities = data["obj"]; console.log(this.cities); }, error => console.log(error)); 
+    this.httpService.getHotelsByCountry(this.tour["countryId"]).subscribe((data : Hotel[]) => { this.hotels = data; console.log(this.hotels); }, error => console.log(error));
+    this.httpService.getCitiesByCountry(this.tour["countryId"]).subscribe((data : City[]) => { this.cities = data; console.log(this.cities); }, error => console.log(error)); 
   }
   onCityChange() {
-    this.httpService.getHotelsByCity(this.tour["cityId"]).subscribe(data => { this.hotels = data["obj"]; console.log(this.hotels); }, error => console.log(error));
+    this.httpService.getHotelsByCity(this.tour["cityId"]).subscribe((data : Hotel[]) => { this.hotels = data; console.log(this.hotels); }, error => console.log(error));
   }
   onHotelChange() {
     this.price = +this.hotels.find(x => x["hotelId"] == this.tour["hotelId"])["pricePerDay"];

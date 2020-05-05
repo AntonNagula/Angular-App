@@ -33,11 +33,10 @@
             <h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>AAA Travel</a></h1>
             <nav id="fh5co-menu-wrap" role="navigation">
               <ul class="sf-menu" id="fh5co-primary-menu">
-                <li class="active"><a href="index.html">Главная</a></li>
-                <li><a href="index.html">Отель</a></li>
-                <li><a href="index.html">Контакты</a></li>
-                <li class="sign-in"><a href="#0">Sign in</a></li>
-                <li class="sign-in"><a href="#0">New account</a></li>
+                <li class="sign-in"><a routerLink="/MainForAllUsers/Tours">Главная</a></li>
+                <li class="sign-in"><a routerLink="/Enter">Войти</a></li>
+                <li class="sign-in"><a routerLink="/Registration">Новый аккаунт</a></li>
+                <li class="sign-in"><a routerLink="/MainForAllUsers/Vouchers">Мои ваучеры</a></li>
               </ul>
             </nav>
           </div>
@@ -106,48 +105,11 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-              <h3>Горячие туры</h3>
-              <p>Описание туров</p>
+              <h3>Все туры</h3>
             </div>
           </div>
           <div class="row">
-            <!--<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-              <div href="#">
-                <img src={{TourContryImgName(0)}} alt="" class="img-responsive" style="height:260px;">
-                <div class="desc">
-                  <span></span>
-                  <h3>{{TourCityname(0)}}</h3>
-                  <span>5 ночей + Перелёт + Отель</span>
-                  <span class="price">$1,000</span>
-                  <a class="btn btn-primary btn-outline" routerLink="/MainForAllUsers/ThisTour/{{TourId(i)}}">Заказть сейчас <i class="icon-arrow-right22"></i></a>
-                </div>
-              </div>
-            </div>-->
-            <!--<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-              <div href="#">
-                <img src={{TourContryImgName(1)}} alt="" class="img-responsive">
-                <div class="desc">
-                  <span></span>
-                  <h3>Moscow</h3>
-                  <span>10 ночей + Хостел + Перевоз</span>
-                  <span class="price">$1,000</span>
-                  <a class="btn btn-primary btn-outline" href="#">Заказать сейчас <i class="icon-arrow-right22"></i></a>
-                </div>
-              </div>
-            </div>-->
-            <!--<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-              <div href="#">
-                <img src="assets/страны/{{TourContryname(2)}}.jpg" alt="" class="img-responsive">
-                <div class="desc">
-                  <span></span>
-                  <h3>Токио</h3>
-                  <span>5 ночей + Перелёт</span>
-                  <span class="price">$1,000</span>
-                  <a class="btn btn-primary btn-outline" href="#">Заказать сейчас <i class="icon-arrow-right22"></i></a>
-                </div>
-              </div>
-            </div>-->
-
+           
             <div class="col-md-12 text-center animate-box">
               <p><a class="btn btn-primary btn-outline btn-lg" routerLink="/MainForAllUsers/AllTours">Посмотреть все туры<i class="icon-arrow-right22"></i></a></p>
             </div>
@@ -163,63 +125,7 @@
               <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
                 <h3>О путшествиях</h3>
                 <p>«Ничто так не развивает ум, как путешествие» — Эмиль Золя.<p>
-              </div>
-              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                <h3>Топ направлений</h3>
-                <ul>
-                  <li><a href="#">Манила</a></li>
-                  <li><a href="#">Дубаи</a></li>
-                  <li><a href="#">Токио</a></li>
-                  <li><a href="#">Пекин</a></li>
-                  <li><a href="#">Нью-Йорк</a></li>
-                </ul>
-              </div>
-              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                <h3>Топ отелей</h3>
-                <ul>
-                  <li><a href="#">Барокко отель</a></li>
-                  <li><a href="#">Дубайский отель</a></li>
-                  <li><a href="#">Синго Отель</a></li>
-                  <li><a href="#">Манио хотел</a></li>
-                </ul>
-              </div>
-              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                <h3>Приемущества</h3>
-                <ul>
-                  <li><a href="#">Пляжные</a></li>
-                  <li><a href="#">Семейные</a></li>
-                  <li><a href="#">Бюджетные</a></li>
-                  <li><a href="#">Едан &amp; Напитки</a></li>
-                  <li><a href="#">Романтические</a></li>
-                </ul>
-              </div>
-              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                <h3>Лучшие места</h3>
-                <ul>
-                  <li><a href="#">Моракай бич</a></li>
-                  <li><a href="#">Манхеттон</a></li>
-                  <li><a href="#">Алея звёд</a></li>
-                  <li><a href="#">Рынок</a></li>
-                </ul>
-              </div>
-              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
-                <h3>Доступность</h3>
-                <ul>
-                  <li><a href="#">Еда &amp; Напитки</a></li>
-                  <li><a href="#">Горящие перелёты</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <p class="fh5co-social-icons">
-                  <a href="#"><i class="icon-twitter2"></i></a>
-                  <a href="#"><i class="icon-facebook2"></i></a>
-                  <a href="#"><i class="icon-instagram"></i></a>
-                  <a href="#"><i class="icon-youtube"></i></a>
-                </p>
-                <p>Copyright 2020 AAA Team <a href="#"></a><br>Made with <i class="icon-heart3"></i> by <a href="https://vk.com/dronwork" target="_blank">DronWOrk</a></p>
-              </div>
+              </div>              
             </div>
           </div>
         </div>

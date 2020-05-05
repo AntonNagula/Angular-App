@@ -18,6 +18,7 @@ import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateV
 import { RegistrationComponent } from './Registration/Registration.component';
 import { CreateTourComponent } from './Client/Main/CreateTour/CreateTour.component';
 import { AllTourComponent } from './ForAllUsers/Main/AllTours/AllTour.component';
+import { VouchersComponent } from './ForAllUsers/Main/Vouchers/Vouchers.component';
 
 
 const UserRoutes: Routes = [
@@ -27,6 +28,7 @@ const UserRoutes: Routes = [
   { path: 'AllTours', component: AllTourComponent },
   { path: 'ThisTour/:id', component: ThisTourComponent },
   { path: 'CreateVoucher/:id', component: CreateVoucherComponent },
+  { path: 'Vouchers', component: VouchersComponent },
   { path: '', component: ChoiseTourComponent },
 ];
 
