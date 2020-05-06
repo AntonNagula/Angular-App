@@ -14,6 +14,7 @@ export class HotelsTableComponent implements OnInit
 {
   hotels: Hotel[] = [];
   id: string;
+  warn: string;
   private routeSubscription: Subscription;
 
   constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
@@ -22,7 +23,7 @@ export class HotelsTableComponent implements OnInit
   }  
   ngOnInit() {
     if (this.id != undefined) {
-      this.httpService.DeleteHotel(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
+      this.httpService.DeleteHotel(this.id).subscribe(() => { this.goToItem() }, error => { this.warn ="Данный " + error["error"]["error"]; console.log(error) });
     }
     this.httpService.getHotels().subscribe((data: Hotel[]) => { this.hotels = data; console.log(this.hotels); }, error => console.log(error));
   }

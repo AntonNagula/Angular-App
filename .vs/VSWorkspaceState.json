@@ -5,12 +5,13 @@
     "\\src\\app",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\Countries",
+    "\\src\\app\\Client\\Main\\Hotels",
+    "\\src\\app\\Enter",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
-    "\\src\\app\\ForAllUsers\\Main\\Vouchers"
+    "\\src\\app\\ForAllUsers\\Main\\Vouchers",
+    "\\src\\app\\Registration"
   ],
-  "SelectedNode": "\\src\\app\\ForAllUsers\\Main\\Vouchers\\Vouchers.component.html",
+  "SelectedNode": "\\src\\app\\Client\\Main\\Countries\\CountriesTable.component.ts",
   "PreviewInSolutionExplorer": false
 }

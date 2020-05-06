@@ -15,6 +15,7 @@ export class CountriesTableComponent implements OnInit
   countries: Country[] = [];
   qser: Country;
   id: string;
+   warn: string;
   private routeSubscription: Subscription;
 
   constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
@@ -23,7 +24,7 @@ export class CountriesTableComponent implements OnInit
   }  
   ngOnInit() {
     if (this.id != undefined) {
-      this.httpService.DeleteCountry(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
+      this.httpService.DeleteCountry(this.id).subscribe(() => { this.goToItem() }, error => this.warn = error["error"]["error"]);
     }
     this.httpService.getCountries().subscribe((data: Country[]) => { this.countries = data; console.log(data); }, error => console.log(error));
   }
