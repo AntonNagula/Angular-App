@@ -19,7 +19,7 @@ export class CreateVoucherComponent {
   }
   submit() {
     this.voucher["userId"] = localStorage.getItem('UserId');
-    this.voucher["tourId"] = this.id
+    this.voucher["tourId"] = this.id;
     this.httpService.CreateVoucher(this.voucher);
   }
 }

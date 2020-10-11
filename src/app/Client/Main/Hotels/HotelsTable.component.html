@@ -1,12 +1,25 @@
-<table>
-  <tbody>
-    <tr *ngFor="let hotel of hotels">
-      <td>{{hotel.hotelId}}</td>
-      <td>{{hotel.hasSea}}</td>
-      <td>{{hotel.stars}}</td>
-      <td>{{hotel.pricePerDay}}</td>
-      <td><a routerLink="/MainClient/UpdateHotels/{{hotel.hotelId}}">Редактировать</a></td>
-      <td><a routerLink="/MainClient/DeleteHotel/{{hotel.hotelId}}">Удалить</a></td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  <p style="color: red;text-align:center"><label>{{warn}}</label></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Есть пляж</th>
+        <th>Название отеля</th>
+        <th>Звезд</th>
+        <th>Цена за ночь</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hotel of hotels; let i=index">
+        <td>{{GetId(i)}}</td>
+        <td>{{HasSea(i)}}</td>
+        <td>{{Name(i)}}</td>
+        <td>{{Stars(i)}}</td>
+        <td>{{PricePerDay(i)}} $</td>
+        <td><a routerLink="/MainClient/UpdateHotels/{{hotel.hotelId}}">Редактировать</a></td>
+        <td><a routerLink="/MainClient/DeleteHotel/{{hotel.hotelId}}">Удалить</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

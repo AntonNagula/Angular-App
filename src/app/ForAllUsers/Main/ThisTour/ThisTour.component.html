@@ -1,20 +1,35 @@
-<div class="center">
-  <div class="form-group">
-    <p><label>Название: {{_tour.name}}</label></p>
+<body>
+  <div>
+    <ul class="nav nav-tabs">
+      <li class="active"> <a routerLink="/MainForAllUsers/Tours">Туры</a></li>
+    </ul>
   </div>
-  <div class="form-group">
-    <p><label>Страна: {{_tour.country}}</label></p>
+  <div class="center">
+    <div class="form-group">
+      <p><label>Название: {{_tour.name}}</label></p>
+    </div>
+    <div class="form-group">
+      <p><label>Страна: {{_tour.country}}</label></p>
+    </div>
+    <div class="form-group">
+      <p><label>Город: {{_tour.city}}</label></p>
+    </div>
+    <div class="form-group">
+      <p><label>Отель: {{_tour.hotel}}</label></p>
+    </div>
+    <div class="form-group">
+      <p><label>Серия паспорта</label></p>
+      <input class="form-control auth" name="passportSeries" [(ngModel)]="passportSeries" />
+    </div>
+    <div class="form-group">
+      <p><label>Номер паспорта</label></p>
+      <input class="form-control auth" name="passportNumber" [(ngModel)]="passportNumber" />
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="Voucher()">Заказать</button>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" (click)="Weather()">Посмотреть погоду</button>
+    </div>
   </div>
-  <div class="form-group">
-    <p><label>Город: {{_tour.city}}</label></p>
-  </div>
-  <div class="form-group">
-    <p><label>Отель: {{_tour.hotel}}</label></p>
-  </div>
-  <div class="form-group">
-    <button type="button" class="btn btn-primary" (click)="Voucher()">Заказать</button>
-  </div>
-  <div class="form-group">
-    <button type="button" class="btn btn-primary" (click)="Weather()">Посмотреть погоду</button>
-  </div>
-</div>
+</body>

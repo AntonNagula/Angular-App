@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Travel &mdash;</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <div id="fh5co-wrapper">
+    <div id="fh5co-page">
+
+      <header id="fh5co-header-section" class="sticky-banner">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+            <h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>AAA Travel</a></h1>
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <li class="sign-in"><a routerLink="/MainForAllUsers/Tours">Главная</a></li>
+                <li class="sign-in"><a routerLink="/Enter">Войти</a></li>
+                <li class="sign-in"><a routerLink="/Registration">Новый аккаунт</a></li>
+                <li class="sign-in"><a routerLink="/MainForAllUsers/Vouchers">Мои ваучеры</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="fh5co-hero">
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+          <div class="desc">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5 col-md-5">
+                  <div class="tabulation animate-box">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active">
+                        <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Условия</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="flights">
+                        <div class="row">
+
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <div class="input-field">
+                              <label for="from">Страна:</label>
+                              <select class="form-control" [(ngModel)]="choisenCriterials.countryId">
+                                <option *ngFor="let country of contries" [value]="country.countryId">{{country.name}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt alternate">
+                            <div class="input-field">
+                              <label for="date-start">Заезд:</label>
+                              <input type="text" class="form-control" id="date-start" placeholder="мм/дд/гггг" [(ngModel)]="choisenCriterials.startDate" />
+                            </div>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt alternate">
+                            <div class="input-field">
+                              <label for="date-end">Выезд:</label>
+                              <input type="text" class="form-control" id="date-end" placeholder="мм/дд/гггг" [(ngModel)]="choisenCriterials.endDate" />
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12">
+                            <input type="submit" class="btn btn-primary btn-block" value="Поиск" (click)="Submit(choisenCriterials)">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="fh5co-tours" class="fh5co-section-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+              <h3>Горячие туры</h3>
+              <p>Описание туров</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn" *ngFor="let tour of tours; let i=index">
+              <div href="#">
+                <img src={{TourContryname(i)}} alt="" class="img-responsive" style="height:260px;">
+                <div class="desc">
+                  <span></span>
+                  <h3>{{TourCityname(i)}}</h3>
+                  <span>{{TourNights(i)}} ночей + Перелёт + Отель</span>
+                  <span class="price">{{TourPrice(i)}}$</span>
+                  <a class="btn btn-primary btn-outline" routerLink="/MainForAllUsers/ThisTour/{{TourId(i)}}">Заказть сейчас <i class="icon-arrow-right22"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <footer>
+        <div id="footer">
+          <div class="container">
+            <div class="row row-bottom-padded-md">
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>О путшествиях</h3>
+                <p>«Ничто так не развивает ум, как путешествие» — Эмиль Золя.<p>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>Топ направлений</h3>
+                <ul>
+                  <li><a href="#">Манила</a></li>
+                  <li><a href="#">Дубаи</a></li>
+                  <li><a href="#">Токио</a></li>
+                  <li><a href="#">Пекин</a></li>
+                  <li><a href="#">Нью-Йорк</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>Топ отелей</h3>
+                <ul>
+                  <li><a href="#">Барокко отель</a></li>
+                  <li><a href="#">Дубайский отель</a></li>
+                  <li><a href="#">Синго Отель</a></li>
+                  <li><a href="#">Манио хотел</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>Приемущества</h3>
+                <ul>
+                  <li><a href="#">Пляжные</a></li>
+                  <li><a href="#">Семейные</a></li>
+                  <li><a href="#">Бюджетные</a></li>
+                  <li><a href="#">Едан &amp; Напитки</a></li>
+                  <li><a href="#">Романтические</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>Лучшие места</h3>
+                <ul>
+                  <li><a href="#">Моракай бич</a></li>
+                  <li><a href="#">Манхеттон</a></li>
+                  <li><a href="#">Алея звёд</a></li>
+                  <li><a href="#">Рынок</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>Доступность</h3>
+                <ul>
+                  <li><a href="#">Еда &amp; Напитки</a></li>
+                  <li><a href="#">Горящие перелёты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <p class="fh5co-social-icons">
+                  <a href="#"><i class="icon-twitter2"></i></a>
+                  <a href="#"><i class="icon-facebook2"></i></a>
+                  <a href="#"><i class="icon-instagram"></i></a>
+                  <a href="#"><i class="icon-youtube"></i></a>
+                </p>
+                <p>Copyright 2020 AAA Team <a href="#"></a><br>Made with <i class="icon-heart3"></i> by <a href="https://vk.com/dronwork" target="_blank">DronWOrk</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
+

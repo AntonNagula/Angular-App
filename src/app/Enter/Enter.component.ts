@@ -11,7 +11,7 @@ import { HttpService } from '../HttpServices/http.service';
 })
 export class EnterComponent {
   user: EnterData = new EnterData(); 
-
+  warn: string;
   receivedUser: EnterData; 
   done: boolean = false;
   constructor(private httpService: HttpService, private router: Router) {  }
@@ -30,8 +30,11 @@ export class EnterComponent {
     else if (this.receivedUser.role == "работник") {
       this.router.navigate(['/MainClient/Tours']);
     }
-    else {
+    else if (this.receivedUser.role == "пользователь") {
       this.router.navigate(['/MainForAllUsers/Tours']);
+    }
+    else {
+     this.warn ="неправильно введен логин или пароль";
     }
   }
 }

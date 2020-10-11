@@ -14,6 +14,7 @@ export class HotelsTableComponent implements OnInit
 {
   hotels: Hotel[] = [];
   id: string;
+  warn: string;
   private routeSubscription: Subscription;
 
   constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
@@ -22,11 +23,28 @@ export class HotelsTableComponent implements OnInit
   }  
   ngOnInit() {
     if (this.id != undefined) {
-      this.httpService.DeleteCountry(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
+      this.httpService.DeleteHotel(this.id).subscribe(() => { this.goToItem() }, error => { this.warn ="Данный " + error["error"]["error"]; console.log(error) });
     }
-    this.httpService.getHotels().subscribe(data => { this.hotels = data["obj"]; console.log(this.hotels); }, error => console.log(error));
+    this.httpService.getHotels().subscribe((data: Hotel[]) => { this.hotels = data; console.log(this.hotels); }, error => console.log(error));
   }
-  
+  HasSea(i: number): string {
+    if (this.hotels[i]["hasBeach"])
+      return "есть";
+    else
+      return "нет";
+  }
+  Name(i: number): string {
+    return this.hotels[i]["name"];
+  }
+  GetId(i: number): string {
+    return this.hotels[i]["hotelId"];
+  }
+  Stars(i: number): string {
+    return this.hotels[i]["stars"];
+  }
+  PricePerDay(i: number): string {
+    return this.hotels[i]["pricePerDay"];
+  }
   goToItem() {
 
     this.router.navigate(

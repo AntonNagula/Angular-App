@@ -1,12 +1,24 @@
-<table>
-  <tbody>
-    <tr *ngFor="let country of countries">
-      <td>{{country.countryId}}</td>
-      <td>{{country.hasSea}}</td>
-      <td>{{country.name}}</td>
-      <td>{{country.img}}</td>
-      <td><a routerLink="/MainClient/UpdateCountry/{{country.countryId}}">Редактировать</a></td>
-      <td><a routerLink="/MainClient/DeleteCountry/{{country.countryId}}">Удалить</a></td>
-    </tr>
-  </tbody>
-</table>
+
+<body>
+  <div><p style="color: black;text-align:center"><label>{{warn}}</label></p></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Выход к морю</th>
+        <th>Название страны</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries;let i=index">
+        <td>{{GetId(i)}}</td>
+        <td>{{HasSea(i)}}</td>
+        <td>{{Name(i)}}</td>
+        <td><a routerLink="/MainClient/UpdateCountry/{{country.countryId}}">Редактировать</a></td>
+        <td><a routerLink="/MainClient/DeleteCountry/{{country.countryId}}">Удалить</a></td>
+      </tr>
+    </tbody>
+  </table>
+</body>

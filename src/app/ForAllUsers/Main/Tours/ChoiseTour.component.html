@@ -1,12 +1,137 @@
-<table>
-  <tbody>
-    <tr *ngFor="let tour of tours">
-      <td>{{tour.tourId}}</td>
-      <td>{{tour.name}}</td>
-      <td>{{tour.country}}</td>
-      <td>{{tour.city}}</td>
-      <td>{{tour.hotel}}</td>
-      <td><a routerLink="/MainForAllUsers/ThisTour/{{tour.tourId}}">Подробнее</a></td>
-    </tr>
-  </tbody>
-</table>
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Travel &mdash;</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <div id="fh5co-wrapper">
+    <div id="fh5co-page">
+
+      <header id="fh5co-header-section" class="sticky-banner">
+        <div class="container">
+          <div class="nav-header">
+            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+            <h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>AAA Travel</a></h1>
+            <nav id="fh5co-menu-wrap" role="navigation">
+              <ul class="sf-menu" id="fh5co-primary-menu">
+                <li class="sign-in"><a routerLink="/MainForAllUsers/Tours">Главная</a></li>
+                <li class="sign-in"><a routerLink="/Enter">Войти</a></li>
+                <li class="sign-in"><a routerLink="/Registration">Новый аккаунт</a></li>
+                <li class="sign-in"><a routerLink="/MainForAllUsers/Vouchers">Мои ваучеры</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div class="fh5co-hero">
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+          <div class="desc">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5 col-md-5">
+                  <div class="tabulation animate-box">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                      <li role="presentation" class="active">
+                        <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Условия</a>
+                      </li>
+                    </ul>
+
+
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="flights">
+                        <div class="row">
+
+                          <div class="col-xxs-12 col-xs-6 mt">
+                            <div class="input-field">
+                              <label for="from">Страна:</label>
+                              <select class="form-control" [(ngModel)]="choisenCriterials.countryId">
+                                <option *ngFor="let country of contries" [value]="country.countryId">{{country.name}}</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt alternate">
+                            <div class="input-field">
+                              <label for="date-start">Заезд:</label>
+                              <input type="text" class="form-control" id="date-start" placeholder="мм/дд/гггг" [(ngModel)]="choisenCriterials.startDate"/>
+                            </div>
+                          </div>
+                          <div class="col-xxs-12 col-xs-6 mt alternate">
+                            <div class="input-field">
+                              <label for="date-end">Выезд:</label>
+                              <input type="text" class="form-control" id="date-end" placeholder="мм/дд/гггг" [(ngModel)]="choisenCriterials.endDate"/>
+                            </div>
+                          </div>
+
+                          <div class="col-xs-12">
+                            <input type="submit" class="btn btn-primary btn-block" value="Поиск" (click)="Submit(choisenCriterials)">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ChoiseCountry-app></ChoiseCountry-app>
+
+      <div id="fh5co-tours" class="fh5co-section-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+              <h3>Все туры</h3>
+            </div>
+          </div>
+          <div class="row">
+           
+            <div class="col-md-12 text-center animate-box">
+              <p><a class="btn btn-primary btn-outline btn-lg" routerLink="/MainForAllUsers/AllTours">Посмотреть все туры<i class="icon-arrow-right22"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <footer>
+        <div id="footer">
+          <div class="container">
+            <div class="row row-bottom-padded-md">
+              <div class="col-md-2 col-sm-2 col-xs-12 fh5co-footer-link">
+                <h3>О путшествиях</h3>
+                <p>«Ничто так не развивает ум, как путешествие» — Эмиль Золя.<p>
+              </div>              
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
+

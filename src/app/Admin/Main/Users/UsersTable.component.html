@@ -1,14 +1,17 @@
-<table>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{user.id}}</td>
-      <td>{{user.role}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.surname}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.password}}</td>
-      <td><a routerLink="/MainAdmin/UpdateUser/{{user.id}}">Редактировать</a></td>
-      <td><a routerLink="/MainAdmin/DeleteUser/{{user.id}}">Удалить</a></td>
-    </tr>    
-  </tbody>
-</table>
+<body style="height:1000px;">
+  <h1 class="header">Пользователи</h1>
+  <table>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.surname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td><a routerLink="/MainAdmin/UpdateUser/{{user.id}}">Редактировать</a></td>
+        <td><a routerLink="/MainAdmin/DeleteUser/{{user.id}}">Удалить</a></td>
+      </tr>
+    </tbody>
+  </table>  
+</body>
