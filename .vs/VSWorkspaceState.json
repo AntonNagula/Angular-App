@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\Tours",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
     "\\src\\app\\ForAllUsers\\Main\\CreateVoucher",
-    "\\src\\app\\Models"
+    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
+    "\\src\\app\\ForAllUsers\\Main\\Tours",
+    "\\src\\app\\Models",
+    "\\src\\app\\Registration"
   ],
-  "SelectedNode": "\\src\\app\\Client\\Main\\Tours\\ToursTable.component.css",
+  "SelectedNode": "\\src\\app\\Registration\\Registration.component.ts",
   "PreviewInSolutionExplorer": false
 }

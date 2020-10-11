@@ -5,7 +5,6 @@ import { MainClientComponent } from './Client/Main/MainClient.component';
 import { EnterComponent } from './Enter/Enter.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
-import { CreateRoleComponent } from './Admin/Main/CreateRole/CreateRole.component';
 import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
 import { WeatherComponent } from './ForAllUsers/Main/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
@@ -16,21 +15,22 @@ import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.com
 import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.component';
 import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateVoucher.component';
+import { RegistrationComponent } from './Registration/Registration.component';
 
 
 const otherRoutes: Routes = [
   { path: 'Weather/:City', component: WeatherComponent },
   { path: 'Tours', component: ChoiseTourComponent },
   { path: 'ThisTour/:id', component: ThisTourComponent },
-  { path: 'CreateVoucher/:id', component: CreateVoucherComponent }
+  { path: 'CreateVoucher/:id', component: CreateVoucherComponent },
+  { path: 'Registration', component: RegistrationComponent }
 ];
 
 const itemRoutes: Routes = [
   { path: 'CreateUser', component: CreateUserComponent },
   { path: 'UserTable', component: UsersTableComponent },
   { path: 'DeleteUser/:id', component: UsersTableComponent },
-  { path: 'UpdateUser/:id', component: CreateUserComponent },
-  { path: 'CreateRole', component: CreateRoleComponent },
+  { path: 'UpdateUser/:id', component: CreateUserComponent }
 ];
 
 const UserRoutes: Routes = [

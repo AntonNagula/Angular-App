@@ -9,7 +9,6 @@ import { MainAdminComponent } from './Admin/Main/Main.component';
 import { MainClientComponent } from './Client/Main/MainClient.component';
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
-import { CreateRoleComponent } from './Admin/Main/CreateRole/CreateRole.component';
 import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
 import { WeatherComponent } from './ForAllUsers/Main/Weather/Weather.component';
 import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
@@ -18,6 +17,7 @@ import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.comp
 import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
 import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
 import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
+import { RegistrationComponent } from './Registration/Registration.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.compone
     MainClientComponent,
     UsersTableComponent,
     CreateUserComponent,
-    CreateRoleComponent,
+    RegistrationComponent,
     CreateCountryComponent,
     CountriesTableComponent,
     CreateHotelComponent,

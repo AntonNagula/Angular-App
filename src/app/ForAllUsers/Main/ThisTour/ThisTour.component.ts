@@ -27,10 +27,13 @@ export class ThisTourComponent implements OnInit
 
   Voucher() {
     this._voucher["userId"] = localStorage.getItem('UserId');
+    if (this._voucher["userId"] == undefined)
+    {
+      this.goToRegistration();
+    }
     this._voucher["tourId"] = this.id;
     this.httpService.CreateVoucher(this._voucher).subscribe(
       (data) => { console.log(data) }, error => console.log(error));
-    //this.goToRegistryVoucher(this._tour.tourId);
   }
 
   Weather() {
@@ -48,9 +51,9 @@ export class ThisTourComponent implements OnInit
       this._tour["tourId"] = data["tourId"];      
     }, error => console.log(error));
   }
-  goToRegistryVoucher(id: string) {
+  goToRegistration() {
     this.Router.navigate(
-      ['/MainForAllUsers/CreateVoucher/' + id]
+      ['/MainForAllUsers/Registartion']
     );
   }
   goToWeatherOfThisCity(city: string) {
