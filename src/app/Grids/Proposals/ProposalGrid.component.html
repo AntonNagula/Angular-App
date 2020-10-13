@@ -1,0 +1,16 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Выход к морю</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proposal of proposals;let i=index">
+        <td>{{ProposalName(i)}}</td>
+        <td>{{ProposalAmount(i)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
