@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Admin",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
     "\\src\\app\\ForAllUsers\\Main\\Tours",
+    "\\src\\app\\Grids",
+    "\\src\\app\\Grids\\Proposals",
     "\\src\\app\\Models",
     "\\src\\app\\Registration"
   ],
-  "SelectedNode": "\\src\\app\\Models\\Payment.ts",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
