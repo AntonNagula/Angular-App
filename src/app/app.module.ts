@@ -20,6 +20,8 @@ import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.compone
 import { RegistrationComponent } from './Registration/Registration.component';
 import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/ChoiseCountry.component';
 import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
+import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
+import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component'
     MainForAllUsersComponent,
     ChoiseTourComponent,
     ChoiseCountryComponent,
-    ProposalGridComponent
+    ProposalGridComponent,
+    StartPageComponent,
+    MainSubmitterComponent
   ],
   imports: [
     BrowserModule,

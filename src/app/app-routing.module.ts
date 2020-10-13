@@ -17,7 +17,14 @@ import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.componen
 import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateVoucher.component';
 import { RegistrationComponent } from './Registration/Registration.component';
 import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
+import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
+import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
 
+
+
+const SubmitterRoutes: Routes = [
+  { path: 'Proposals', component: StartPageComponent }
+];
 
 const otherRoutes: Routes = [
   { path: 'Weather/:City', component: WeatherComponent },
@@ -56,7 +63,9 @@ const appRoutes: Routes = [
   { path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
   { path: 'MainClient', component: MainClientComponent },
   { path: 'MainClient', component: MainClientComponent, children: UserRoutes },
-  { path: '', component: ProposalGridComponent }
+  { path: '', component: StartPageComponent }
+  //{ path: '', component: MainSubmitterComponent },
+  //{ path: '', component: MainSubmitterComponent, children: SubmitterRoutes }
 ];
 
 @NgModule({

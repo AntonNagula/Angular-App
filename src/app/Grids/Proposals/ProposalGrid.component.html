@@ -2,14 +2,14 @@
   <table>
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Выход к морю</th>
+        <th>Название запроса</th>
+        <th>Статус</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let proposal of proposals;let i=index">
+      <tr *ngFor="let proposal of proposals">
         <td>{{proposal["name"]}}</td>
-        <td>{{proposal["amount"]}}</td>
+        <td>{{proposal["status"]}}</td>
       </tr>
     </tbody>
   </table>

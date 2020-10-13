@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpProposalService } from '../../HttpServices/http.proposals';
 
 @Component({
-  selector: 'ProposalGrid-root',
+  selector: 'ProposalGrid',
   templateUrl: './ProposalGrid.component.html',
   styleUrls: ['./ProposalGrid.component.css'],
   providers: [HttpProposalService]
