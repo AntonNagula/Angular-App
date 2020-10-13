@@ -11,6 +11,6 @@
     "\\src\\app\\Models",
     "\\src\\app\\Registration"
   ],
-  "SelectedNode": "\\src\\app\\ForAllUsers\\Main\\Tours\\ChoiseTour.component.html",
+  "SelectedNode": "\\src\\app\\Models\\Payment.ts",
   "PreviewInSolutionExplorer": false
 }
