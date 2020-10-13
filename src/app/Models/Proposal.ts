@@ -1,4 +1,4 @@
 export class Proposal {
-  Name: string;
-  Amount: string;
+  name: string;
+  amount: string;
 }

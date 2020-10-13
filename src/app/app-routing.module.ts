@@ -16,6 +16,7 @@ import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.compone
 import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.component';
 import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateVoucher.component';
 import { RegistrationComponent } from './Registration/Registration.component';
+import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
 
 
 const otherRoutes: Routes = [
@@ -55,7 +56,7 @@ const appRoutes: Routes = [
   { path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
   { path: 'MainClient', component: MainClientComponent },
   { path: 'MainClient', component: MainClientComponent, children: UserRoutes },
-  { path: '', component: EnterComponent }
+  { path: '', component: ProposalGridComponent }
 ];
 
 @NgModule({

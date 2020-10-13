@@ -18,10 +18,4 @@ export class ProposalGridComponent implements OnInit {
   ngOnInit() {
     this.httpProposalService.getProposals().subscribe((data: Proposal[]) => { this.proposals = data; console.log(this.proposals); }, error => console.log(error));
   }
-  ProposalName(id: number): string {
-    return this.proposals[id]["Name"];
-  }
-  ProposalAmount(id: number): string {
-    return this.proposals[id]["Amount"];
-  }
 }

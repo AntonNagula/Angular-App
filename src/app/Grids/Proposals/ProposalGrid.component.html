@@ -8,8 +8,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let proposal of proposals;let i=index">
-        <td>{{ProposalName(i)}}</td>
-        <td>{{ProposalAmount(i)}}</td>
+        <td>{{proposal["name"]}}</td>
+        <td>{{proposal["amount"]}}</td>
       </tr>
     </tbody>
   </table>
