@@ -13,4 +13,10 @@ export class StartPageComponent {
   constructor(private route: ActivatedRoute, private router: Router) {
 
   }
+
+  ToForm($event: any): void {
+    this.router.navigate(
+      ['/Reply']
+    );
+  }
 }

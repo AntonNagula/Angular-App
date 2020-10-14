@@ -22,6 +22,7 @@ import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/Chois
 import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
 import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
 import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
+import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component
     ChoiseCountryComponent,
     ProposalGridComponent,
     StartPageComponent,
-    MainSubmitterComponent
+    MainSubmitterComponent,
+    ReplyQuestionsComponent
   ],
   imports: [
     BrowserModule,

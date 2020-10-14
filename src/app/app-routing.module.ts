@@ -19,11 +19,13 @@ import { RegistrationComponent } from './Registration/Registration.component';
 import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
 import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
 import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
+import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
 
 
 
 const SubmitterRoutes: Routes = [
-  { path: 'Proposals', component: StartPageComponent }
+  { path: 'Proposals', component: StartPageComponent },
+  { path: 'Reply', component: ReplyQuestionsComponent }
 ];
 
 const otherRoutes: Routes = [
@@ -63,9 +65,9 @@ const appRoutes: Routes = [
   { path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
   { path: 'MainClient', component: MainClientComponent },
   { path: 'MainClient', component: MainClientComponent, children: UserRoutes },
-  { path: '', component: StartPageComponent }
-  //{ path: '', component: MainSubmitterComponent },
-  //{ path: '', component: MainSubmitterComponent, children: SubmitterRoutes }
+  //{ path: '', component: StartPageComponent }
+  { path: '', component: MainSubmitterComponent },
+  { path: '', component: MainSubmitterComponent, children: SubmitterRoutes }
 ];
 
 @NgModule({

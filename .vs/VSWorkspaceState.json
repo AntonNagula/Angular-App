@@ -5,13 +5,12 @@
     "\\src\\app",
     "\\src\\app\\ForAllUsers",
     "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\Weather",
-    "\\src\\app\\Grids",
-    "\\src\\app\\Grids\\Proposals",
-    "\\src\\app\\HttpServices",
+    "\\src\\app\\ForAllUsers\\Main\\Tours",
     "\\src\\app\\Models",
-    "\\src\\app\\Registration"
+    "\\src\\app\\Submitter",
+    "\\src\\app\\Submitter\\Main",
+    "\\src\\app\\Submitter\\Main\\Questions"
   ],
-  "SelectedNode": "\\src\\app\\Grids\\Proposals\\ProposalGrid.component.ts",
+  "SelectedNode": "\\src\\app\\Models\\Proposal.ts",
   "PreviewInSolutionExplorer": false
 }

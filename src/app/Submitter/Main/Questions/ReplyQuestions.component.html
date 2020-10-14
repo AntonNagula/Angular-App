@@ -1,0 +1,27 @@
+<body>
+  <div class="main-div">
+    <label>Имя</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="userName" />
+    <br />
+    <label>Фамилия</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="userSurname" />
+    <br />
+    <label>Сумма</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="amount" />
+    <br />
+    <label>Цель</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="purpose" />
+    <br />
+    <label>Банковский счет</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="bankAccount" />
+    <br />
+    <br/>
+    <button class="btn btn-primary button-margin" (click)="Done($event)">Отправить</button>
+    <button class="btn btn-primary button-margin" (click)="Close($event)">Закрыть</button>
+  </div>
+</body>
