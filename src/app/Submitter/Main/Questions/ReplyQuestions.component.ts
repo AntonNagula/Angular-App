@@ -22,8 +22,6 @@ export class ReplyQuestionsComponent implements OnInit {
   ngOnInit() {
     this.httpProposalService.getProposal(this.id).subscribe((data: Proposal) => {
       this.proposal = data;
-      this.name = data["name"];
-      console.log(this.name, this.id);
     }, error => console.log(error));
   }
   Close($event: any): void {

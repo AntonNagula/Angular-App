@@ -21,6 +21,8 @@ import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.compone
 import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
 import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
 import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
+import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
+import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
 
 
 
@@ -33,6 +35,8 @@ const SubmitterRoutes: Routes = [
 
 const ClientRoutes: Routes = [
   { path: 'Proposals', component: ClientStartPageComponent },
+  { path: 'Proposal/:id', component: ProposalViewComponent },
+  { path: 'CreationPayment/:id', component: CreatePaymentViewComponent }
   //{ path: 'Proposals/:id', component: StartPageComponent },
   //{ path: 'Reply', component: ReplyQuestionsComponent },
   //{ path: 'Reply/:id', component: ReplyQuestionsComponent }
@@ -76,13 +80,6 @@ const UserRoutes: Routes = [
 ];
 
 const appRoutes: Routes = [
-  //{ path: 'MainForAllUsers', component: MainForAllUsersComponent },
-  //{ path: 'MainForAllUsers', component: MainForAllUsersComponent, children: otherRoutes },
-  //{ path: 'MainAdmin', component: MainAdminComponent },
-  //{ path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
-  //{ path: 'MainClient', component: MainClientComponent },
-  //{ path: 'MainClient', component: MainClientComponent, children: UserRoutes },
-  //{ path: '', component: StartPageComponent }
   { path: 'Submitter', component: MainSubmitterComponent },
   { path: 'Submitter', component: MainSubmitterComponent, children: SubmitterRoutes },
   { path: 'Client', component: MainClientComponent },

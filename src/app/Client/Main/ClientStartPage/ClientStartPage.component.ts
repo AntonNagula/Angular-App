@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpProposalService } from '../../../HttpServices/http.proposals';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'ClientStartPage',

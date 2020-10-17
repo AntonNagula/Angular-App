@@ -25,6 +25,9 @@ import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component
 import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
 import { ClientProposalGridComponent } from './Grids/ClientProposals/ClientProposalGrid.component';
 import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
+import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
+import { ProposalPaymentsGridComponent } from './Grids/ProposalPayments/ProposalPayments.component';
+import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,10 @@ import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientSt
     MainSubmitterComponent,
     ReplyQuestionsComponent,
     ClientProposalGridComponent,
-    ClientStartPageComponent
+    ClientStartPageComponent,
+    ProposalViewComponent,
+    ProposalPaymentsGridComponent,
+    CreatePaymentViewComponent
   ],
   imports: [
     BrowserModule,

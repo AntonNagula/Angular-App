@@ -1,6 +1,6 @@
-export class Payment {
+export class Budget {
   id: string;
   name: string;
   amount: string;
-  proposalId: string;
+  remainingAmount: string;
 }
