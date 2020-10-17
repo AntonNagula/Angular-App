@@ -9,16 +9,7 @@ import { MainAdminComponent } from './Admin/Main/Main.component';
 import { MainClientComponent } from './Client/Main/MainClient.component';
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
-import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
-import { WeatherComponent } from './ForAllUsers/Main/Weather/Weather.component';
-import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
-import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
-import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
-import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
-import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
-import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 import { RegistrationComponent } from './Registration/Registration.component';
-import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/ChoiseCountry.component';
 import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
 import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
 import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
@@ -38,15 +29,6 @@ import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/Crea
     UsersTableComponent,
     CreateUserComponent,
     RegistrationComponent,
-    CreateCountryComponent,
-    CountriesTableComponent,
-    CreateHotelComponent,
-    HotelsTableComponent,
-    ToursTableComponent,
-    WeatherComponent,
-    MainForAllUsersComponent,
-    ChoiseTourComponent,
-    ChoiseCountryComponent,
     ProposalGridComponent,
     StartPageComponent,
     MainSubmitterComponent,
