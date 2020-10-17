@@ -25,7 +25,9 @@ import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestio
 
 const SubmitterRoutes: Routes = [
   { path: 'Proposals', component: StartPageComponent },
-  { path: 'Reply', component: ReplyQuestionsComponent }
+  { path: 'Proposals/:id', component: StartPageComponent },
+  { path: 'Reply', component: ReplyQuestionsComponent },  
+  { path: 'Reply/:id', component: ReplyQuestionsComponent }
 ];
 
 const otherRoutes: Routes = [

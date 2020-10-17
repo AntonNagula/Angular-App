@@ -10,7 +10,7 @@ export class Proposal {
 }
 
 export enum Statuses {
-  Draft,
-  Sent,
-  Approved
+  Draft = 1,
+  Sent = 2,
+  Approved = 3
 }

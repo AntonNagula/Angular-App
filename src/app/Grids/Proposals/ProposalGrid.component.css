@@ -9,7 +9,7 @@ th {
   background: #0000F3;
   color: white;
   padding: 10px 20px;
-  width:200px;
+  width:300px;
 }
 
 th, td {
@@ -25,3 +25,7 @@ td {
   th:first-child, td:first-child {
     text-align: left;
   }
+
+.button-margin {
+  margin-right: 10px;
+}

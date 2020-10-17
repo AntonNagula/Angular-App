@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Question } from '../../../Models/Question';
-import { Answer } from '../../../Models/Answer';
-import { HttpQuestionService } from '../../../HttpServices/http.questions';
-import { HttpAnswerService } from '../../../HttpServices/http.answers';
 import { Proposal, Statuses } from '../../../Models/Proposal';
 import { HttpProposalService } from '../../../HttpServices/http.proposals';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'ReplyQuestions',
@@ -13,19 +10,23 @@ import { HttpProposalService } from '../../../HttpServices/http.proposals';
   styleUrls: ['./ReplyQuestions.component.css'],
   providers: [HttpProposalService]
 })
-export class ReplyQuestionsComponent {
-  questions: Question[] = [];
+export class ReplyQuestionsComponent implements OnInit {
   proposal: Proposal = new Proposal();
-  userName: string;
-  userSurname: string;
-  purpose: string;
-  amount: string;
-  bankAccount: string;
+
+  private routeSubscription: Subscription;
+  id: string;
+  name: string;
   constructor(private httpProposalService: HttpProposalService, private route: ActivatedRoute, private router: Router) {
-    
+    this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
+  }
+  ngOnInit() {
+    this.httpProposalService.getProposal(this.id).subscribe((data: Proposal) => {
+      this.proposal = data;
+      this.name = data["name"];
+      console.log(this.name, this.id);
+    }, error => console.log(error));
   }
   Close($event: any): void {
-    this.Answers();
     this.MarkDraft();
     this.Send();
     this.router.navigate(
@@ -34,8 +35,8 @@ export class ReplyQuestionsComponent {
   }
 
   Done($event: any): void {
-    this.Answers();
     this.MarkAsDone();
+    this.Answers();
     this.Send();
     this.router.navigate(
       ['/Proposals']
@@ -43,13 +44,9 @@ export class ReplyQuestionsComponent {
   }
 
   Answers() {
-    this.proposal["userName"] = this.userName;
-    this.proposal["userSurname"] = this.userSurname;
-    this.proposal["purpose"] = this.purpose;
-    this.proposal["amount"] = this.amount;
-    this.proposal["bankAccount"] = this.bankAccount;
+    this.proposal.name = this.name;
+    this.proposal.id = this.id;
   }
-
   MarkAsDone() {
     this.proposal["status"] = Statuses.Sent.toString();
   }

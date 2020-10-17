@@ -11,17 +11,15 @@ export class HttpProposalService {
     return this.http.get('http://localhost:54717/api/proposal');
   }
 
+  getProposal(id: string) {
+    return this.http.get('http://localhost:54717/api/proposal/'+id);
+  }
+
   postProposal(proposal: Proposal) {
-    const body = {
-      id: "jhh",
-      name: "jj",
-      status: proposal.status,
-      userName: proposal.userName,
-      userSurname: proposal.userSurname,
-      purpose: proposal.purpose,
-      amount: proposal.amount,
-      bankAccount: proposal.bankAccount      
-    };
-    return this.http.post('http://localhost:54717/api/proposal',body);
+    return this.http.post('http://localhost:54717/api/proposal', proposal);
+  }
+
+  deleteProposal(id: string) {
+    return this.http.delete('http://localhost:54717/api/proposal/'+id);
   }
 }

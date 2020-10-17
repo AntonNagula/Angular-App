@@ -2,23 +2,23 @@
   <div class="main-div">
     <label>Имя</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="userName" />
+    <input class="inputtext" type="text" [(ngModel)]="proposal.userName" />
     <br />
     <label>Фамилия</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="userSurname" />
+    <input class="inputtext" type="text" [(ngModel)]="proposal.userSurname" />
     <br />
     <label>Сумма</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="amount" />
+    <input class="inputtext" type="text" [(ngModel)]="proposal.amount" />
     <br />
     <label>Цель</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="purpose" />
+    <input class="inputtext" type="text" [(ngModel)]="proposal.purpose" />
     <br />
     <label>Банковский счет</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="bankAccount" />
+    <input class="inputtext" type="text" [(ngModel)]="proposal.bankAccount" />
     <br />
     <br/>
     <button class="btn btn-primary button-margin" (click)="Done($event)">Отправить</button>

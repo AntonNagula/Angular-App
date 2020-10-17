@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpProposalService } from '../../../HttpServices/http.proposals';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'StartPage',
@@ -9,9 +10,8 @@ import { HttpProposalService } from '../../../HttpServices/http.proposals';
   providers: [HttpProposalService]
 })
 export class StartPageComponent {
-
-  constructor(private route: ActivatedRoute, private router: Router) {
-
+  constructor(private router: Router, private httpProposalService: HttpProposalService,) {
+   
   }
 
   ToForm($event: any): void {
