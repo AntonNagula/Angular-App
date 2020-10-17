@@ -23,6 +23,8 @@ import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component'
 import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
 import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
 import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
+import { ClientProposalGridComponent } from './Grids/ClientProposals/ClientProposalGrid.component';
+import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestio
     ProposalGridComponent,
     StartPageComponent,
     MainSubmitterComponent,
-    ReplyQuestionsComponent
+    ReplyQuestionsComponent,
+    ClientProposalGridComponent,
+    ClientStartPageComponent
   ],
   imports: [
     BrowserModule,

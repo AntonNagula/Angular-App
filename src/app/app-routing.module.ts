@@ -20,6 +20,7 @@ import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component'
 import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
 import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
 import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
+import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
 
 
 
@@ -28,6 +29,20 @@ const SubmitterRoutes: Routes = [
   { path: 'Proposals/:id', component: StartPageComponent },
   { path: 'Reply', component: ReplyQuestionsComponent },  
   { path: 'Reply/:id', component: ReplyQuestionsComponent }
+];
+
+const ClientRoutes: Routes = [
+  { path: 'Proposals', component: ClientStartPageComponent },
+  //{ path: 'Proposals/:id', component: StartPageComponent },
+  //{ path: 'Reply', component: ReplyQuestionsComponent },
+  //{ path: 'Reply/:id', component: ReplyQuestionsComponent }
+];
+
+const AdminRoutes: Routes = [
+  //{ path: 'Proposals', component: StartPageComponent },
+  //{ path: 'Proposals/:id', component: StartPageComponent },
+  //{ path: 'Reply', component: ReplyQuestionsComponent },
+  //{ path: 'Reply/:id', component: ReplyQuestionsComponent }
 ];
 
 const otherRoutes: Routes = [
@@ -61,15 +76,19 @@ const UserRoutes: Routes = [
 ];
 
 const appRoutes: Routes = [
-  { path: 'MainForAllUsers', component: MainForAllUsersComponent },
-  { path: 'MainForAllUsers', component: MainForAllUsersComponent, children: otherRoutes },
-  { path: 'MainAdmin', component: MainAdminComponent },
-  { path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
-  { path: 'MainClient', component: MainClientComponent },
-  { path: 'MainClient', component: MainClientComponent, children: UserRoutes },
+  //{ path: 'MainForAllUsers', component: MainForAllUsersComponent },
+  //{ path: 'MainForAllUsers', component: MainForAllUsersComponent, children: otherRoutes },
+  //{ path: 'MainAdmin', component: MainAdminComponent },
+  //{ path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
+  //{ path: 'MainClient', component: MainClientComponent },
+  //{ path: 'MainClient', component: MainClientComponent, children: UserRoutes },
   //{ path: '', component: StartPageComponent }
-  { path: '', component: MainSubmitterComponent },
-  { path: '', component: MainSubmitterComponent, children: SubmitterRoutes }
+  { path: 'Submitter', component: MainSubmitterComponent },
+  { path: 'Submitter', component: MainSubmitterComponent, children: SubmitterRoutes },
+  { path: 'Client', component: MainClientComponent },
+  { path: 'Client', component: MainClientComponent, children: ClientRoutes },
+  { path: 'Admin', component: MainAdminComponent },
+  { path: 'Admin', component: MainAdminComponent, children: AdminRoutes },
 ];
 
 @NgModule({
