@@ -3,4 +3,5 @@ export class Payment {
   name: string;
   amount: string;
   proposalId: string;
+  budgetId: string;
 }
