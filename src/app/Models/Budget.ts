@@ -3,4 +3,5 @@ export class Budget {
   name: string;
   amount: string;
   remainingAmount: string;
+  budgetTemplateId: string;
 }

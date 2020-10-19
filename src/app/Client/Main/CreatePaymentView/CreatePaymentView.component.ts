@@ -42,6 +42,6 @@ export class CreatePaymentViewComponent {
   }
 
   Send() {
-    this.httpProposalService.postProposal(this.payment).subscribe(() => { }, error => console.log(error));
+    this.httpProposalService.postPayment(this.payment).subscribe(() => { }, error => console.log(error));
   }
 }

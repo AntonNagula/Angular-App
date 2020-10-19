@@ -19,6 +19,8 @@ import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientSt
 import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
 import { ProposalPaymentsGridComponent } from './Grids/ProposalPayments/ProposalPayments.component';
 import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
+import { BudgetsGridComponent } from './Grids/Budgets/BudgetsGrid.component';
+import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/Crea
     ClientStartPageComponent,
     ProposalViewComponent,
     ProposalPaymentsGridComponent,
-    CreatePaymentViewComponent
+    CreatePaymentViewComponent,
+    BudgetsGridComponent,
+    BudgetsViewComponent
   ],
   imports: [
     BrowserModule,
