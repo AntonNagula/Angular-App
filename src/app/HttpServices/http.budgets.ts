@@ -11,15 +11,8 @@ export class HttpBudgetService {
     return this.http.get('http://localhost:54717/api/budgets');
   }
 
-  getProposal(id: string) {
-    return this.http.get('http://localhost:54717/api/proposal/'+id);
+  postBudgets(budgets: Budget[]) {
+    return this.http.post('http://localhost:54717/api/budgets/addcollection', budgets);
   }
 
-  //postProposal(proposal: Proposal) {
-  //  return this.http.post('http://localhost:54717/api/proposal', proposal);
-  //}
-
-  deleteProposal(id: string) {
-    return this.http.delete('http://localhost:54717/api/proposal/'+id);
-  }
 }

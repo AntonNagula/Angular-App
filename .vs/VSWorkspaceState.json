@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\CreatePaymentView",
-    "\\src\\app\\Client\\Main\\ProposalView",
-    "\\src\\app\\Grids\\ProposalPayments",
-    "\\src\\app\\Submitter\\Main",
-    "\\src\\app\\Submitter\\Main\\Questions"
+    "\\src\\app\\Client\\Main\\BudgetsView",
+    "\\src\\app\\Client\\Main\\ClientStartPage",
+    "\\src\\app\\Grids",
+    "\\src\\app\\Grids\\Budgets",
+    "\\src\\app\\Grids\\Proposals"
   ],
-  "SelectedNode": "\\src\\app\\Enter",
+  "SelectedNode": "\\src\\app\\HttpServices\\http.proposals.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -13,6 +13,7 @@ import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestio
 import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
 import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
 import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
+import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
 
 
 
@@ -26,8 +27,8 @@ const SubmitterRoutes: Routes = [
 const ClientRoutes: Routes = [
   { path: 'Proposals', component: ClientStartPageComponent },
   { path: 'Proposal/:id', component: ProposalViewComponent },
-  { path: 'CreationPayment/:id', component: CreatePaymentViewComponent }
-  //{ path: 'Proposals/:id', component: StartPageComponent },
+  { path: 'CreationPayment/:id', component: CreatePaymentViewComponent },
+  { path: 'Budgets', component: BudgetsViewComponent },
   //{ path: 'Reply', component: ReplyQuestionsComponent },
   //{ path: 'Reply/:id', component: ReplyQuestionsComponent }
 ];
