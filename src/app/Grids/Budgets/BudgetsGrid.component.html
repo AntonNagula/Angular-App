@@ -1,0 +1,20 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Название бюджета</th>
+        <th>Изначальная сумма</th>
+        <th>Оставшаяся сумма</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let budget of budgets;let i=index">
+        <td>{{budget["name"]}}</td>
+        <td>{{budget["amount"]}}</td>
+        <td>{{budget["remainingAmount"]}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>

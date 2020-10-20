@@ -1,4 +1,7 @@
 export class Payment {
+  id: string;
+  name: string;
   amount: string;
-  status: string;
+  proposalId: string;
+  budgetId: string;
 }

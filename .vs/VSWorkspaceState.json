@@ -3,15 +3,16 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\Admin",
+    "\\src\\app\\Admin\\Main",
+    "\\src\\app\\Admin\\Main\\BTsView",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\Countries",
-    "\\src\\app\\Client\\Main\\CreateCountry",
-    "\\src\\app\\Client\\Main\\CreateHotel",
-    "\\src\\app\\ForAllUsers",
-    "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\Tours"
+    "\\src\\app\\Client\\Main\\BudgetsView",
+    "\\src\\app\\Grids",
+    "\\src\\app\\Grids\\BTs",
+    "\\src\\app\\Models"
   ],
-  "SelectedNode": "\\src\\app\\Submitter\\Main\\Questions\\ReplyQuestions.component.css",
+  "SelectedNode": "\\src\\app\\Admin\\Main\\CreateBTView\\CreateBTView.component.ts",
   "PreviewInSolutionExplorer": false
 }

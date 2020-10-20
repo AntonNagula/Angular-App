@@ -1,0 +1,18 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Название шаблона</th>
+        <th>Изначальная сумма</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let BT of BTs;let i=index">
+        <td>{{BT["name"]}}</td>
+        <td>{{BT["amount"]}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
