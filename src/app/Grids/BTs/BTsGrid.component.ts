@@ -19,15 +19,18 @@ export class BTsGridComponent implements OnInit {
     this.httpBudgetTemplateService.getBudgetTemplates().subscribe((data: BudgetTemplate[]) => { this.BTs = data; console.log(this.BTs); }, error => console.log(error));
   }
   
-  //Delete(i: number): void {
-  //  this.httpProposalService.deleteProposal(i.toString()).subscribe(() => { }, error => console.log(error));
-  //  this.router.navigate(
-  //    ['/Proposals']
-  //  );
-  //}
+  Delete(i: number): void {
+    this.httpBudgetTemplateService.deleteBudgetTemplate(i.toString()).subscribe(() => { }, error => console.log(error));
+    setTimeout(() => this.reRoute(), 2000);    
+  }
   Edit(i: number): void {
     this.router.navigate(
-      ['/Reply/' + i.toString()]
+      ['/Admin/CreationBT/' + i.toString()]
+    );
+  }
+  reRoute() {
+    this.router.navigate(
+      ['Admin/BTs']
     );
   }
 }

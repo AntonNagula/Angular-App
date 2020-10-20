@@ -35,6 +35,7 @@ const ClientRoutes: Routes = [
 
 const AdminRoutes: Routes = [
   { path: 'CreationBT', component: CreateBTViewComponent },
+  { path: 'CreationBT/:id', component: CreateBTViewComponent },
   { path: 'BTs', component: BTsViewComponent }
 ];
 
