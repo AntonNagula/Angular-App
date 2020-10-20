@@ -10,4 +10,8 @@ export class HttpBudgetTemplateService {
   getBudgetTemplates() {
     return this.http.get('http://localhost:54717/api/budgettemplates');
   }
+
+  postBudgetTemplates(budgetTemplate: BudgetTemplate) {
+    return this.http.post('http://localhost:54717/api/budgettemplate', budgetTemplate);
+  }
 }

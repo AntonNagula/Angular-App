@@ -21,6 +21,9 @@ import { ProposalPaymentsGridComponent } from './Grids/ProposalPayments/Proposal
 import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
 import { BudgetsGridComponent } from './Grids/Budgets/BudgetsGrid.component';
 import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
+import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
+import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
+import { BTsGridComponent } from './Grids/BTs/BTsGrid.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.comp
     ProposalPaymentsGridComponent,
     CreatePaymentViewComponent,
     BudgetsGridComponent,
-    BudgetsViewComponent
+    BudgetsViewComponent,
+    CreateBTViewComponent,
+    BTsViewComponent,
+    BTsGridComponent
   ],
   imports: [
     BrowserModule,

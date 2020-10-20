@@ -14,6 +14,8 @@ import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientSt
 import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
 import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
 import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
+import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
+import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
 
 
 
@@ -29,26 +31,11 @@ const ClientRoutes: Routes = [
   { path: 'Proposal/:id', component: ProposalViewComponent },
   { path: 'CreationPayment/:id', component: CreatePaymentViewComponent },
   { path: 'Budgets', component: BudgetsViewComponent },
-  //{ path: 'Reply', component: ReplyQuestionsComponent },
-  //{ path: 'Reply/:id', component: ReplyQuestionsComponent }
 ];
 
 const AdminRoutes: Routes = [
-  //{ path: 'Proposals', component: StartPageComponent },
-  //{ path: 'Proposals/:id', component: StartPageComponent },
-  //{ path: 'Reply', component: ReplyQuestionsComponent },
-  //{ path: 'Reply/:id', component: ReplyQuestionsComponent }
-];
-
-const otherRoutes: Routes = [
-  { path: 'Registration', component: RegistrationComponent }
-];
-
-const itemRoutes: Routes = [
-  { path: 'CreateUser', component: CreateUserComponent },
-  { path: 'UserTable', component: UsersTableComponent },
-  { path: 'DeleteUser/:id', component: UsersTableComponent },
-  { path: 'UpdateUser/:id', component: CreateUserComponent }
+  { path: 'CreationBT', component: CreateBTViewComponent },
+  { path: 'BTs', component: BTsViewComponent }
 ];
 
 const appRoutes: Routes = [

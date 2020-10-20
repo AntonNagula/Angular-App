@@ -1,0 +1,15 @@
+<body>
+  <div class="main-div">
+    <label>Название шаблона бюджета</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="budgetTemplate.name" />
+    <br />
+    <label>Сумма</label>
+    <br />
+    <input class="inputtext" type="text" [(ngModel)]="budgetTemplate.amount" />
+    <br />    
+    <br/>
+    <button class="btn btn-primary button-margin" (click)="Done($event)">Отправить</button>
+    <button class="btn btn-primary button-margin" (click)="Close($event)">Закрыть</button>
+  </div>
+</body>

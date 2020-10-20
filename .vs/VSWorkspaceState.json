@@ -3,14 +3,16 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\Admin",
+    "\\src\\app\\Admin\\Main",
+    "\\src\\app\\Admin\\Main\\BTsView",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
     "\\src\\app\\Client\\Main\\BudgetsView",
-    "\\src\\app\\Client\\Main\\ClientStartPage",
     "\\src\\app\\Grids",
-    "\\src\\app\\Grids\\Budgets",
-    "\\src\\app\\Grids\\Proposals"
+    "\\src\\app\\Grids\\BTs",
+    "\\src\\app\\Models"
   ],
-  "SelectedNode": "\\src\\app\\HttpServices\\http.proposals.ts",
+  "SelectedNode": "\\src\\app\\Admin\\Main\\CreateBTView\\CreateBTView.component.ts",
   "PreviewInSolutionExplorer": false
 }
