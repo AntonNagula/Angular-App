@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\Admin",
+    "\\src\\app\\Admin\\Main",
+    "\\src\\app\\Admin\\Main\\CreateUser",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\BudgetsView",
-    "\\src\\app\\Grids",
-    "\\src\\app\\Grids\\BTs",
-    "\\src\\app\\Grids\\Budgets",
+    "\\src\\app\\Client\\Main\\ClientStartPage",
     "\\src\\app\\Models"
   ],
-  "SelectedNode": "\\src\\app\\Client\\Main\\BudgetsView\\BudgetsView.component.ts",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

@@ -24,6 +24,7 @@ import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.comp
 import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
 import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
 import { BTsGridComponent } from './Grids/BTs/BTsGrid.component';
+import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { BTsGridComponent } from './Grids/BTs/BTsGrid.component';
     EnterComponent,
     MainAdminComponent,
     MainClientComponent,
+    UsersViewComponent,
     UsersTableComponent,
     CreateUserComponent,
     RegistrationComponent,

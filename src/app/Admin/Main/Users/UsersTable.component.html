@@ -1,5 +1,4 @@
-<body style="height:1000px;">
-  <h1 class="header">Пользователи</h1>
+<body>
   <table>
     <tbody>
       <tr *ngFor="let user of users">
@@ -9,9 +8,9 @@
         <td>{{user.surname}}</td>
         <td>{{user.email}}</td>
         <td>{{user.password}}</td>
-        <td><a routerLink="/MainAdmin/UpdateUser/{{user.id}}">Редактировать</a></td>
-        <td><a routerLink="/MainAdmin/DeleteUser/{{user.id}}">Удалить</a></td>
+        <td><button class="btn btn-primary button-margin" (click)="Edit(user.userId)">Редактировать</button></td>
+        <td><button class="btn btn-primary button-margin" (click)="Delete(user.userId)">Удалить</button></td>
       </tr>
     </tbody>
-  </table>  
+  </table>
 </body>

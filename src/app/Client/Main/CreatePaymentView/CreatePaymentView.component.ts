@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Proposal, Statuses } from '../../../Models/Proposal';
 import { Subscription } from 'rxjs';
 import { HttpPaymentService } from '../../../HttpServices/http.payments';
 import { Payment } from '../../../Models/Payment';
@@ -28,13 +27,16 @@ export class CreatePaymentViewComponent {
   }
 
   Done($event: any): void {
-    alert("hjbjv");
     this.MarkAsDone();
+    this.Answers();    
     this.Send();
-    console.log(this.id);
     this.router.navigate(
       ['/Client/Proposal/' + this.id]
     );
+  }
+
+  Answers() {
+    this.payment["amount"] = +this.payment["amount"];
   }
 
   MarkAsDone() {

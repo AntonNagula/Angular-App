@@ -6,7 +6,7 @@ export class Proposal {
   purpose: string;
   amount: number;
   bankAccount: string;
-  status: number;
+  statusId: number;
 }
 
 export enum Statuses {
