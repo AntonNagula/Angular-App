@@ -49,7 +49,7 @@ export class BudgetsViewComponent {
       let budget = new Budget();
       budget["amount"] = budgettemplate["amount"];
       budget["remainingAmount"] = budgettemplate["amount"];
-      budget["budgetTemplateId"] = budgettemplate["id"];
+      budget["budgetTemplateId"] = budgettemplate["budgetTemplateId"];
       budget["name"] = budgettemplate["name"];
       this.budgets.push(budget);
     }

@@ -23,13 +23,13 @@ export class ProposalGridComponent implements OnInit {
     this.httpProposalService.getProposals().subscribe((data: Proposal[]) => { this.proposals = data; console.log(this.proposals); }, error => console.log(error));
   }
   IsDraft(i: number): boolean {
-    return this.proposals[i]["status"] === Statuses.Draft.toString();
+    return this.proposals[i]["status"] === Statuses.Draft;
   }
   IsSent(i: number): boolean {
-    return this.proposals[i]["status"] === Statuses.Sent.toString();
+    return this.proposals[i]["status"] === Statuses.Sent;
   }
   IsApproved(i: number): boolean {
-    return this.proposals[i]["status"] === Statuses.Approved.toString();
+    return this.proposals[i]["status"] === Statuses.Approved;
   }
   Delete(i: number): void {
     this.httpProposalService.deleteProposal(i.toString()).subscribe(() => { }, error => console.log(error));

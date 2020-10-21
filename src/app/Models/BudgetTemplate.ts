@@ -1,5 +1,5 @@
 export class BudgetTemplate {
-  id: string;
+  budgetTemplateId: number;
   name: string;
-  amount: string;
+  amount: number;
 }

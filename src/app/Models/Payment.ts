@@ -1,7 +1,7 @@
 export class Payment {
-  id: string;
+  paymentId: number;
   name: string;
-  amount: string;
-  proposalId: string;
-  budgetId: string;
+  amount: number;
+  proposalId: number;
+  budgetId: number;
 }

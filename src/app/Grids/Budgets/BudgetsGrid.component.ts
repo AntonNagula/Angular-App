@@ -21,7 +21,7 @@ export class BudgetsGridComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.httpBudgetService.getBudgets().subscribe((data: Budget[]) => { this.budgets = data; console.log(this.budgets); }, error => console.log(error));
+    this.httpBudgetService.getBudgets().subscribe((data: any) => { this.budgets = data; console.log(data); }, error => console.log(error));
   }
   
   //Delete(i: number): void {

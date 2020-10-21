@@ -7,10 +7,10 @@
     "\\src\\app\\Client\\Main",
     "\\src\\app\\Client\\Main\\BudgetsView",
     "\\src\\app\\Grids",
-    "\\src\\app\\Grids\\Proposals",
-    "\\src\\app\\HttpServices",
+    "\\src\\app\\Grids\\BTs",
+    "\\src\\app\\Grids\\Budgets",
     "\\src\\app\\Models"
   ],
-  "SelectedNode": "\\src\\app\\Grids\\Proposals\\ProposalGrid.component.ts",
+  "SelectedNode": "\\src\\app\\Client\\Main\\BudgetsView\\BudgetsView.component.ts",
   "PreviewInSolutionExplorer": false
 }

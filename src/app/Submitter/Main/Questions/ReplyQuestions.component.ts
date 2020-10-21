@@ -34,23 +34,18 @@ export class ReplyQuestionsComponent implements OnInit {
 
   Done($event: any): void {
     this.MarkAsDone();
-    this.Answers();
     this.Send();
     this.router.navigate(
       ['/Proposals']
     );
   }
 
-  Answers() {
-    this.proposal.name = this.name;
-    this.proposal.id = this.id;
-  }
   MarkAsDone() {
-    this.proposal["status"] = Statuses.Sent.toString();
+    this.proposal["status"] = Statuses.Sent;
   }
 
   MarkDraft() {
-    this.proposal["status"] = Statuses.Draft.toString();
+    this.proposal["status"] = Statuses.Draft;
   }
 
   Send() {

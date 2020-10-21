@@ -38,7 +38,7 @@ export class CreatePaymentViewComponent {
   }
 
   MarkAsDone() {
-    this.payment["proposalId"] = this.id;
+    this.payment["proposalId"] = +this.id;
   }
 
   Send() {

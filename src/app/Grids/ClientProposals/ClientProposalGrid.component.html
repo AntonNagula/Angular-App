@@ -17,7 +17,7 @@
         <td>{{proposal["status"]}}</td>
         <td>{{proposal["amount"]}}</td>
         <td>{{proposal["purpose"]}}</td>
-        <td><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Delete(proposal.id)">Удалить</button><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Edit(proposal.id)">Редактировать</button></td>
+        <td><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Delete(proposal.proposalId)">Удалить</button><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Edit(proposal.proposalId)">Редактировать</button></td>
       </tr>
     </tbody>
   </table>

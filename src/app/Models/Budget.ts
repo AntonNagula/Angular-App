@@ -1,7 +1,7 @@
 export class Budget {
-  id: string;
+  budgetId: number;
   name: string;
-  amount: string;
-  remainingAmount: string;
-  budgetTemplateId: string;
+  amount: number;
+  remainingAmount: number;
+  budgetTemplateId: number;
 }
