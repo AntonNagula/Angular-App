@@ -6,11 +6,11 @@
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
     "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Client",
+    "\\src\\app\\Admin\\Main\\Users",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\ClientStartPage",
-    "\\src\\app\\Models"
+    "\\src\\app\\G",
+    "\\src\\app\\HttpServices"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\app\\G\\AuthGuard.ts",
   "PreviewInSolutionExplorer": false
 }

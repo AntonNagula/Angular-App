@@ -25,6 +25,7 @@ import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.co
 import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
 import { BTsGridComponent } from './Grids/BTs/BTsGrid.component';
 import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
+import { AuthGuard } from './Guards/AuthGuard';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,6 @@ import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
     FormsModule
   ],
   bootstrap: [AppComponent],
-  providers: []
+  providers: [AuthGuard]
 })
 export class AppModule { }
