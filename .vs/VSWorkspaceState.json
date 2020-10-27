@@ -5,12 +5,12 @@
     "\\src\\app",
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\G",
-    "\\src\\app\\HttpServices"
+    "\\src\\app\\Client\\Main\\BudgetsView",
+    "\\src\\app\\Registration",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\src\\app\\G\\AuthGuard.ts",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

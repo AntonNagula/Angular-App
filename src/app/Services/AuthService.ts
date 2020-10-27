@@ -6,11 +6,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  public Token():void {
-    this.http.get('http://localhost:54717/token')
+  public Token(login: string, password: string): void {
+    let body = { password: password, login: login };
+    this.http.post('http://localhost:54717/token',body)
       .subscribe((res: any) => {
         if (res) {
-          let token = res["token"];          
+          let token = res["token"]["result"];          
           localStorage.setItem('accessToken', token);
         }
       })
