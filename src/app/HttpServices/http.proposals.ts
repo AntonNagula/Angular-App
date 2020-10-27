@@ -6,10 +6,10 @@ import { Proposal } from '../Models/Proposal';
 export class HttpProposalService {
 
   constructor(private http: HttpClient) { }
-  //"content-type": "application/x-www-form-urlencoded",
+
   Headers(): HttpHeaders {
     let bearer = "Bearer " + localStorage.getItem('accessToken');
-    let headers = new HttpHeaders({ "Authorization": bearer });
+    let headers = new HttpHeaders({ "content-type": "application/x-www-form-urlencoded", "Authorization": bearer });
     return headers;
   }
 
@@ -26,7 +26,6 @@ export class HttpProposalService {
   }
 
   postProposal(proposal: Proposal) {
-    console.log(proposal);
     return this.http.post('http://localhost:54717/api/proposal', proposal, { headers: this.Headers() });
   }
 

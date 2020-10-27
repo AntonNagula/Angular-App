@@ -25,6 +25,7 @@ export class ReplyQuestionsComponent implements OnInit {
     }, error => console.log(error));
   }
   Close($event: any): void {
+    this.Answers();
     this.MarkDraft();
     this.Send();
     this.router.navigate(
@@ -33,6 +34,7 @@ export class ReplyQuestionsComponent implements OnInit {
   }
 
   Done($event: any): void {
+    this.Answers();
     this.MarkAsDone();
     this.Send();
     console.log(this.proposal);
@@ -42,14 +44,17 @@ export class ReplyQuestionsComponent implements OnInit {
   }
 
   MarkAsDone() {
-    this.proposal["status"] = Statuses.Sent;
+    this.proposal["statusId"] = Statuses.Sent;
   }
 
   MarkDraft() {
-    this.proposal["status"] = Statuses.Draft;
+    this.proposal["statusId"] = Statuses.Draft;
   }
 
   Send() {
     this.httpProposalService.postProposal(this.proposal).subscribe(() => { }, error => console.log(error));
+  }
+  Answers() {
+    this.proposal["amount"] = +this.proposal["amount"];
   }
 }
