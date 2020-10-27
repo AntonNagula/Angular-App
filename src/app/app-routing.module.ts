@@ -50,6 +50,7 @@ const appRoutes: Routes = [
   { path: 'Client', component: MainClientComponent, children: ClientRoutes },
   { path: 'Admin', component: MainAdminComponent },
   { path: 'Admin', component: MainAdminComponent, children: AdminRoutes },
+  { path: '', component: EnterComponent },
 ];
 
 @NgModule({

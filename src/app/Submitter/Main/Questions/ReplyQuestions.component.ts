@@ -28,15 +28,16 @@ export class ReplyQuestionsComponent implements OnInit {
     this.MarkDraft();
     this.Send();
     this.router.navigate(
-      ['/Proposals']
+      ['/Submitter/Proposals']
     );
   }
 
   Done($event: any): void {
     this.MarkAsDone();
     this.Send();
+    console.log(this.proposal);
     this.router.navigate(
-      ['/Proposals']
+      ['/Submitter/Proposals']
     );
   }
 

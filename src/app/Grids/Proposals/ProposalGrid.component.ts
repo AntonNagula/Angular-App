@@ -20,26 +20,29 @@ export class ProposalGridComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.httpProposalService.getProposals().subscribe((data: Proposal[]) => { this.proposals = data; console.log(this.proposals); }, error => console.log(error));
+    this.httpProposalService.getUserProposals().subscribe((data: Proposal[]) => { this.proposals = data; console.log(this.proposals); }, error => console.log(error));
   }
   IsDraft(i: number): boolean {
-    return this.proposals[i]["status"] === Statuses.Draft;
+    return this.proposals[i]["statusId"] === Statuses.Draft;
   }
   IsSent(i: number): boolean {
-    return this.proposals[i]["status"] === Statuses.Sent;
+    return this.proposals[i]["statusId"] === Statuses.Sent;
   }
   IsApproved(i: number): boolean {
-    return this.proposals[i]["status"] === Statuses.Approved;
+    return this.proposals[i]["statusId"] === Statuses.Approved;
   }
   Delete(i: number): void {
     this.httpProposalService.deleteProposal(i.toString()).subscribe(() => { }, error => console.log(error));
-    this.router.navigate(
-      ['/Proposals']
-    );
+    setTimeout(() => this.Route(), 1000);
   }
   Edit(i: number): void {
     this.router.navigate(
-      ['/Reply/' + i.toString()]
+      ['Submitter/Reply/' + i.toString()]
+    );
+  }
+  Route() {
+    this.router.navigate(
+      ['/Submitter/Proposals']
     );
   }
 }

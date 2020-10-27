@@ -16,7 +16,7 @@ export class StartPageComponent {
 
   ToForm($event: any): void {
     this.router.navigate(
-      ['/Reply']
+      ['/Submitter/Reply']
     );
   }
 }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { EnterData } from './../Models/EnterData';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../Services/AuthService';
+import { Proposal } from '../Models/Proposal';
 
 @Component({
   selector: 'Enter',
@@ -10,6 +11,7 @@ import { AuthService } from '../Services/AuthService';
   providers: [AuthService]
 })
 export class EnterComponent {
+  role: string;
   login: string;
   password: string;
   user: EnterData = new EnterData(); 
@@ -19,21 +21,25 @@ export class EnterComponent {
   constructor(private authService: AuthService, private route: ActivatedRoute, private router: Router) { }
 
   submit($event: any) {
-    //this.authService.Token(this.password, this.login);
-    //console.log(this.receivedUser);
-    //localStorage.setItem('UserId', this.receivedUser["userId"]);
-    //console.log(localStorage.getItem('UserId'));
-    //if (this.receivedUser.role == "админ") {
-    //  this.router.navigate(['/MainAdmin/UserTable']);
-    //}
-    //else if (this.receivedUser.role == "работник") {
-    //  this.router.navigate(['/MainClient/Tours']);
-    //}
-    //else if (this.receivedUser.role == "пользователь") {
-    //  this.router.navigate(['/MainForAllUsers/Tours']);
-    //}
-    //else {
-    // this.warn ="неправильно введен логин или пароль";
-    //}
+    this.authService.Token(this.login, this.password);
+
+    setTimeout(() => this.Route(), 1000);
+  }
+
+  Route() {
+    this.role = localStorage.getItem("role");
+    console.log(this.role);
+    if (this.role == "Admin") {
+      this.router.navigate(['/Admin/Users']);
+    }
+    else if (this.role == "Client") {
+      this.router.navigate(['/Client/Proposals']);
+    }
+    else if (this.role == "Submitter") {
+      this.router.navigate(['/Submitter/Proposals']);
+    }
+    else {
+      this.warn = "неправильно введен логин или пароль";
+    }
   }
 }
