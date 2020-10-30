@@ -12,7 +12,7 @@ import { Proposal } from '../../../Models/Proposal';
 })
 export class ProposalViewComponent implements OnInit {
   private routeSubscription: Subscription;
-  private proposal: Proposal = new Proposal();
+  proposal: Proposal = new Proposal();
   private id: string;  
 
   constructor(private router: Router, private route: ActivatedRoute, private httpProposalService: HttpProposalService,) {
@@ -24,7 +24,7 @@ export class ProposalViewComponent implements OnInit {
   }
 
   NameSurname(): string {
-    return this.proposal["userName"] + " " + this.proposal["userSurname"];
+    return this.proposal["user"]["name"] + " " + this.proposal["user"]["surname"];
   }
 
   ToPayment($event: any): void {

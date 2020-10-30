@@ -33,7 +33,6 @@ export class ProposalGridComponent implements OnInit {
   }
   Delete(i: number): void {
     this.httpProposalService.deleteProposal(i.toString()).subscribe(() => { }, error => console.log(error));
-    setTimeout(() => this.Route(), 1000);
   }
   Edit(i: number): void {
     this.router.navigate(

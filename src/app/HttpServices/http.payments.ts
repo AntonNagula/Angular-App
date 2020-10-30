@@ -9,7 +9,7 @@ export class HttpPaymentService {
 
   Headers(): HttpHeaders {
     let bearer = "Bearer " + localStorage.getItem('accessToken');
-    let headers = new HttpHeaders({ "content-type": "application/x-www-form-urlencoded", "Authorization": bearer });
+    let headers = new HttpHeaders({ "Authorization": bearer });
     return headers;
   }
 

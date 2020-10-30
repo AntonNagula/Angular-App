@@ -19,4 +19,9 @@ export class StartPageComponent {
       ['/Submitter/Reply']
     );
   }
+  ToGrid($event: any): void {
+    this.router.navigate(
+      ['/Submitter/Proposals']
+    );
+  }
 }

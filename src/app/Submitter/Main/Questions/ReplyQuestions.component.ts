@@ -28,19 +28,14 @@ export class ReplyQuestionsComponent implements OnInit {
     this.Answers();
     this.MarkDraft();
     this.Send();
-    this.router.navigate(
-      ['/Submitter/Proposals']
-    );
+    setTimeout(() => this.Route(), 1000);    
   }
 
-  Done($event: any): void {
+  Done($event: any): void {    
     this.Answers();
     this.MarkAsDone();
     this.Send();
-    console.log(this.proposal);
-    this.router.navigate(
-      ['/Submitter/Proposals']
-    );
+    setTimeout(() => this.Route(), 1000);    
   }
 
   MarkAsDone() {
@@ -52,9 +47,18 @@ export class ReplyQuestionsComponent implements OnInit {
   }
 
   Send() {
-    this.httpProposalService.postProposal(this.proposal).subscribe(() => { }, error => console.log(error));
+    if (this.proposal.proposalId !== undefined)
+      this.httpProposalService.putProposal(this.proposal).subscribe(() => { }, error => console.log(error));
+    else
+      this.httpProposalService.postProposal(this.proposal).subscribe(() => { }, error => console.log(error));
   }
   Answers() {
+    console.log(this.proposal["amount"]);
     this.proposal["amount"] = +this.proposal["amount"];
+  }
+  Route() {
+    this.router.navigate(
+      ['/Submitter/Proposals']
+    );
   }
 }

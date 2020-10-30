@@ -3,14 +3,15 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Admin",
-    "\\src\\app\\Admin\\Main",
     "\\src\\app\\Client",
     "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\BudgetsView",
-    "\\src\\app\\Registration",
-    "\\src\\environments"
+    "\\src\\app\\Client\\Main\\CreatePaymentView",
+    "\\src\\app\\Models",
+    "\\src\\app\\Submitter",
+    "\\src\\app\\Submitter\\Main",
+    "\\src\\app\\Submitter\\Main\\Questions",
+    "\\src\\app\\Submitter\\Main\\StartPage"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\Submitter\\Main\\Questions\\ReplyQuestions.component.ts",
   "PreviewInSolutionExplorer": false
 }

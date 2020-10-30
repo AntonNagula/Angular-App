@@ -12,10 +12,4 @@ export class ClientStartPageComponent {
   constructor(private router: Router, private httpProposalService: HttpProposalService,) {
    
   }
-
-  ToForm($event: any): void {
-    this.router.navigate(
-      ['/Reply']
-    );
-  }
 }

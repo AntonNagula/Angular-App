@@ -9,7 +9,7 @@ export class HttpProposalService {
 
   Headers(): HttpHeaders {
     let bearer = "Bearer " + localStorage.getItem('accessToken');
-    let headers = new HttpHeaders({ "content-type": "application/x-www-form-urlencoded", "Authorization": bearer });
+    let headers = new HttpHeaders({ "Authorization": bearer });
     return headers;
   }
 
@@ -28,7 +28,10 @@ export class HttpProposalService {
   postProposal(proposal: Proposal) {
     return this.http.post('http://localhost:54717/api/proposal', proposal, { headers: this.Headers() });
   }
-
+  putProposal(proposal: Proposal) {
+    console.log(proposal);
+    return this.http.put('http://localhost:54717/api/proposal', proposal, { headers: this.Headers() });
+  }
   deleteProposal(id: string) {
     return this.http.delete('http://localhost:54717/api/proposal/' + id, { headers: this.Headers() });
   }

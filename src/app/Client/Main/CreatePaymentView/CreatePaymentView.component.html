@@ -2,13 +2,19 @@
   <div class="main-div">
     <label>Название платежа</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="payment.name" />
+    <input class="input" type="text" [(ngModel)]="payment.name" />
     <br />
     <label>Сумма</label>
     <br />
-    <input class="inputtext" type="text" [(ngModel)]="payment.amount" />
-    <br />    
-    <br/>
+    <input class="input" type="text" [(ngModel)]="payment.amount" />
+    <br />
+    <label>Бюджет</label>
+    <br />
+    <select class="input" [(ngModel)]="payment.budgetId">
+      <option *ngFor="let budget of budgets" [value]="budget.budgetId">{{budget.name}}</option>
+    </select>
+    <br />
+    <br />
     <button class="btn btn-primary button-margin" (click)="Done($event)">Отправить</button>
     <button class="btn btn-primary button-margin" (click)="Close($event)">Закрыть</button>
   </div>

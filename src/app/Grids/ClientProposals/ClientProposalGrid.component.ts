@@ -30,17 +30,11 @@ export class ClientProposalGridComponent implements OnInit {
     return this.proposals[i]["status"] === Statuses.Approved;
   }
   NameSurname(i: number): string {
-    return this.proposals[i]["userName"] + " " + this.proposals[i]["userSurname"];
+    return this.proposals[i]["user"]["name"] + " " + this.proposals[i]["user"]["surname"];
   }
-  Delete(i: number): void {
-    this.httpProposalService.deleteProposal(i.toString()).subscribe(() => { }, error => console.log(error));
+  Show(i: number): void {
     this.router.navigate(
-      ['/Client/Proposals']
-    );
-  }
-  Edit(i: number): void {
-    this.router.navigate(
-      ['/Reply/' + i.toString()]
+      ['/Client/Proposal/' + i.toString()]
     );
   }
 }
