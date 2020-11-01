@@ -14,10 +14,10 @@
       <tr *ngFor="let proposal of proposals;let i=index">
         <td>{{proposal["name"]}}</td>
         <td>{{NameSurname(i)}}</td>
-        <td>{{proposal["status"]}}</td>
+        <td>{{proposal["status"]["name"]}}</td>
         <td>{{proposal["amount"]}}</td>
         <td>{{proposal["purpose"]}}</td>
-        <td><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Delete(proposal.id)">Удалить</button><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Edit(proposal.id)">Редактировать</button></td>
+        <td><button class="btn btn-primary button-margin" (click)="Show(proposal.proposalId)">Просмотреть</button></td>
       </tr>
     </tbody>
   </table>

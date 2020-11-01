@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Budget } from '../Models/Budget';
 
 @Injectable()
@@ -7,12 +7,18 @@ export class HttpBudgetService {
 
   constructor(private http: HttpClient) { }
 
-  getBudgets() {
-    return this.http.get('http://localhost:54717/api/budgets');
+  Headers(): HttpHeaders {
+    let bearer = "Bearer " + localStorage.getItem('accessToken');
+    let headers = new HttpHeaders({ "Authorization": bearer });
+    return headers;
   }
 
-  postBudgets(budgets: Budget[]) {
-    return this.http.post('http://localhost:54717/api/budgets/addcollection', budgets);
+  getBudgets() {
+    return this.http.get('http://localhost:54717/api/budgets', { headers: this.Headers() });
+  }
+
+  postBudgets() {
+    return this.http.post('http://localhost:54717/api/budgets/addcollection', { headers: this.Headers() });
   }
 
 }

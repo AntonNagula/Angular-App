@@ -16,7 +16,12 @@ export class StartPageComponent {
 
   ToForm($event: any): void {
     this.router.navigate(
-      ['/Reply']
+      ['/Submitter/Reply']
+    );
+  }
+  ToGrid($event: any): void {
+    this.router.navigate(
+      ['/Submitter/Proposals']
     );
   }
 }

@@ -11,7 +11,7 @@
       <tr *ngFor="let BT of BTs;let i=index">
         <td>{{BT["name"]}}</td>
         <td>{{BT["amount"]}}</td>
-        <td></td>
+        <td><button class="btn btn-primary button-margin" (click)="Delete(BT.budgetTemplateId)">Удалить</button><button class="btn btn-primary button-margin" (click)="Edit(BT.budgetTemplateId)">Редактировать</button></td>
       </tr>
     </tbody>
   </table>

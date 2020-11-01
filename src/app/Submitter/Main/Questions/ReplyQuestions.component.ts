@@ -25,35 +25,40 @@ export class ReplyQuestionsComponent implements OnInit {
     }, error => console.log(error));
   }
   Close($event: any): void {
+    this.Answers();
     this.MarkDraft();
     this.Send();
-    this.router.navigate(
-      ['/Proposals']
-    );
+    setTimeout(() => this.Route(), 1000);    
   }
 
-  Done($event: any): void {
-    this.MarkAsDone();
+  Done($event: any): void {    
     this.Answers();
+    this.MarkAsDone();
     this.Send();
-    this.router.navigate(
-      ['/Proposals']
-    );
+    setTimeout(() => this.Route(), 1000);    
   }
 
-  Answers() {
-    this.proposal.name = this.name;
-    this.proposal.id = this.id;
-  }
   MarkAsDone() {
-    this.proposal["status"] = Statuses.Sent.toString();
+    this.proposal["statusId"] = Statuses.Sent;
   }
 
   MarkDraft() {
-    this.proposal["status"] = Statuses.Draft.toString();
+    this.proposal["statusId"] = Statuses.Draft;
   }
 
   Send() {
-    this.httpProposalService.postProposal(this.proposal).subscribe(() => { }, error => console.log(error));
+    if (this.proposal.proposalId !== undefined)
+      this.httpProposalService.putProposal(this.proposal).subscribe(() => { }, error => console.log(error));
+    else
+      this.httpProposalService.postProposal(this.proposal).subscribe(() => { }, error => console.log(error));
+  }
+  Answers() {
+    console.log(this.proposal["amount"]);
+    this.proposal["amount"] = +this.proposal["amount"];
+  }
+  Route() {
+    this.router.navigate(
+      ['/Submitter/Proposals']
+    );
   }
 }

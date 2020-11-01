@@ -16,6 +16,7 @@ import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/Crea
 import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
 import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
 import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
+import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
 
 
 
@@ -35,7 +36,11 @@ const ClientRoutes: Routes = [
 
 const AdminRoutes: Routes = [
   { path: 'CreationBT', component: CreateBTViewComponent },
-  { path: 'BTs', component: BTsViewComponent }
+  { path: 'CreationBT/:id', component: CreateBTViewComponent },
+  { path: 'BTs', component: BTsViewComponent },
+  { path: 'Users', component: UsersViewComponent },
+  { path: 'UpdateUser/:id', component: CreateUserComponent },
+  { path: 'CreateUser', component: CreateUserComponent}
 ];
 
 const appRoutes: Routes = [
@@ -45,6 +50,7 @@ const appRoutes: Routes = [
   { path: 'Client', component: MainClientComponent, children: ClientRoutes },
   { path: 'Admin', component: MainAdminComponent },
   { path: 'Admin', component: MainAdminComponent, children: AdminRoutes },
+  { path: '', component: EnterComponent },
 ];
 
 @NgModule({

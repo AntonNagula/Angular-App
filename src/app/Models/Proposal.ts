@@ -1,12 +1,12 @@
 export class Proposal {
-  id: string;
+  proposalId: number;
   name: string;
   userName: string;
   userSurname: string;
   purpose: string;
-  amount: string;
+  amount: number;
   bankAccount: string;
-  status: string;
+  statusId: number;
 }
 
 export enum Statuses {
