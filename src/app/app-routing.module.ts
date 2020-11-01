@@ -5,57 +5,52 @@ import { MainClientComponent } from './Client/Main/MainClient.component';
 import { EnterComponent } from './Enter/Enter.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
-import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
-import { WeatherComponent } from './ForAllUsers/Main/Weather/Weather.component';
-import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
-import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
-import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
-import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
-import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
-import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
-import { ThisTourComponent } from './ForAllUsers/Main/ThisTour/ThisTour.component';
-import { CreateVoucherComponent } from './ForAllUsers/Main/CreateVoucher/CreateVoucher.component';
 import { RegistrationComponent } from './Registration/Registration.component';
+import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
+import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
+import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
+import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
+import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
+import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
+import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
+import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
+import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
+import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
+import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
 
 
-const otherRoutes: Routes = [
-  { path: 'Weather/:City', component: WeatherComponent },
-  { path: 'Tours', component: ChoiseTourComponent },
-  { path: 'ThisTour/:id', component: ThisTourComponent },
-  { path: 'CreateVoucher/:id', component: CreateVoucherComponent },
-  { path: 'Registration', component: RegistrationComponent }
+
+const SubmitterRoutes: Routes = [
+  { path: 'Proposals', component: StartPageComponent },
+  { path: 'Proposals/:id', component: StartPageComponent },
+  { path: 'Reply', component: ReplyQuestionsComponent },  
+  { path: 'Reply/:id', component: ReplyQuestionsComponent }
 ];
 
-const itemRoutes: Routes = [
-  { path: 'CreateUser', component: CreateUserComponent },
-  { path: 'UserTable', component: UsersTableComponent },
-  { path: 'DeleteUser/:id', component: UsersTableComponent },
-  { path: 'UpdateUser/:id', component: CreateUserComponent }
+const ClientRoutes: Routes = [
+  { path: 'Proposals', component: ClientStartPageComponent },
+  { path: 'Proposal/:id', component: ProposalViewComponent },
+  { path: 'CreationPayment/:id', component: CreatePaymentViewComponent },
+  { path: 'Budgets', component: BudgetsViewComponent },
 ];
 
-const UserRoutes: Routes = [
-  { path: 'CreateCountry', component: CreateCountryComponent },
-  { path: 'UpdateCountry/:id', component: CreateCountryComponent },
-  { path: 'CountriesTable', component: CountriesTableComponent },
-  { path: 'DeleteCountry/:id', component: CountriesTableComponent },
-  { path: 'CreateHotel', component: CreateHotelComponent },
-  { path: 'UpdateHotels/:id', component: CreateHotelComponent },
-  { path: 'Hotels', component: HotelsTableComponent },
-  { path: 'DeleteHotel/:id', component: HotelsTableComponent },
-  { path: 'CreateTour', component: CreateHotelComponent },
-  { path: 'UpdateTours/:id', component: CreateHotelComponent },
-  { path: 'Tours', component: ToursTableComponent },
-  { path: 'DeleteTour/:id', component: ToursTableComponent },
+const AdminRoutes: Routes = [
+  { path: 'CreationBT', component: CreateBTViewComponent },
+  { path: 'CreationBT/:id', component: CreateBTViewComponent },
+  { path: 'BTs', component: BTsViewComponent },
+  { path: 'Users', component: UsersViewComponent },
+  { path: 'UpdateUser/:id', component: CreateUserComponent },
+  { path: 'CreateUser', component: CreateUserComponent}
 ];
 
 const appRoutes: Routes = [
-  { path: 'MainForAllUsers', component: MainForAllUsersComponent },
-  { path: 'MainForAllUsers', component: MainForAllUsersComponent, children: otherRoutes },
-  { path: 'MainAdmin', component: MainAdminComponent },
-  { path: 'MainAdmin', component: MainAdminComponent, children: itemRoutes },
-  { path: 'MainClient', component: MainClientComponent },
-  { path: 'MainClient', component: MainClientComponent, children: UserRoutes },
-  { path: '', component: EnterComponent }
+  { path: 'Submitter', component: MainSubmitterComponent },
+  { path: 'Submitter', component: MainSubmitterComponent, children: SubmitterRoutes },
+  { path: 'Client', component: MainClientComponent },
+  { path: 'Client', component: MainClientComponent, children: ClientRoutes },
+  { path: 'Admin', component: MainAdminComponent },
+  { path: 'Admin', component: MainAdminComponent, children: AdminRoutes },
+  { path: '', component: EnterComponent },
 ];
 
 @NgModule({

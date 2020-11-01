@@ -1,0 +1,23 @@
+<body>
+  <div class="main-div">
+    <label>Названіе запроса</label>
+    <br />
+    <input class="inputtext" type="text" required [(ngModel)]="proposal.name" />
+    <br />    
+    <label>Сумма</label>
+    <br />
+    <input class="inputtext" type="text" required [(ngModel)]="proposal.amount" />
+    <br />
+    <label>Цель</label>
+    <br />
+    <input class="inputtext" type="text" required [(ngModel)]="proposal.purpose" />
+    <br />
+    <label>Банковский счет</label>
+    <br />
+    <input class="inputtext" type="text" required [(ngModel)]="proposal.bankAccount" />
+    <br />
+    <br/>
+    <button class="btn btn-primary button-margin" (click)="Done($event)">Отправить</button>
+    <button class="btn btn-primary button-margin" (click)="Close($event)">Закрыть</button>
+  </div>
+</body>

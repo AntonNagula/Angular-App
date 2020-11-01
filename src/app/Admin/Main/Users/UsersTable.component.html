@@ -1,17 +1,26 @@
-<body style="height:1000px;">
-  <h1 class="header">Пользователи</h1>
+<body>
   <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Роль</th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Почта</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
     <tbody>
       <tr *ngFor="let user of users">
-        <td>{{user.id}}</td>
-        <td>{{user.role}}</td>
+        <td>{{user.userId}}</td>
+        <td>{{user.role.name}}</td>
         <td>{{user.name}}</td>
         <td>{{user.surname}}</td>
         <td>{{user.email}}</td>
-        <td>{{user.password}}</td>
-        <td><a routerLink="/MainAdmin/UpdateUser/{{user.id}}">Редактировать</a></td>
-        <td><a routerLink="/MainAdmin/DeleteUser/{{user.id}}">Удалить</a></td>
+        <td><button class="btn btn-primary button-margin" (click)="Edit(user.userId)">Редактировать</button></td>
+        <td><button class="btn btn-primary button-margin" (click)="Delete(user.userId)">Удалить</button></td>
       </tr>
     </tbody>
-  </table>  
+  </table>
 </body>

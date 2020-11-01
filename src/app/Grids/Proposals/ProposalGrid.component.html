@@ -1,0 +1,18 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Название запроса</th>
+        <th>Статус</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proposal of proposals;let i=index">
+        <td>{{proposal["name"]}}</td>
+        <td>{{proposal["status"]["name"]}}</td>        
+        <td><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Delete(proposal.proposalId)">Удалить</button><button class="btn btn-primary button-margin" *ngIf="IsDraft(i)" (click)="Edit(proposal.proposalId)">Редактировать</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>

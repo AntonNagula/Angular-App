@@ -7,17 +7,16 @@ body {
 }
 
 table {
-  background: url("https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png") 98% 56% no-repeat;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 }
 
 th {
   font-weight: normal;
   font-size: 14px;
-  color: #339;
+  color: black;
   padding: 10px 12px;
-  background: white;
+  background: red;
 }
 
 td {

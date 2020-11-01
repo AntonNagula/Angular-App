@@ -4,13 +4,13 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\Admin",
-    "\\src\\app\\ForAllUsers",
-    "\\src\\app\\ForAllUsers\\Main",
-    "\\src\\app\\ForAllUsers\\Main\\ThisTour",
-    "\\src\\app\\ForAllUsers\\Main\\Tours",
-    "\\src\\app\\Models",
-    "\\src\\app\\Registration"
+    "\\src\\app\\Admin\\Main",
+    "\\src\\app\\Admin\\Main\\CreateBTView",
+    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\Grids",
+    "\\src\\app\\Grids\\Budgets",
+    "\\src\\app\\HttpServices"
   ],
-  "SelectedNode": "\\src\\app\\ForAllUsers\\Main\\Tours\\ChoiseTour.component.html",
+  "SelectedNode": "\\src\\app\\Admin\\Main\\CreateBTView\\CreateBTView.component.ts",
   "PreviewInSolutionExplorer": false
 }

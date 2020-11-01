@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../Models/User';
+import { User, Roles } from '../../../Models/User';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpService } from '../../../HttpServices/http.service';
+import { HttpUserService } from '../../../HttpServices/http.users';
+import { Role } from '../../../Models/Role';
 
 @Component({
-  selector: 'UserTable-app',
+  selector: 'UserTable',
   templateUrl: './UsersTable.component.html',
   styleUrls: ['./UsersTable.component.css'],
-  providers: [HttpService]
+  providers: [HttpUserService]
 })
 export class UsersTableComponent implements OnInit
 {
@@ -17,21 +18,24 @@ export class UsersTableComponent implements OnInit
   id: string;
   private routeSubscription: Subscription;
 
-  constructor(private httpService: HttpService, private route: ActivatedRoute, private router: Router)
+  constructor(private httpUserService:HttpUserService,private route: ActivatedRoute, private router: Router)
   {    
-    this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
+    
   }  
   ngOnInit() {
-    if (this.id != undefined) {
-      this.httpService.DeleteUser(this.id).subscribe(() => { this.goToItem() }, error => console.log(error));
-    }
-    this.httpService.getUsers().subscribe((data : User[]) => { this.users = data; console.log(this.users); }, error => console.log(error));
+    this.httpUserService.getUsers().subscribe((data : User[]) => { this.users = data; console.log(this.users); }, error => console.log(error));
   }
-  
-  goToItem() {
-
+  Delete(i: number): void {
+    this.httpUserService.deleteUser(i.toString()).subscribe(() => { }, error => console.log(error));
+    setTimeout(() => this.Reload(), 1000);
+  }
+  Edit(i: number): void {
     this.router.navigate(
-      ['/MainAdmin/UserTable']
+      ['/Admin/UpdateUser/' + i.toString()]
     );
+  }
+
+  Reload() {
+    window.location.reload();
   }
 }

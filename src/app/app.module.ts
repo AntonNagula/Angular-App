@@ -9,16 +9,23 @@ import { MainAdminComponent } from './Admin/Main/Main.component';
 import { MainClientComponent } from './Client/Main/MainClient.component';
 import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
-import { CreateCountryComponent } from './Client/Main/CreateCountry/CreateCountry.component';
-import { WeatherComponent } from './ForAllUsers/Main/Weather/Weather.component';
-import { CountriesTableComponent } from './Client/Main/Countries/CountriesTable.component';
-import { HotelsTableComponent } from './Client/Main/Hotels/HotelsTable.component';
-import { CreateHotelComponent } from './Client/Main/CreateHotel/CreateHotel.component';
-import { ToursTableComponent } from './Client/Main/Tours/ToursTable.component';
-import { MainForAllUsersComponent } from './ForAllUsers/Main/MainForAllUsers.component';
-import { ChoiseTourComponent } from './ForAllUsers/Main/Tours/ChoiseTour.component';
 import { RegistrationComponent } from './Registration/Registration.component';
-import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/ChoiseCountry.component';
+import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
+import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
+import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
+import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
+import { ClientProposalGridComponent } from './Grids/ClientProposals/ClientProposalGrid.component';
+import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
+import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
+import { ProposalPaymentsGridComponent } from './Grids/ProposalPayments/ProposalPayments.component';
+import { CreatePaymentViewComponent } from './Client/Main/CreatePaymentView/CreatePaymentView.component';
+import { BudgetsGridComponent } from './Grids/Budgets/BudgetsGrid.component';
+import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.component';
+import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
+import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
+import { BTsGridComponent } from './Grids/BTs/BTsGrid.component';
+import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
+import { AuthGuard } from './Guards/AuthGuard';
 
 @NgModule({
   declarations: [
@@ -26,18 +33,24 @@ import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/Chois
     EnterComponent,
     MainAdminComponent,
     MainClientComponent,
+    UsersViewComponent,
     UsersTableComponent,
     CreateUserComponent,
     RegistrationComponent,
-    CreateCountryComponent,
-    CountriesTableComponent,
-    CreateHotelComponent,
-    HotelsTableComponent,
-    ToursTableComponent,
-    WeatherComponent,
-    MainForAllUsersComponent,
-    ChoiseTourComponent,
-    ChoiseCountryComponent
+    ProposalGridComponent,
+    StartPageComponent,
+    MainSubmitterComponent,
+    ReplyQuestionsComponent,
+    ClientProposalGridComponent,
+    ClientStartPageComponent,
+    ProposalViewComponent,
+    ProposalPaymentsGridComponent,
+    CreatePaymentViewComponent,
+    BudgetsGridComponent,
+    BudgetsViewComponent,
+    CreateBTViewComponent,
+    BTsViewComponent,
+    BTsGridComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +59,6 @@ import { ChoiseCountryComponent } from './ForAllUsers/Main/Tours/Countries/Chois
     FormsModule
   ],
   bootstrap: [AppComponent],
-  providers: []
+  providers: [AuthGuard]
 })
 export class AppModule { }

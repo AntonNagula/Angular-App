@@ -1,9 +1,15 @@
 export class User {
-  id: string;
-  role: string;
+  userId: number;
+  roleId: number;
   name: string;
   surname: string;
   email: string;
   password: string;
-  roleId: string;
+  role: string;
+}
+
+export enum Roles {
+  Admin = 1,
+  Client = 2,
+  Submitter = 3
 }
