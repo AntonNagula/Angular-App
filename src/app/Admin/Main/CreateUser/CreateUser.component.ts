@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../../Models/User';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Role } from '../../../Models/Role';
 import { HttpUserService } from '../../../HttpServices/http.users';
@@ -16,7 +16,7 @@ export class CreateUserComponent implements OnInit {
   newUser: User = new User();
   id: string;
   private routeSubscription: Subscription;
-  constructor(private httpUserService: HttpUserService, private route: ActivatedRoute) {
+  constructor(private httpUserService: HttpUserService, private route: ActivatedRoute, private router: Router) {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
   
@@ -27,20 +27,27 @@ export class CreateUserComponent implements OnInit {
     this.httpUserService.getRoles().subscribe((data: Role[]) => { this.roles = data; console.log(this.roles); }, error => console.log(error));
   }
 
-  submit(user: User) {
-    this.AnswersFix(user);
+  submit($event:any) {
+    this.AnswersFix(this.newUser);
     if (this.id != undefined) {
-      console.log(user);
-      this.httpUserService.putUser(user).subscribe(
+      console.log(this.newUser);
+      this.httpUserService.putUser(this.newUser).subscribe(
         () => { }, error => console.log(error));
     }
     else {
-      this.httpUserService.postUser(user).subscribe(
+      this.httpUserService.postUser(this.newUser).subscribe(
         () => { }, error => console.log(error));
     }
+
+    setTimeout(() => this.Route(), 2000);
   }
 
   AnswersFix(user:User) {
     user["roleId"] = +user["roleId"];
+  }
+  Route() {
+    this.router.navigate(
+      ['/Admin/Users']
+    );
   }
 }

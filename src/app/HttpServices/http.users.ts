@@ -9,13 +9,10 @@ export class HttpUserService {
 
   Headers(): HttpHeaders {
     let bearer = "Bearer " + localStorage.getItem('accessToken');
-    let headers = new HttpHeaders({ "content-type": "application/x-www-form-urlencoded", "Authorization": bearer });
+    let headers = new HttpHeaders({ "Authorization": bearer });
     return headers;
   }
 
-  getRoles() {
-    return this.http.get('http://localhost:54717/api/roles', { headers: this.Headers() });
-  }
   getUsers() {
     return this.http.get('http://localhost:54717/api/user', { headers: this.Headers() });
   }
@@ -30,5 +27,8 @@ export class HttpUserService {
   }
   putUser(user:User) {
     return this.http.put('http://localhost:54717/api/user/' + user["userId"], user, { headers: this.Headers() });
+  }
+  getRoles() {
+    return this.http.get('http://localhost:54717/api/user/roles', { headers: this.Headers() });
   }
 }

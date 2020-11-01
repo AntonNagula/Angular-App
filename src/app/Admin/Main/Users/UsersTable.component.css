@@ -14,9 +14,9 @@ table {
 th {
   font-weight: normal;
   font-size: 14px;
-  color: #339;
+  color: black;
   padding: 10px 12px;
-  background: white;
+  background: red;
 }
 
 td {

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../Models/User';
+import { User, Roles } from '../../../Models/User';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpUserService } from '../../../HttpServices/http.users';
+import { Role } from '../../../Models/Role';
 
 @Component({
   selector: 'UserTable',
@@ -26,16 +27,15 @@ export class UsersTableComponent implements OnInit
   }
   Delete(i: number): void {
     this.httpUserService.deleteUser(i.toString()).subscribe(() => { }, error => console.log(error));
-    setTimeout(() => this.reRoute(), 2000);
+    setTimeout(() => this.Reload(), 1000);
   }
   Edit(i: number): void {
     this.router.navigate(
       ['/Admin/UpdateUser/' + i.toString()]
     );
   }
-  reRoute() {
-    this.router.navigate(
-      ['Admin/Users']
-    );
+
+  Reload() {
+    window.location.reload();
   }
 }

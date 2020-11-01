@@ -21,16 +21,15 @@ export class BTsGridComponent implements OnInit {
   
   Delete(i: number): void {
     this.httpBudgetTemplateService.deleteBudgetTemplate(i.toString()).subscribe(() => { }, error => console.log(error));
-    setTimeout(() => this.reRoute(), 2000);    
+    setTimeout(() => this.Reload(), 1000);    
   }
   Edit(i: number): void {
     this.router.navigate(
       ['/Admin/CreationBT/' + i.toString()]
     );
   }
-  reRoute() {
-    this.router.navigate(
-      ['Admin/BTs']
-    );
+
+  Reload() {
+    window.location.reload();
   }
 }

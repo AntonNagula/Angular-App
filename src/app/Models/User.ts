@@ -7,3 +7,9 @@ export class User {
   password: string;
   role: string;
 }
+
+export enum Roles {
+  Admin = 1,
+  Client = 2,
+  Submitter = 3
+}

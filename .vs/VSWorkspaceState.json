@@ -3,15 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\CreatePaymentView",
-    "\\src\\app\\Models",
-    "\\src\\app\\Submitter",
-    "\\src\\app\\Submitter\\Main",
-    "\\src\\app\\Submitter\\Main\\Questions",
-    "\\src\\app\\Submitter\\Main\\StartPage"
+    "\\src\\app\\Admin",
+    "\\src\\app\\Admin\\Main",
+    "\\src\\app\\Admin\\Main\\CreateBTView",
+    "\\src\\app\\Admin\\Main\\Users",
+    "\\src\\app\\Grids",
+    "\\src\\app\\Grids\\Budgets",
+    "\\src\\app\\HttpServices"
   ],
-  "SelectedNode": "\\src\\app\\Submitter\\Main\\Questions\\ReplyQuestions.component.ts",
+  "SelectedNode": "\\src\\app\\Admin\\Main\\CreateBTView\\CreateBTView.component.ts",
   "PreviewInSolutionExplorer": false
 }

@@ -31,7 +31,12 @@ export class CreatePaymentViewComponent implements OnInit {
 
   Done($event: any): void {
     this.MarkAsDone();
-    this.Answers();    
+    this.Answers();
+    if (!this.Validation())
+    {
+      alert("Денег не хватает в данном бюджете");
+      return;
+    }
     this.Send();
     setTimeout(() => this.ToRoute(), 1000);    
   }
@@ -44,6 +49,13 @@ export class CreatePaymentViewComponent implements OnInit {
   }
   Send() {
     this.httpPaymentService.postPayment(this.payment).subscribe(() => { }, error => console.log(error));
+  }
+  Validation(): boolean {
+    let budget = this.budgets.find(x => x.budgetId == this.payment["budgetId"]);
+    if (budget["amount"] < this.payment["amount"])
+      return false;
+    else
+      return true;
   }
   ToRoute(): void {
     this.router.navigate(

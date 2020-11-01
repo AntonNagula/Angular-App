@@ -9,7 +9,7 @@ export class HttpBudgetService {
 
   Headers(): HttpHeaders {
     let bearer = "Bearer " + localStorage.getItem('accessToken');
-    let headers = new HttpHeaders({ "content-type": "application/x-www-form-urlencoded", "Authorization": bearer });
+    let headers = new HttpHeaders({ "Authorization": bearer });
     return headers;
   }
 
@@ -17,8 +17,8 @@ export class HttpBudgetService {
     return this.http.get('http://localhost:54717/api/budgets', { headers: this.Headers() });
   }
 
-  postBudgets(budgets: Budget[]) {
-    return this.http.post('http://localhost:54717/api/budgets/addcollection', budgets, { headers: this.Headers() });
+  postBudgets() {
+    return this.http.post('http://localhost:54717/api/budgets/addcollection', { headers: this.Headers() });
   }
 
 }
