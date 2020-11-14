@@ -32,10 +32,10 @@ export class EnterComponent {
     //if (this.role == "Admin") {
     //  this.router.navigate(['/Admin/Users']);
     //}
-    if (this.role == "Client") {
+    if (this.role == "Admin") {
       this.router.navigate(['/Admin/Proposals']);
     }
-    else if (this.role == "Submitter") {
+    else if (this.role == "Client") {
       this.router.navigate(['/Client/Proposals']);
     }
     else {

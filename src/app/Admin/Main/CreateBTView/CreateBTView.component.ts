@@ -29,6 +29,7 @@ export class CreateBTViewComponent implements OnInit {
   Done($event: any): void {
     console.log(this.id);
     this.budgetTemplate["amount"] = +this.budgetTemplate["amount"];
+    this.budgetTemplate["enabled"] = true;
     if (this.id !== undefined)
       this.httpBudgetTemplateService.putBudgetTemplates(this.budgetTemplate).subscribe(() => { }, error => console.log(error));
     else
