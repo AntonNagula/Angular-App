@@ -3,25 +3,31 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Proposal, Statuses } from '../../../Models/Proposal';
 import { HttpProposalService } from '../../../HttpServices/http.proposals';
 import { Subscription } from 'rxjs';
+import { HttpPurposeService } from '../../../HttpServices/http.purpose';
+import { Purpose } from '../../../Models/Purpose';
 
 @Component({
   selector: 'ReplyQuestions',
   templateUrl: './ReplyQuestions.component.html',
   styleUrls: ['./ReplyQuestions.component.css'],
-  providers: [HttpProposalService]
+  providers: [HttpProposalService, HttpPurposeService]
 })
 export class ReplyQuestionsComponent implements OnInit {
   proposal: Proposal = new Proposal();
+  purposes: Purpose[] = [];
 
   private routeSubscription: Subscription;
   id: string;
   name: string;
-  constructor(private httpProposalService: HttpProposalService, private route: ActivatedRoute, private router: Router) {
+  constructor(private httpProposalService: HttpProposalService, private httpPurposeService: HttpPurposeService, private route: ActivatedRoute, private router: Router) {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
   ngOnInit() {
     this.httpProposalService.getProposal(this.id).subscribe((data: Proposal) => {
       this.proposal = data;
+    }, error => console.log(error));
+    this.httpPurposeService.getPurposes().subscribe((data: Purpose[]) => {
+      this.purposes = data;
     }, error => console.log(error));
   }
   Close($event: any): void {
@@ -55,6 +61,8 @@ export class ReplyQuestionsComponent implements OnInit {
   Answers() {
     console.log(this.proposal["amount"]);
     this.proposal["amount"] = +this.proposal["amount"];
+    this.proposal["purposeId"] = +this.proposal["purposeId"];
+    console.log(this.proposal);
   }
   Route() {
     this.router.navigate(

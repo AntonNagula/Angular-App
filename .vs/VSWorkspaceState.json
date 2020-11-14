@@ -5,12 +5,12 @@
     "\\src\\app",
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\CreateUser",
-    "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\HttpServices",
-    "\\src\\app\\Models"
+    "\\src\\app\\Admin\\Main\\BTsView",
+    "\\src\\app\\Admin\\Main\\CreateBTView",
+    "\\src\\app\\Guards",
+    "\\src\\app\\Registration",
+    "\\src\\app\\Services"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\app\\Models\\Proposal.ts",
   "PreviewInSolutionExplorer": false
 }

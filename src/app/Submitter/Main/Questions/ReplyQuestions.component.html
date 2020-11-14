@@ -3,10 +3,16 @@
     <label>Названіе запроса</label>
     <br />
     <input class="inputtext" type="text" required [(ngModel)]="proposal.name" />
-    <br />    
+    <br />
     <label>Сумма</label>
     <br />
     <input class="inputtext" type="text" required [(ngModel)]="proposal.amount" />
+    <br />
+    <label>Цель(Если не нашли нужную, введите вручную)</label>
+    <br />
+    <select class="input" [(ngModel)]="proposal.purposeId">
+      <option *ngFor="let purpose of purposes" [value]="purpose.purposeId">{{purpose.name}}</option>
+    </select>
     <br />
     <label>Цель</label>
     <br />
@@ -16,7 +22,7 @@
     <br />
     <input class="inputtext" type="text" required [(ngModel)]="proposal.bankAccount" />
     <br />
-    <br/>
+    <br />
     <button class="btn btn-primary button-margin" (click)="Done($event)">Отправить</button>
     <button class="btn btn-primary button-margin" (click)="Close($event)">Закрыть</button>
   </div>
