@@ -59,7 +59,7 @@ export class CreatePaymentViewComponent implements OnInit {
   }
   ToRoute(): void {
     this.router.navigate(
-      ['/Client/Proposal/' + this.id]
+      ['/Admin/Proposal/' + this.id]
     );
   }
 }

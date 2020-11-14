@@ -34,7 +34,7 @@ export class ClientProposalGridComponent implements OnInit {
   }
   Show(i: number): void {
     this.router.navigate(
-      ['/Client/Proposal/' + i.toString()]
+      ['/Admin/Proposal/' + i.toString()]
     );
   }
 }

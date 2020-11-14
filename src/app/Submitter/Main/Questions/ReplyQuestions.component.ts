@@ -58,7 +58,7 @@ export class ReplyQuestionsComponent implements OnInit {
   }
   Route() {
     this.router.navigate(
-      ['/Submitter/Proposals']
+      ['/Client/Proposals']
     );
   }
 }

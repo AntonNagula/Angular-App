@@ -19,19 +19,11 @@ import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
 import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
 
 
-
-const SubmitterRoutes: Routes = [
+const ClientRoutes: Routes = [
   { path: 'Proposals', component: StartPageComponent },
   { path: 'Proposals/:id', component: StartPageComponent },
-  { path: 'Reply', component: ReplyQuestionsComponent },  
+  { path: 'Reply', component: ReplyQuestionsComponent },
   { path: 'Reply/:id', component: ReplyQuestionsComponent }
-];
-
-const ClientRoutes: Routes = [
-  { path: 'Proposals', component: ClientStartPageComponent },
-  { path: 'Proposal/:id', component: ProposalViewComponent },
-  { path: 'CreationPayment/:id', component: CreatePaymentViewComponent },
-  { path: 'Budgets', component: BudgetsViewComponent },
 ];
 
 const AdminRoutes: Routes = [
@@ -40,12 +32,14 @@ const AdminRoutes: Routes = [
   { path: 'BTs', component: BTsViewComponent },
   { path: 'Users', component: UsersViewComponent },
   { path: 'UpdateUser/:id', component: CreateUserComponent },
-  { path: 'CreateUser', component: CreateUserComponent}
+  { path: 'CreateUser', component: CreateUserComponent },
+  { path: 'Proposals', component: ClientStartPageComponent },
+  { path: 'Proposal/:id', component: ProposalViewComponent },
+  { path: 'CreationPayment/:id', component: CreatePaymentViewComponent },
+  { path: 'Budgets', component: BudgetsViewComponent }
 ];
 
 const appRoutes: Routes = [
-  { path: 'Submitter', component: MainSubmitterComponent },
-  { path: 'Submitter', component: MainSubmitterComponent, children: SubmitterRoutes },
   { path: 'Client', component: MainClientComponent },
   { path: 'Client', component: MainClientComponent, children: ClientRoutes },
   { path: 'Admin', component: MainAdminComponent },

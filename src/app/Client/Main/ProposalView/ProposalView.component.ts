@@ -29,7 +29,7 @@ export class ProposalViewComponent implements OnInit {
 
   ToPayment($event: any): void {
     this.router.navigate(
-      ['/Client/CreationPayment/' + this.id]
+      ['/Admin/CreationPayment/' + this.id]
     );
   }
 }
