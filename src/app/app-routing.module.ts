@@ -4,11 +4,7 @@ import { MainAdminComponent } from './Admin/Main/Main.component';
 import { MainClientComponent } from './Client/Main/MainClient.component';
 import { EnterComponent } from './Enter/Enter.component';
 import { CreateUserComponent } from './Admin/Main/CreateUser/CreateUser.component';
-import { UsersTableComponent } from './Admin/Main/Users/UsersTable.component';
-import { RegistrationComponent } from './Registration/Registration.component';
-import { ProposalGridComponent } from './Grids/Proposals/ProposalGrid.component';
 import { StartPageComponent } from './Submitter/Main/StartPage/StartPage.component';
-import { MainSubmitterComponent } from './Submitter/Main/MainSubmitter.component';
 import { ReplyQuestionsComponent } from './Submitter/Main/Questions/ReplyQuestions.component';
 import { ClientStartPageComponent } from './Client/Main/ClientStartPage/ClientStartPage.component';
 import { ProposalViewComponent } from './Client/Main/ProposalView/ProposalView.component';
@@ -17,6 +13,8 @@ import { BudgetsViewComponent } from './Client/Main/BudgetsView/BudgetsView.comp
 import { CreateBTViewComponent } from './Admin/Main/CreateBTView/CreateBTView.component';
 import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
 import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
+import { CreatePurposeComponent } from './Admin/Main/CreatePurpose/CreatePurpose.component';
+import { PurposesViewComponent } from './Admin/Main/Purposes/PurposesView.component';
 
 
 const ClientRoutes: Routes = [
@@ -36,7 +34,9 @@ const AdminRoutes: Routes = [
   { path: 'Proposals', component: ClientStartPageComponent },
   { path: 'Proposal/:id', component: ProposalViewComponent },
   { path: 'CreationPayment/:id', component: CreatePaymentViewComponent },
-  { path: 'Budgets', component: BudgetsViewComponent }
+  { path: 'Budgets', component: BudgetsViewComponent },
+  { path: 'CreatePurpose', component: CreatePurposeComponent },
+  { path: 'Purposes', component: PurposesViewComponent }
 ];
 
 const appRoutes: Routes = [

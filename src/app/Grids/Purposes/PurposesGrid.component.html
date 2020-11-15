@@ -1,0 +1,14 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Цель запроса</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let purpose of purposes;let i=index">
+        <td>{{purpose["name"]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
