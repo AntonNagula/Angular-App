@@ -26,7 +26,7 @@ export class HttpPurposeService {
   }
   putPurpose(purpose: Purpose) {
     console.log(purpose);
-    return this.http.put('http://localhost:54717/api/purpose', purpose, { headers: this.Headers() });
+    return this.http.put('http://localhost:54717/api/purpose/' + purpose.purposeId, purpose, { headers: this.Headers() });
   }
   deletePurpose(id: string) {
     return this.http.delete('http://localhost:54717/api/purpose/' + id, { headers: this.Headers() });

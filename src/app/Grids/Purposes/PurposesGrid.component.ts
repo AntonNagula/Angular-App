@@ -22,4 +22,12 @@ export class PurposesGridComponent implements OnInit {
   ngOnInit() {
     this.httpPurposeService.getPurposes().subscribe((data: Purpose[]) => { this.purposes = data; console.log(this.purposes); }, error => console.log(error));
   }
+  Delete(i: number): void {
+    this.purposes[i].enabled = false;
+    this.httpPurposeService.putPurpose(this.purposes[i]).subscribe(() => { }, error => console.log(error));
+    setTimeout(() => this.Reload(), 1000);
+  }
+  Reload() {
+    window.location.reload();
+  }
 }
