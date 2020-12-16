@@ -20,8 +20,6 @@ export class StartPageComponent {
     );
   }
   ToGrid($event: any): void {
-    this.router.navigate(
-      ['/Client/Proposals']
-    );
+    window.location.reload();
   }
 }

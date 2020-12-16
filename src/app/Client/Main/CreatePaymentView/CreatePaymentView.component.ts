@@ -27,7 +27,7 @@ export class CreatePaymentViewComponent implements OnInit {
     this.routeSubscription = route.params.subscribe(params => this.id = params['id']);
   }
   ngOnInit() {
-    this.httpBudgetService.getBudgets().subscribe((data: Budget[]) => { this.budgets = data; console.log(this.budgets); }, error => console.log(error));
+    this.httpBudgetService.getBudgetsPayment().subscribe((data: Budget[]) => { this.budgets = data; console.log(this.budgets); }, error => console.log(error));
     this.httpProposalService.getProposal(this.id).subscribe((data: Proposal) => { this.proposal = data; console.log(this.proposal); }, error => console.log(error));
     this.httpPaymentService.getPayments(this.id).subscribe((data: Payment[]) => { this.payments = data; console.log(this.payments); }, error => console.log(error));
   }

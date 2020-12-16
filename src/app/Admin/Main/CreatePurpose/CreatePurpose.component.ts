@@ -27,6 +27,7 @@ export class CreatePurposeComponent implements OnInit {
   }
 
   submit($event: any) {
+    this.purpose["enabled"] = true;
     this.httpPurposeService.postPurpose(this.purpose).subscribe(
       () => { }, error => console.log(error));
 

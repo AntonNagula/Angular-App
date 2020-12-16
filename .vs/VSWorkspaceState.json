@@ -5,12 +5,13 @@
     "\\src\\app",
     "\\src\\app\\Admin",
     "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\BTsView",
-    "\\src\\app\\Admin\\Main\\CreatePurpose",
-    "\\src\\app\\Admin\\Main\\Purposes",
+    "\\src\\app\\Admin\\Main\\UsersView",
+    "\\src\\app\\Client",
+    "\\src\\app\\Client\\Main",
+    "\\src\\app\\Client\\Main\\ProposalView",
     "\\src\\app\\Grids",
-    "\\src\\app\\Grids\\Purposes"
+    "\\src\\app\\Grids\\ProposalPayments"
   ],
-  "SelectedNode": "\\src\\app\\app.module.ts",
+  "SelectedNode": "\\src\\app\\Grids\\ProposalPayments\\ProposalPayments.component.css",
   "PreviewInSolutionExplorer": false
 }

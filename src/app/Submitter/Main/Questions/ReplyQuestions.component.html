@@ -1,12 +1,13 @@
 <body>
   <div class="main-div">
-    <label>Названіе запроса</label>
+    <h1>Оформите запрос</h1>
+    <!--<label>Название запроса</label>
     <br />
     <input class="inputtext" type="text" required [(ngModel)]="proposal.name" />
-    <br />
+    <br />-->
     <label>Сумма</label>
     <br />
-    <input class="inputtext" type="text" required [(ngModel)]="proposal.amount" />
+    <input class="inputtext" type="text" required [(ngModel)]="proposal.amount" pattern="^[ 0-9]+$" />
     <br />
     <label>Цель(Если не нашли нужную, введите вручную)</label>
     <br />

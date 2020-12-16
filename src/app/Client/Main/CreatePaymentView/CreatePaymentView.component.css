@@ -23,3 +23,7 @@
 .input {
     width:250px;
 }
+body {
+  background: -webkit-linear-gradient(left, rgba(28, 51, 255, 0.548) 0%, rgba(0, 255, 21, 0.589) 100%);
+  height: 1000px;
+}
