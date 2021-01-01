@@ -11,7 +11,8 @@ export class AuthService {
     this.http.post('http://localhost:54717/token',body)
       .subscribe((res: any) => {
         if (res) {
-          let token = res["token"];          
+          let token = res["token"];
+          localStorage.clear();
           localStorage.setItem('accessToken', token);
           localStorage.setItem('role', res["role"]);
         }

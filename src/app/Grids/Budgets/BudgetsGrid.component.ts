@@ -24,15 +24,14 @@ export class BudgetsGridComponent implements OnInit {
     this.httpBudgetService.getBudgets().subscribe((data: any) => { this.budgets = data; console.log(data); }, error => console.log(error));
   }
   
-  //Delete(i: number): void {
-  //  this.httpProposalService.deleteProposal(i.toString()).subscribe(() => { }, error => console.log(error));
-  //  this.router.navigate(
-  //    ['/Proposals']
-  //  );
-  //}
   Edit(i: number): void {
     this.router.navigate(
       ['/Reply/' + i.toString()]
     );
+  }
+  Deactivate(i: number): void {
+    this.budgets[i]["enabled"] = false;
+    this.httpBudgetService.putBudget(this.budgets[i]).subscribe(() => { }, error => console.log(error));
+    window.location.reload();
   }
 }
