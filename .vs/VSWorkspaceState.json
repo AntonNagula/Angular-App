@@ -4,14 +4,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\Admin",
-    "\\src\\app\\Admin\\Main",
-    "\\src\\app\\Admin\\Main\\UsersView",
     "\\src\\app\\Client",
-    "\\src\\app\\Client\\Main",
-    "\\src\\app\\Client\\Main\\ProposalView",
-    "\\src\\app\\Grids",
-    "\\src\\app\\Grids\\ProposalPayments"
+    "\\src\\app\\Enter",
+    "\\src\\app\\HttpServices"
   ],
-  "SelectedNode": "\\src\\app\\Grids\\ProposalPayments\\ProposalPayments.component.css",
   "PreviewInSolutionExplorer": false
 }
