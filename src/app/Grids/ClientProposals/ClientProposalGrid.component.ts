@@ -3,12 +3,13 @@ import { Proposal, Statuses } from '../../Models/Proposal';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpProposalService } from '../../HttpServices/http.proposals';
 import { Subscription } from 'rxjs';
+import { HttpPurposeService } from '../../HttpServices/http.purpose';
 
 @Component({
   selector: 'ClientProposalGrid',
   templateUrl: './ClientProposalGrid.component.html',
   styleUrls: ['./ClientProposalGrid.component.css'],
-  providers: [HttpProposalService]
+  providers: [HttpProposalService, HttpPurposeService]
 })
 export class ClientProposalGridComponent implements OnInit {
   proposals: Proposal[] = [];
@@ -34,7 +35,7 @@ export class ClientProposalGridComponent implements OnInit {
   }
   Show(i: number): void {
     this.router.navigate(
-      ['/Client/Proposal/' + i.toString()]
+      ['/Admin/Proposal/' + i.toString()]
     );
   }
 }

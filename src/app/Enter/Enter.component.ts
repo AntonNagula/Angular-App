@@ -29,14 +29,14 @@ export class EnterComponent {
   Route() {
     this.role = localStorage.getItem("role");
     console.log(this.role);
+    //if (this.role == "Admin") {
+    //  this.router.navigate(['/Admin/Users']);
+    //}
     if (this.role == "Admin") {
-      this.router.navigate(['/Admin/Users']);
+      this.router.navigate(['/Admin/Proposals']);
     }
     else if (this.role == "Client") {
       this.router.navigate(['/Client/Proposals']);
-    }
-    else if (this.role == "Submitter") {
-      this.router.navigate(['/Submitter/Proposals']);
     }
     else {
       this.warn = "неправильно введен логин или пароль";

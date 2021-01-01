@@ -1,0 +1,16 @@
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Цель запроса</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let purpose of purposes;let i=index">
+        <td>{{purpose["name"]}}</td>
+        <td><button class="btn btn-primary button-margin" (click)="Delete(i)">Удалить</button></td>
+      </tr>
+    </tbody>
+  </table>
+</body>

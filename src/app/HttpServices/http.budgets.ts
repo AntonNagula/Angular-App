@@ -16,9 +16,14 @@ export class HttpBudgetService {
   getBudgets() {
     return this.http.get('http://localhost:54717/api/budgets', { headers: this.Headers() });
   }
+  getBudgetsPayment() {
+    return this.http.get('http://localhost:54717/api/budgets/payment', { headers: this.Headers() });
+  }
 
   postBudgets() {
     return this.http.post('http://localhost:54717/api/budgets/addcollection', { headers: this.Headers() });
   }
-
+  putBudget(budget: Budget) {
+    return this.http.put('http://localhost:54717/api/budgets', budget, { headers: this.Headers() });
+  }
 }

@@ -5,6 +5,7 @@
         <th>Название бюджета</th>
         <th>Изначальная сумма</th>
         <th>Оставшаяся сумма</th>
+        <th>Деактивировать</th>
       </tr>
     </thead>
     <tbody>
@@ -12,7 +13,7 @@
         <td>{{budget["name"]}}</td>
         <td>{{budget["amount"]}}</td>
         <td>{{budget["remainingAmount"]}}</td>
-        <td></td>
+        <td><button class="btn btn-primary button-margin" (click)="Deactivate(i)">Деактивировать</button></td>
       </tr>
     </tbody>
   </table>

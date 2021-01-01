@@ -10,7 +10,10 @@
     <br />
     <label>Банковский Счет: {{proposal["bankAccount"]}}</label>
     <br />
-    <button class="button button-margin" (click)="ToPayment($event)">Оформить платеж</button>
+    <button class="button button-margin" *ngIf="Visibility()" (click)="ToPayment($event)">Оформить платеж</button>
+    <button class="button button-margin" *ngIf="Visibility()" (click)="Approve($event)">Подтвердить</button>
+    <button class="button button-margin" *ngIf="Visibility()" (click)="Deny($event)">Запрет</button>
+    <button class="button button-margin" (click)="Close($event)">Закрыть</button>
     <ProposalPaymentsGrid></ProposalPaymentsGrid>
   </div>
 </body>

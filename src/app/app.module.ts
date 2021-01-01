@@ -26,6 +26,9 @@ import { BTsViewComponent } from './Admin/Main/BTsView/BTsView.component';
 import { BTsGridComponent } from './Grids/BTs/BTsGrid.component';
 import { UsersViewComponent } from './Admin/Main/UsersView/UsersView.component';
 import { AuthGuard } from './Guards/AuthGuard';
+import { CreatePurposeComponent } from './Admin/Main/CreatePurpose/CreatePurpose.component';
+import { PurposesViewComponent } from './Admin/Main/Purposes/PurposesView.component';
+import { PurposesGridComponent } from './Grids/Purposes/PurposesGrid.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { AuthGuard } from './Guards/AuthGuard';
     BudgetsViewComponent,
     CreateBTViewComponent,
     BTsViewComponent,
-    BTsGridComponent
+    BTsGridComponent,
+    CreatePurposeComponent,
+    PurposesGridComponent,
+    PurposesViewComponent
   ],
   imports: [
     BrowserModule,

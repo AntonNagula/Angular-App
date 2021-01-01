@@ -3,7 +3,8 @@ body {
   font-size: 10px;
   text-align: center;
   color: #787878;
-  background-image: linear-gradient(to top, rgb(245, 245, 245), rgba(231, 233, 239, 0.97), rgba(217, 221, 233, 0.94), rgba(203, 209, 228, 0.91), rgba(189, 197, 222, 0.88), rgba(175, 185, 216, 0.85), rgba(160, 174, 210, 0.83), rgba(146, 162, 204, 0.8), rgba(132, 150, 198, 0.77), rgba(118, 138, 193, 0.74), rgba(104, 126, 187, 0.71), rgba(90, 114, 181, 0.68));
+  background: -webkit-linear-gradient(left, rgba(28, 51, 255, 0.548) 0%, rgba(0, 255, 21, 0.589) 100%);
+  
 }
 li
 {

@@ -20,7 +20,9 @@ export class BTsGridComponent implements OnInit {
   }
   
   Delete(i: number): void {
-    this.httpBudgetTemplateService.deleteBudgetTemplate(i.toString()).subscribe(() => { }, error => console.log(error));
+    this.BTs[i].enabled = false;
+    console.log(this.BTs[i]);
+    this.httpBudgetTemplateService.putBudgetTemplates(this.BTs[i]).subscribe(() => { }, error => console.log(error));
     setTimeout(() => this.Reload(), 1000);    
   }
   Edit(i: number): void {
